@@ -1,0 +1,13 @@
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\bin\Debug\Kursak_Ol.exe.config
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\bin\Debug\Kursak_Ol.exe
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\bin\Debug\Kursak_Ol.pdb
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.csprojAssemblyReference.cache
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.Form1.resources
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.Properties.Resources.resources
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.Registration.resources
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.GenerateResource.cache
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CoreCompileInputs.cache
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CopyComplete
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.exe
+D:\proga_Visual\ADO_net\Kursak_Ol\Kursak_Ol\obj\Debug\Kursak_Ol.pdb
