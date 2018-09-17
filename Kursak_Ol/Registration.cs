@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Timer = System.Threading.Timer;
 
 namespace Kursak_Ol
 {
@@ -20,8 +22,16 @@ namespace Kursak_Ol
             this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
             this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
             this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
-            this.timer1.Tick += Timer1_Tick;
-            this.timer1.Start();
+           
+            TimerCallback startCallback=new TimerCallback(Show_Slider);
+            Timer timer=new Timer(startCallback);
+            timer.Change(0,3000);
+        }
+
+        private void Show_Slider(object state)
+        {
+            Close_Slaider();
+            Show_Slaider();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
