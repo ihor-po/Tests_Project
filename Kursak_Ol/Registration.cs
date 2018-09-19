@@ -49,10 +49,6 @@ namespace Kursak_Ol
             label14_Phone_Error.Visible = false;
             panel12_Opovesh.Visible = false;
             timer1.Tick += Timer1_Tick1;
-            using (Tests_DBContainer tests = new Tests_DBContainer())
-            {
-                MessageBox.Show($"{tests.User.Count()}");
-            }
         }
 
         private void Timer1_Tick1(object sender, EventArgs e)
@@ -89,8 +85,8 @@ namespace Kursak_Ol
                 }
 
                 string ph = textBox1_Phone.Text;
-                var phone = tests.User.Where(z => z.Phone == ph).ToList();
-                if (phone.Count >0)
+                var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
+                if (phone!=null)
                 {
                     label14_Phone_Error.Visible = true;
                     return;
