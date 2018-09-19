@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/18/2018 22:35:34
--- Generated from EDMX file: \\mac\iCloud\Step\TestsProject\Kursak_Ol\Tests_DB.edmx
+-- Date Created: 09/19/2018 22:12:15
+-- Generated from EDMX file: D:\git\Kursak\Tests_Project\Kursak_Ol\Tests_DB.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -239,7 +239,7 @@ ADD CONSTRAINT [FK_UserRole]
     FOREIGN KEY ([RoleId])
     REFERENCES [dbo].[Role]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserRole'
@@ -254,7 +254,7 @@ ADD CONSTRAINT [FK_TestCategory]
     FOREIGN KEY ([CategoryId])
     REFERENCES [dbo].[Category]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestCategory'
@@ -269,7 +269,7 @@ ADD CONSTRAINT [FK_TestQuestionTest]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestQuestionTest'
@@ -284,7 +284,7 @@ ADD CONSTRAINT [FK_TestQuestionAnswerTestQuestion]
     FOREIGN KEY ([TestQuestionId])
     REFERENCES [dbo].[TestQuestion]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestQuestionAnswerTestQuestion'
@@ -299,7 +299,7 @@ ADD CONSTRAINT [FK_UserTestCreator]
     FOREIGN KEY ([UserId])
     REFERENCES [dbo].[User]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestCreator'
@@ -314,7 +314,7 @@ ADD CONSTRAINT [FK_TestTestCreator]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestTestCreator'
@@ -329,7 +329,7 @@ ADD CONSTRAINT [FK_UserTestUser]
     FOREIGN KEY ([UserId])
     REFERENCES [dbo].[User]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestUser'
@@ -344,7 +344,7 @@ ADD CONSTRAINT [FK_UserTestTest]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestTest'
@@ -359,7 +359,7 @@ ADD CONSTRAINT [FK_UserTestAnswerUserTest]
     FOREIGN KEY ([UserTestId])
     REFERENCES [dbo].[UserTest]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestAnswerUserTest'
@@ -401,46 +401,3 @@ GO
 -- --------------------------------------------------
 -- Script has ended
 -- --------------------------------------------------
-
-INSERT INTO dbo.[Role] VALUES
-('Преподаватель'),
-('Студент');
-GO
-
-INSERT INTO dbo.[User] VALUES
-('stdudent', '123123', 'Интерперунников', 'Авегундар', 'Мыхяцуевич', '380123214567', 'Нету адреса', 2),
-('teacher', '321321', 'Простой', 'Иван', 'Сергеевич', '380554443322', 'Кабинетный переулок, д. 54', 1);
-GO
-
-INSERT INTO dbo.[Category] VALUES
-('Первая категория для тестов'),
-('Вторая категория для тестов');
-GO
-
-INSERT INTO dbo.[Test] VALUES
-('Самый скучный тест на планете Нептун', 1, 1),
-('О, смотри, какие тут вопросы!', 1, 1);
-GO
-
-INSERT INTO dbo.[TestCreator] VALUES
-(2,1),
-(2,2);
-GO
-
-INSERT INTO dbo.[TestQuestion] VALUES
-('Ты суслика видишь?', 1, 1),
-('Есть закурить?', 1, 1),
-('А если найду?', 1, 1);
-GO
-
-INSERT INTO dbo.[TestQuestionAnswer] VALUES
-('Да', 0, 1),
-('Нет', 0, 1),
-('Кто такой суслик?', 1, 1),
-('Незнаю', 0, 1),
-('Да', 1, 1),
-('Нет', 0, 1),
-('Я не курю и Вам не советую', 0, 1),
-('И.....', 0, 1),
-('Нечего искать!', 1, 1);
-GO
