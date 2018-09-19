@@ -24,7 +24,7 @@ IF OBJECT_ID(N'[dbo].[FK_TestCategory]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Test] DROP CONSTRAINT [FK_TestCategory];
 GO
 IF OBJECT_ID(N'[dbo].[FK_TestQuestionTest]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[TestQuestionSet] DROP CONSTRAINT [FK_TestQuestionTest];
+    ALTER TABLE [dbo].[TestQuestion] DROP CONSTRAINT [FK_TestQuestionTest];
 GO
 IF OBJECT_ID(N'[dbo].[FK_TestQuestionAnswerTestQuestion]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[TestQuestionAnswer] DROP CONSTRAINT [FK_TestQuestionAnswerTestQuestion];
@@ -70,8 +70,8 @@ GO
 IF OBJECT_ID(N'[dbo].[TestCreator]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TestCreator];
 GO
-IF OBJECT_ID(N'[dbo].[TestQuestionSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TestQuestionSet];
+IF OBJECT_ID(N'[dbo].[TestQuestion]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TestQuestion];
 GO
 IF OBJECT_ID(N'[dbo].[TestQuestionAnswer]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TestQuestionAnswer];
@@ -239,7 +239,7 @@ ADD CONSTRAINT [FK_UserRole]
     FOREIGN KEY ([RoleId])
     REFERENCES [dbo].[Role]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserRole'
@@ -254,7 +254,7 @@ ADD CONSTRAINT [FK_TestCategory]
     FOREIGN KEY ([CategoryId])
     REFERENCES [dbo].[Category]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestCategory'
@@ -269,7 +269,7 @@ ADD CONSTRAINT [FK_TestQuestionTest]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestQuestionTest'
@@ -284,7 +284,7 @@ ADD CONSTRAINT [FK_TestQuestionAnswerTestQuestion]
     FOREIGN KEY ([TestQuestionId])
     REFERENCES [dbo].[TestQuestion]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestQuestionAnswerTestQuestion'
@@ -299,7 +299,7 @@ ADD CONSTRAINT [FK_UserTestCreator]
     FOREIGN KEY ([UserId])
     REFERENCES [dbo].[User]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestCreator'
@@ -314,7 +314,7 @@ ADD CONSTRAINT [FK_TestTestCreator]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestTestCreator'
@@ -329,7 +329,7 @@ ADD CONSTRAINT [FK_UserTestUser]
     FOREIGN KEY ([UserId])
     REFERENCES [dbo].[User]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestUser'
@@ -344,7 +344,7 @@ ADD CONSTRAINT [FK_UserTestTest]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestTest'
@@ -359,7 +359,7 @@ ADD CONSTRAINT [FK_UserTestAnswerUserTest]
     FOREIGN KEY ([UserTestId])
     REFERENCES [dbo].[UserTest]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestAnswerUserTest'
