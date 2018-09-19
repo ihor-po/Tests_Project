@@ -11,7 +11,7 @@
     <EntitySet Name="Category" EntityType="Tests_DB.Store.Category" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Test" EntityType="Tests_DB.Store.Test" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TestCreator" EntityType="Tests_DB.Store.TestCreator" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TestQuestionSet" EntityType="Tests_DB.Store.TestQuestionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestQuestion" EntityType="Tests_DB.Store.TestQuestion" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TestQuestionAnswer" EntityType="Tests_DB.Store.TestQuestionAnswer" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserTest" EntityType="Tests_DB.Store.UserTest" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserTestAnswer" EntityType="Tests_DB.Store.UserTestAnswer" store:Type="Tables" Schema="dbo" />
@@ -24,12 +24,12 @@
       <End Role="Category" EntitySet="Category" />
     </AssociationSet>
     <AssociationSet Name="TestQuestionTest" Association="Tests_DB.Store.TestQuestionTest">
-      <End Role="TestQuestion" EntitySet="TestQuestionSet" />
+      <End Role="TestQuestion" EntitySet="TestQuestion" />
       <End Role="Test" EntitySet="Test" />
     </AssociationSet>
     <AssociationSet Name="TestQuestionAnswerTestQuestion" Association="Tests_DB.Store.TestQuestionAnswerTestQuestion">
       <End Role="TestQuestionAnswer" EntitySet="TestQuestionAnswer" />
-      <End Role="TestQuestion" EntitySet="TestQuestionSet" />
+      <End Role="TestQuestion" EntitySet="TestQuestion" />
     </AssociationSet>
     <AssociationSet Name="UserTestCreator" Association="Tests_DB.Store.UserTestCreator">
       <End Role="User" EntitySet="User" />
@@ -53,7 +53,7 @@
     </AssociationSet>
     <AssociationSet Name="UserTestAnswerTestQuestion" Association="Tests_DB.Store.UserTestAnswerTestQuestion">
       <End Role="UserTestAnswer" EntitySet="UserTestAnswer" />
-      <End Role="TestQuestion" EntitySet="TestQuestionSet" />
+      <End Role="TestQuestion" EntitySet="TestQuestion" />
     </AssociationSet>
     <AssociationSet Name="TestQuestionAnswerUserTestAnswer" Association="Tests_DB.Store.TestQuestionAnswerUserTestAnswer">
       <End Role="TestQuestionAnswer" EntitySet="TestQuestionAnswer" />
@@ -105,7 +105,7 @@
     <Property Name="UserId" Type="int" Nullable="false" />
     <Property Name="TestId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="TestQuestionSet">
+  <EntityType Name="TestQuestion">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -169,7 +169,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="TestQuestionTest">
-    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestionSet" Multiplicity="*" />
+    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestion" Multiplicity="*" />
     <End Role="Test" Type="Tests_DB.Store.Test" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Test">
@@ -182,7 +182,7 @@
   </Association>
   <Association Name="TestQuestionAnswerTestQuestion">
     <End Role="TestQuestionAnswer" Type="Tests_DB.Store.TestQuestionAnswer" Multiplicity="*" />
-    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestionSet" Multiplicity="1" />
+    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestion" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="TestQuestion">
         <PropertyRef Name="Id" />
@@ -254,7 +254,7 @@
   </Association>
   <Association Name="UserTestAnswerTestQuestion">
     <End Role="UserTestAnswer" Type="Tests_DB.Store.UserTestAnswer" Multiplicity="*" />
-    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestionSet" Multiplicity="1" />
+    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestion" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="TestQuestion">
         <PropertyRef Name="Id" />
@@ -641,7 +641,7 @@
     </EntitySetMapping>
     <EntitySetMapping Name="TestQuestion">
       <EntityTypeMapping TypeName="IsTypeOf(Tests_DB.TestQuestion)">
-        <MappingFragment StoreEntitySet="TestQuestionSet">
+        <MappingFragment StoreEntitySet="TestQuestion">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Question" ColumnName="Question" />
           <ScalarProperty Name="IsActual" ColumnName="IsActual" />
