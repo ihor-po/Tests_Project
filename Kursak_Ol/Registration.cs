@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,10 +23,172 @@ namespace Kursak_Ol
             this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
             this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
             this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
-           
+            this.Load += Registration_Load;
             TimerCallback startCallback=new TimerCallback(Show_Slider);
             Timer timer=new Timer(startCallback);
             timer.Change(0,3000);
+
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+            this.textBox1_Adres.TextChanged+= new EventHandler(textBox);
+            this.textBox1_LastName.TextChanged += new EventHandler(textBox);
+            this.textBox1_Login.TextChanged += new EventHandler(textBox);
+            this.textBox1_Login_Registr.TextChanged += new EventHandler(textBox);
+            this.textBox1_Middle_name.TextChanged += new EventHandler(textBox);
+            this.textBox1_Name.TextChanged += new EventHandler(textBox);
+            this.textBox1_Password.TextChanged += new EventHandler(textBox);
+            this.textBox1_Password_Registr.TextChanged += new EventHandler(textBox);
+            this.textBox1_Phone.TextChanged += new EventHandler(textBox);
+            this.button1_Registration_DB.Click += Button1_Registration_DB_Click;
+            label14_Null.Visible = false;
+            label6_Error.Visible = false;
+            label14_phone.Visible = false;
+            label14_Log_Povtor.Visible = false;
+            label14_Phone_Error.Visible = false;
+            panel12_Opovesh.Visible = false;
+            timer1.Tick += Timer1_Tick1;
+        }
+
+        private void Timer1_Tick1(object sender, EventArgs e)
+        {
+            bunifuTransition3.HideSync(this.panel12_Opovesh);
+            timer1.Stop();
+        }
+
+        private void Button1_Registration_DB_Click(object sender, EventArgs e)
+        {
+            if (textBox1_Adres.Text == "" || textBox1_LastName.Text == "" || textBox1_Phone.Text == "" ||
+                textBox1_Login_Registr.Text == "" ||
+                textBox1_Middle_name.Text == "" || textBox1_Password_Registr.Text == "" || textBox1_Name.Text == "")
+            {
+                label14_Null.Visible = true;
+                return;
+            }
+            string phoneNumber = @"380\d{9}";
+            if (!Regex.Match(textBox1_Phone.Text, phoneNumber).Success)
+            {
+                label14_phone.Visible = true;
+                return;
+            }
+
+            using (Tests_DBContainer tests =new Tests_DBContainer())
+            {
+                string login = textBox1_Login_Registr.Text;
+                //var log = tests.User.Where(z => z.Login == login).ToList();
+                var log = tests.User.FirstOrDefault(z => z.Login == login);
+                if (log!=null)
+                {
+                    label14_Log_Povtor.Visible = true;
+                    return;
+                }
+
+                string ph = textBox1_Phone.Text;
+                var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
+                if (phone!=null)
+                {
+                    label14_Phone_Error.Visible = true;
+                    return;
+                }
+
+                var id = tests.Role.FirstOrDefault(z => z.Title == "Pred");
+                if (id == null)
+                {
+                    return;
+                }
+
+                User rUser=new User
+                {
+                    Address = textBox1_Adres.Text,
+                    FirstName = textBox1_Name.Text,
+                    Login = textBox1_Login_Registr.Text,
+                    LastName = textBox1_LastName.Text,
+                    MiddleName = textBox1_Middle_name.Text,
+                    Password = textBox1_Password_Registr.Text,
+                    Phone = textBox1_Phone.Text,
+                    RoleId = id.Id
+                };
+                tests.User.Add(rUser);
+                tests.SaveChanges();
+            }
+
+            this.label16_Log_Opov.Text = textBox1_Login_Registr.Text;
+            bunifuTransition3.ShowSync(this.panel12_Opovesh);
+            timer1.Start();
+        }
+
+        private void textBox(object sender, EventArgs a)
+        {
+            label14_Null.Visible = false;
+            label14_phone.Visible = false;
+            label14_Log_Povtor.Visible = false;
+            label6_Error.Visible = false;
+            label14_Phone_Error.Visible = false;
+            TextBox text=sender as TextBox;
+            if (text.Name == textBox1_Adres.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Adres.Text))
+                {
+                    textBox1_Adres.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_LastName.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_LastName.Text))
+                {
+                    textBox1_LastName.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Login.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Login.Text))
+                {
+                    textBox1_Login.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Login_Registr.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Login_Registr.Text))
+                {
+                    textBox1_Login_Registr.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Middle_name.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Middle_name.Text))
+                {
+                    textBox1_Middle_name.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Name.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Name.Text))
+                {
+                    textBox1_Name.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Password.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Password.Text))
+                {
+                    textBox1_Password.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Password_Registr.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Password_Registr.Text))
+                {
+                    textBox1_Password_Registr.Text = null;
+                }
+            }
+            else if (text.Name == textBox1_Phone.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Phone.Text))
+                {
+                    textBox1_Phone.Text = null;
+                }
+            }
         }
 
         private void Show_Slider(object state)
