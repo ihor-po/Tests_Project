@@ -79,14 +79,14 @@ namespace Kursak_Ol
                     return;
                 }
 
-                if (user.Role.Title == "User")
+                if (user.Role.Title == "Студент")
                 {
                     Pupil pupil=new Pupil(user);
                     textBox1_Login.Text = null;
                     textBox1_Password.Text = null;
                     pupil.ShowDialog();
                 }
-                else
+                else if(user.Role.Title == "Преподователь")
                 {
                     Teacher teacher=new Teacher(user);
                     textBox1_Login.Text = null;
@@ -136,8 +136,8 @@ namespace Kursak_Ol
                     return;
                 }
 
-                var id = tests.Role.FirstOrDefault(z => z.Title == "User");//роль
-                if (id == null)//проверка роли есть он в БД 
+                var id = tests.Role.FirstOrDefault(z => z.Title == "Студент");//роль
+                if (id == null)//проверка роли есть она в БД 
                 {
                     return;
                 }
