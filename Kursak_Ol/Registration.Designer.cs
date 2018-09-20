@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1_Min = new Bunifu.Framework.UI.BunifuImageButton();
@@ -52,6 +52,7 @@
             this.pictureBox3_Slider = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel6_rr = new System.Windows.Forms.Panel();
+            this.label15_Vhod_Null = new System.Windows.Forms.Label();
             this.label6_Error = new System.Windows.Forms.Label();
             this.panel7_Suda = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,41 +64,41 @@
             this.textBox1_Login = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel9_Border = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label14_Phone_Error = new System.Windows.Forms.Label();
+            this.label14_Log_Povtor = new System.Windows.Forms.Label();
+            this.label14_phone = new System.Windows.Forms.Label();
+            this.label14_Null = new System.Windows.Forms.Label();
+            this.button1_Registration_DB = new System.Windows.Forms.Button();
+            this.textBox1_Adres = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox1_Phone = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox1_Password_Registr = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1_Login_Registr = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1_Middle_name = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1_LastName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1_Name = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel7_Registr = new System.Windows.Forms.Panel();
+            this.panel12_Opovesh = new System.Windows.Forms.Panel();
+            this.label16_Log_Opov = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9_Border = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1_Name = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1_LastName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1_Middle_name = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1_Login_Registr = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1_Password_Registr = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1_Phone = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox1_Adres = new System.Windows.Forms.TextBox();
-            this.button1_Registration_DB = new System.Windows.Forms.Button();
-            this.label14_Null = new System.Windows.Forms.Label();
-            this.panel7_Registr = new System.Windows.Forms.Panel();
-            this.label14_phone = new System.Windows.Forms.Label();
-            this.label14_Log_Povtor = new System.Windows.Forms.Label();
-            this.label14_Phone_Error = new System.Windows.Forms.Label();
-            this.panel12_Opovesh = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16_Log_Opov = new System.Windows.Forms.Label();
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuTransition3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -356,22 +357,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Scale;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 0F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 0;
+            animation7.Padding = new System.Windows.Forms.Padding(0);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation7;
             // 
             // pictureBox3_Slider
             // 
@@ -403,6 +404,7 @@
             // 
             this.panel6_rr.AutoSize = true;
             this.panel6_rr.BackColor = System.Drawing.SystemColors.Control;
+            this.panel6_rr.Controls.Add(this.label15_Vhod_Null);
             this.panel6_rr.Controls.Add(this.label6_Error);
             this.panel6_rr.Controls.Add(this.panel7_Suda);
             this.panel6_rr.Controls.Add(this.button1_Vkhod);
@@ -418,6 +420,20 @@
             this.panel6_rr.Name = "panel6_rr";
             this.panel6_rr.Size = new System.Drawing.Size(295, 387);
             this.panel6_rr.TabIndex = 12;
+            // 
+            // label15_Vhod_Null
+            // 
+            this.label15_Vhod_Null.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label15_Vhod_Null, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label15_Vhod_Null, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label15_Vhod_Null, BunifuAnimatorNS.DecorationType.None);
+            this.label15_Vhod_Null.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15_Vhod_Null.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label15_Vhod_Null.Location = new System.Drawing.Point(77, 121);
+            this.label15_Vhod_Null.Name = "label15_Vhod_Null";
+            this.label15_Vhod_Null.Size = new System.Drawing.Size(141, 17);
+            this.label15_Vhod_Null.TabIndex = 8;
+            this.label15_Vhod_Null.Text = "Заполните все поля!";
             // 
             // label6_Error
             // 
@@ -570,54 +586,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // bunifuTransition2
-            // 
-            this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
-            this.bunifuTransition2.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 20;
-            animation2.Padding = new System.Windows.Forms.Padding(30);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation2;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1_Top;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 30;
-            this.bunifuElipse1.TargetControl = this.panel10;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 30;
-            this.bunifuElipse2.TargetControl = this.panel9_Border;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 30;
-            this.bunifuElipse3.TargetControl = this.panel9;
-            // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 30;
-            this.bunifuElipse4.TargetControl = this.panel6_rr;
-            // 
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -632,6 +600,18 @@
             this.panel7.Size = new System.Drawing.Size(308, 45);
             this.panel7.TabIndex = 11;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(0, 43);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(308, 2);
+            this.panel8.TabIndex = 1;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -644,18 +624,6 @@
             this.label6.Size = new System.Drawing.Size(297, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Регистрация для тестирования";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.bunifuTransition1.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 43);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(308, 2);
-            this.panel8.TabIndex = 1;
             // 
             // panel9_Border
             // 
@@ -700,201 +668,61 @@
             this.panel10.Size = new System.Drawing.Size(521, 395);
             this.panel10.TabIndex = 13;
             // 
-            // pictureBox3
+            // label14_Phone_Error
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuTransition3.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Image = global::Kursak_Ol.Properties.Resources.registration;
-            this.pictureBox3.Location = new System.Drawing.Point(215, 16);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 98);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.label14_Phone_Error.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label14_Phone_Error, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label14_Phone_Error, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label14_Phone_Error, BunifuAnimatorNS.DecorationType.None);
+            this.label14_Phone_Error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14_Phone_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label14_Phone_Error.Location = new System.Drawing.Point(101, 127);
+            this.label14_Phone_Error.Name = "label14_Phone_Error";
+            this.label14_Phone_Error.Size = new System.Drawing.Size(327, 17);
+            this.label14_Phone_Error.TabIndex = 20;
+            this.label14_Phone_Error.Text = "Пользователь с таким номером уже существует!";
             // 
-            // label7
+            // label14_Log_Povtor
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(30, 214);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Имя:";
+            this.label14_Log_Povtor.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label14_Log_Povtor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label14_Log_Povtor, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label14_Log_Povtor, BunifuAnimatorNS.DecorationType.None);
+            this.label14_Log_Povtor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14_Log_Povtor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label14_Log_Povtor.Location = new System.Drawing.Point(100, 127);
+            this.label14_Log_Povtor.Name = "label14_Log_Povtor";
+            this.label14_Log_Povtor.Size = new System.Drawing.Size(319, 17);
+            this.label14_Log_Povtor.TabIndex = 19;
+            this.label14_Log_Povtor.Text = "Пользователь с таким логином уже существует!";
             // 
-            // textBox1_Name
+            // label14_phone
             // 
-            this.textBox1_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_Name, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_Name, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_Name, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_Name.Location = new System.Drawing.Point(34, 237);
-            this.textBox1_Name.Name = "textBox1_Name";
-            this.textBox1_Name.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_Name.TabIndex = 3;
+            this.label14_phone.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label14_phone, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label14_phone, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label14_phone, BunifuAnimatorNS.DecorationType.None);
+            this.label14_phone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label14_phone.Location = new System.Drawing.Point(89, 127);
+            this.label14_phone.Name = "label14_phone";
+            this.label14_phone.Size = new System.Drawing.Size(334, 17);
+            this.label14_phone.TabIndex = 18;
+            this.label14_phone.Text = "Телефон не соответствует формату 380000000000";
             // 
-            // label8
+            // label14_Null
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(30, 266);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Фамилия:";
-            // 
-            // textBox1_LastName
-            // 
-            this.textBox1_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_LastName, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_LastName, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_LastName, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_LastName.Location = new System.Drawing.Point(34, 289);
-            this.textBox1_LastName.Name = "textBox1_LastName";
-            this.textBox1_LastName.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_LastName.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(30, 318);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 20);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Отчество:";
-            // 
-            // textBox1_Middle_name
-            // 
-            this.textBox1_Middle_name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_Middle_name, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_Middle_name, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_Middle_name, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_Middle_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_Middle_name.Location = new System.Drawing.Point(34, 339);
-            this.textBox1_Middle_name.Name = "textBox1_Middle_name";
-            this.textBox1_Middle_name.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_Middle_name.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(30, 162);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 20);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Логин:";
-            // 
-            // textBox1_Login_Registr
-            // 
-            this.textBox1_Login_Registr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_Login_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_Login_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_Login_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_Login_Registr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_Login_Registr.Location = new System.Drawing.Point(34, 185);
-            this.textBox1_Login_Registr.Name = "textBox1_Login_Registr";
-            this.textBox1_Login_Registr.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_Login_Registr.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(276, 162);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 20);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Пароль:";
-            // 
-            // textBox1_Password_Registr
-            // 
-            this.textBox1_Password_Registr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_Password_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_Password_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_Password_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_Password_Registr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_Password_Registr.Location = new System.Drawing.Point(280, 185);
-            this.textBox1_Password_Registr.Name = "textBox1_Password_Registr";
-            this.textBox1_Password_Registr.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_Password_Registr.TabIndex = 11;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(276, 214);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 20);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Телефон:";
-            // 
-            // textBox1_Phone
-            // 
-            this.textBox1_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_Phone, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_Phone, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_Phone, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_Phone.Location = new System.Drawing.Point(278, 237);
-            this.textBox1_Phone.Name = "textBox1_Phone";
-            this.textBox1_Phone.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_Phone.TabIndex = 13;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(276, 266);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 20);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Адрес:";
-            // 
-            // textBox1_Adres
-            // 
-            this.textBox1_Adres.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuTransition3.SetDecoration(this.textBox1_Adres, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.textBox1_Adres, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.textBox1_Adres, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1_Adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1_Adres.Location = new System.Drawing.Point(278, 289);
-            this.textBox1_Adres.Name = "textBox1_Adres";
-            this.textBox1_Adres.Size = new System.Drawing.Size(208, 26);
-            this.textBox1_Adres.TabIndex = 15;
+            this.label14_Null.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label14_Null, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label14_Null, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label14_Null, BunifuAnimatorNS.DecorationType.None);
+            this.label14_Null.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14_Null.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label14_Null.Location = new System.Drawing.Point(193, 127);
+            this.label14_Null.Name = "label14_Null";
+            this.label14_Null.Size = new System.Drawing.Size(141, 17);
+            this.label14_Null.TabIndex = 17;
+            this.label14_Null.Text = "Заполните все поля!";
             // 
             // button1_Registration_DB
             // 
@@ -915,19 +743,201 @@
             this.button1_Registration_DB.Text = "Зарегестрироваться";
             this.button1_Registration_DB.UseVisualStyleBackColor = false;
             // 
-            // label14_Null
+            // textBox1_Adres
             // 
-            this.label14_Null.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label14_Null, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label14_Null, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label14_Null, BunifuAnimatorNS.DecorationType.None);
-            this.label14_Null.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14_Null.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label14_Null.Location = new System.Drawing.Point(193, 127);
-            this.label14_Null.Name = "label14_Null";
-            this.label14_Null.Size = new System.Drawing.Size(141, 17);
-            this.label14_Null.TabIndex = 17;
-            this.label14_Null.Text = "Заполните все поля!";
+            this.textBox1_Adres.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_Adres, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_Adres, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_Adres, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_Adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_Adres.Location = new System.Drawing.Point(278, 289);
+            this.textBox1_Adres.Name = "textBox1_Adres";
+            this.textBox1_Adres.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_Adres.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label13, BunifuAnimatorNS.DecorationType.None);
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(276, 266);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 20);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Адрес:";
+            // 
+            // textBox1_Phone
+            // 
+            this.textBox1_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_Phone, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_Phone, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_Phone, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_Phone.Location = new System.Drawing.Point(278, 237);
+            this.textBox1_Phone.Name = "textBox1_Phone";
+            this.textBox1_Phone.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_Phone.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(276, 214);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 20);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Телефон:";
+            // 
+            // textBox1_Password_Registr
+            // 
+            this.textBox1_Password_Registr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_Password_Registr, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_Password_Registr, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_Password_Registr, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_Password_Registr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_Password_Registr.Location = new System.Drawing.Point(280, 185);
+            this.textBox1_Password_Registr.Name = "textBox1_Password_Registr";
+            this.textBox1_Password_Registr.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_Password_Registr.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label11, BunifuAnimatorNS.DecorationType.None);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(276, 162);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 20);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Пароль:";
+            // 
+            // textBox1_Login_Registr
+            // 
+            this.textBox1_Login_Registr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_Login_Registr, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_Login_Registr, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_Login_Registr, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_Login_Registr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_Login_Registr.Location = new System.Drawing.Point(34, 185);
+            this.textBox1_Login_Registr.Name = "textBox1_Login_Registr";
+            this.textBox1_Login_Registr.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_Login_Registr.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(30, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 20);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Логин:";
+            // 
+            // textBox1_Middle_name
+            // 
+            this.textBox1_Middle_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_Middle_name, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_Middle_name, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_Middle_name, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_Middle_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_Middle_name.Location = new System.Drawing.Point(34, 339);
+            this.textBox1_Middle_name.Name = "textBox1_Middle_name";
+            this.textBox1_Middle_name.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_Middle_name.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(30, 318);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Отчество:";
+            // 
+            // textBox1_LastName
+            // 
+            this.textBox1_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_LastName, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_LastName, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_LastName, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_LastName.Location = new System.Drawing.Point(34, 289);
+            this.textBox1_LastName.Name = "textBox1_LastName";
+            this.textBox1_LastName.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_LastName.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(30, 266);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Фамилия:";
+            // 
+            // textBox1_Name
+            // 
+            this.textBox1_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuTransition3.SetDecoration(this.textBox1_Name, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.textBox1_Name, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.textBox1_Name, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1_Name.Location = new System.Drawing.Point(34, 237);
+            this.textBox1_Name.Name = "textBox1_Name";
+            this.textBox1_Name.Size = new System.Drawing.Size(208, 26);
+            this.textBox1_Name.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(30, 214);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Имя:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuTransition3.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox3.Image = global::Kursak_Ol.Properties.Resources.registration;
+            this.pictureBox3.Location = new System.Drawing.Point(215, 16);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 98);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // panel7_Registr
             // 
@@ -938,53 +948,11 @@
             this.bunifuTransition1.SetDecoration(this.panel7_Registr, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.panel7_Registr, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition3.SetDecoration(this.panel7_Registr, BunifuAnimatorNS.DecorationType.None);
-            this.panel7_Registr.Location = new System.Drawing.Point(128, 89);
+            this.panel7_Registr.Location = new System.Drawing.Point(128, 95);
             this.panel7_Registr.Name = "panel7_Registr";
             this.panel7_Registr.Size = new System.Drawing.Size(612, 505);
             this.panel7_Registr.TabIndex = 14;
             this.panel7_Registr.Visible = false;
-            // 
-            // label14_phone
-            // 
-            this.label14_phone.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label14_phone, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label14_phone, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label14_phone, BunifuAnimatorNS.DecorationType.None);
-            this.label14_phone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label14_phone.Location = new System.Drawing.Point(89, 127);
-            this.label14_phone.Name = "label14_phone";
-            this.label14_phone.Size = new System.Drawing.Size(334, 17);
-            this.label14_phone.TabIndex = 18;
-            this.label14_phone.Text = "Телефон не соответствует формату 380000000000";
-            // 
-            // label14_Log_Povtor
-            // 
-            this.label14_Log_Povtor.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label14_Log_Povtor, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label14_Log_Povtor, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label14_Log_Povtor, BunifuAnimatorNS.DecorationType.None);
-            this.label14_Log_Povtor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14_Log_Povtor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label14_Log_Povtor.Location = new System.Drawing.Point(100, 127);
-            this.label14_Log_Povtor.Name = "label14_Log_Povtor";
-            this.label14_Log_Povtor.Size = new System.Drawing.Size(319, 17);
-            this.label14_Log_Povtor.TabIndex = 19;
-            this.label14_Log_Povtor.Text = "Пользователь с таким логином уже существует!";
-            // 
-            // label14_Phone_Error
-            // 
-            this.label14_Phone_Error.AutoSize = true;
-            this.bunifuTransition3.SetDecoration(this.label14_Phone_Error, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label14_Phone_Error, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label14_Phone_Error, BunifuAnimatorNS.DecorationType.None);
-            this.label14_Phone_Error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14_Phone_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label14_Phone_Error.Location = new System.Drawing.Point(101, 127);
-            this.label14_Phone_Error.Name = "label14_Phone_Error";
-            this.label14_Phone_Error.Size = new System.Drawing.Size(327, 17);
-            this.label14_Phone_Error.TabIndex = 20;
-            this.label14_Phone_Error.Text = "Пользователь с таким номером уже существует!";
             // 
             // panel12_Opovesh
             // 
@@ -999,21 +967,6 @@
             this.panel12_Opovesh.Name = "panel12_Opovesh";
             this.panel12_Opovesh.Size = new System.Drawing.Size(347, 47);
             this.panel12_Opovesh.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.bunifuTransition3.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(347, 17);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Вы зарегестрировались как пользователь:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label16_Log_Opov
             // 
@@ -1030,6 +983,69 @@
             this.label16_Log_Opov.Text = "null";
             this.label16_Log_Opov.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label14
+            // 
+            this.bunifuTransition3.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(347, 17);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Вы зарегестрировались как пользователь:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // bunifuTransition2
+            // 
+            this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
+            this.bunifuTransition2.Cursor = null;
+            animation8.AnimateOnlyDifferences = true;
+            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
+            animation8.LeafCoeff = 0F;
+            animation8.MaxTime = 1F;
+            animation8.MinTime = 0F;
+            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
+            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
+            animation8.MosaicSize = 20;
+            animation8.Padding = new System.Windows.Forms.Padding(30);
+            animation8.RotateCoeff = 0F;
+            animation8.RotateLimit = 0F;
+            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
+            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
+            animation8.TimeCoeff = 0F;
+            animation8.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation8;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this.panel10;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 30;
+            this.bunifuElipse2.TargetControl = this.panel9_Border;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 30;
+            this.bunifuElipse3.TargetControl = this.panel9;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 30;
+            this.bunifuElipse4.TargetControl = this.panel6_rr;
+            // 
             // bunifuElipse5
             // 
             this.bunifuElipse5.ElipseRadius = 15;
@@ -1039,22 +1055,22 @@
             // 
             this.bunifuTransition3.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition3.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition3.DefaultAnimation = animation3;
+            animation9.AnimateOnlyDifferences = true;
+            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
+            animation9.LeafCoeff = 0F;
+            animation9.MaxTime = 1F;
+            animation9.MinTime = 0F;
+            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
+            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
+            animation9.MosaicSize = 0;
+            animation9.Padding = new System.Windows.Forms.Padding(0);
+            animation9.RotateCoeff = 0F;
+            animation9.RotateLimit = 0F;
+            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
+            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
+            animation9.TimeCoeff = 0F;
+            animation9.TransparencyCoeff = 0F;
+            this.bunifuTransition3.DefaultAnimation = animation9;
             // 
             // timer1
             // 
@@ -1181,5 +1197,6 @@
         private BunifuAnimatorNS.BunifuTransition bunifuTransition3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label15_Vhod_Null;
     }
 }

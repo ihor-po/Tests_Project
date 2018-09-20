@@ -24,9 +24,12 @@ namespace Kursak_Ol
             this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
             this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
             this.Load += Registration_Load;
+            this.button2_Vhod_Form.Click += Button2_Vhod_Form_Click;
+            this.button2_Registretion_Form.Click += Button2_Registretion_Form_Click;
+            this.button1_Registretion.Click += Button2_Registretion_Form_Click;
             TimerCallback startCallback=new TimerCallback(Show_Slider);
             Timer timer=new Timer(startCallback);
-            timer.Change(0,3000);
+            timer.Change(4000,4000);
 
         }
 
@@ -48,7 +51,39 @@ namespace Kursak_Ol
             label14_Log_Povtor.Visible = false;
             label14_Phone_Error.Visible = false;
             panel12_Opovesh.Visible = false;
+            label15_Vhod_Null.Visible = false;
             timer1.Tick += Timer1_Tick1;
+            this.button1_Vkhod.Click += Button1_Vkhod_Click;
+        }
+
+        private void Button1_Vkhod_Click(object sender, EventArgs e)
+        {
+            if (textBox1_Login.Text == "" || textBox1_Password.Text == "")
+            {
+                label15_Vhod_Null.Visible = true;
+                return;
+            }
+
+            using (Tests_DBContainer tests = new Tests_DBContainer())
+            {
+                var user = tests.User.FirstOrDefault(z =>
+                    z.Login == textBox1_Login.Text && z.Password == textBox1_Password.Text);
+                if (user==null)
+                {
+                    this.label6_Error.Visible = true;
+                    return;
+                }
+
+                if (user.Role.Title == "User")
+                {
+                    Pupil pupil=new Pupil();
+                    pupil.ShowDialog();
+                }
+                else
+                {
+                    
+                }
+            }
         }
 
         private void Timer1_Tick1(object sender, EventArgs e)
@@ -92,7 +127,7 @@ namespace Kursak_Ol
                     return;
                 }
 
-                var id = tests.Role.FirstOrDefault(z => z.Title == "Pred");
+                var id = tests.Role.FirstOrDefault(z => z.Title == "User");
                 if (id == null)
                 {
                     return;
@@ -116,6 +151,13 @@ namespace Kursak_Ol
             this.label16_Log_Opov.Text = textBox1_Login_Registr.Text;
             bunifuTransition3.ShowSync(this.panel12_Opovesh);
             timer1.Start();
+            this.textBox1_Adres.Text = null;
+            this.textBox1_LastName.Text = null;
+            this.textBox1_Login_Registr.Text = null;
+            this.textBox1_Middle_name.Text = null;
+            this.textBox1_Password_Registr.Text = null;
+            this.textBox1_Name.Text = null;
+            this.textBox1_Phone.Text = null;
         }
 
         private void textBox(object sender, EventArgs a)
@@ -125,6 +167,7 @@ namespace Kursak_Ol
             label14_Log_Povtor.Visible = false;
             label6_Error.Visible = false;
             label14_Phone_Error.Visible = false;
+            label15_Vhod_Null.Visible = false;
             TextBox text=sender as TextBox;
             if (text.Name == textBox1_Adres.Name)
             {
@@ -208,9 +251,7 @@ namespace Kursak_Ol
             Bitmap My_image = new Bitmap(String.Format(@"..\..\images\Slider\{0}.png", iSlaider));
             this.pictureBox3_Slider.Image = My_image;
             this.bunifuTransition1.Show(this.pictureBox3_Slider);
-            this.button2_Vhod_Form.Click += Button2_Vhod_Form_Click;
-            this.button2_Registretion_Form.Click += Button2_Registretion_Form_Click;
-            this.button1_Registretion.Click+= Button2_Registretion_Form_Click;
+            
         }
 
         private void Button2_Registretion_Form_Click(object sender, EventArgs e)
@@ -221,6 +262,13 @@ namespace Kursak_Ol
         private void Button2_Vhod_Form_Click(object sender, EventArgs e)
         {
             this.panel7_Registr.Visible = false;
+            this.textBox1_Adres.Text = null;
+            this.textBox1_LastName.Text = null;
+            this.textBox1_Login_Registr.Text = null;
+            this.textBox1_Middle_name.Text = null;
+            this.textBox1_Password_Registr.Text = null;
+            this.textBox1_Name.Text = null;
+            this.textBox1_Phone.Text = null;
         }
 
         private void Close_Slaider()
