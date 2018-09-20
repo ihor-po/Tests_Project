@@ -19,6 +19,8 @@ namespace Kursak_Ol
         public Registration()
         {
             InitializeComponent();
+            //bunifu это теже кнопки 
+            // 4 кнопки которые закрывают сворачивают и т.д
             this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
             this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
             this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
@@ -27,14 +29,16 @@ namespace Kursak_Ol
             this.button2_Vhod_Form.Click += Button2_Vhod_Form_Click;
             this.button2_Registretion_Form.Click += Button2_Registretion_Form_Click;
             this.button1_Registretion.Click += Button2_Registretion_Form_Click;
+            //Работа логотипа
             TimerCallback startCallback=new TimerCallback(Show_Slider);
             Timer timer=new Timer(startCallback);
             timer.Change(4000,4000);
 
         }
 
-        private void Registration_Load(object sender, EventArgs e)
+        private void Registration_Load(object sender, EventArgs e)//загружаю все события 
         {
+            //проверки всех боксов на пробелы
             this.textBox1_Adres.TextChanged+= new EventHandler(textBox);
             this.textBox1_LastName.TextChanged += new EventHandler(textBox);
             this.textBox1_Login.TextChanged += new EventHandler(textBox);
@@ -45,6 +49,7 @@ namespace Kursak_Ol
             this.textBox1_Password_Registr.TextChanged += new EventHandler(textBox);
             this.textBox1_Phone.TextChanged += new EventHandler(textBox);
             this.button1_Registration_DB.Click += Button1_Registration_DB_Click;
+            //labl который будет выводить ошибки на форме для пользователя
             label14_Null.Visible = false;
             label6_Error.Visible = false;
             label14_phone.Visible = false;
@@ -77,11 +82,16 @@ namespace Kursak_Ol
                 if (user.Role.Title == "User")
                 {
                     Pupil pupil=new Pupil(user);
+                    textBox1_Login.Text = null;
+                    textBox1_Password.Text = null;
                     pupil.ShowDialog();
                 }
                 else
                 {
-                    
+                    Teacher teacher=new Teacher(user);
+                    textBox1_Login.Text = null;
+                    textBox1_Password.Text = null;
+                    teacher.ShowDialog();
                 }
             }
         }
@@ -102,7 +112,7 @@ namespace Kursak_Ol
                 return;
             }
             string phoneNumber = @"380\d{9}";
-            if (!Regex.Match(textBox1_Phone.Text, phoneNumber).Success)
+            if (!Regex.Match(textBox1_Phone.Text, phoneNumber).Success)//проверка на правильность написания телефона
             {
                 label14_phone.Visible = true;
                 return;
@@ -112,7 +122,7 @@ namespace Kursak_Ol
             {
                 string login = textBox1_Login_Registr.Text;
                 var log = tests.User.FirstOrDefault(z => z.Login == login);
-                if (log!=null)
+                if (log!=null)//проверка на логин есть или нет его в БД
                 {
                     label14_Log_Povtor.Visible = true;
                     return;
@@ -120,18 +130,18 @@ namespace Kursak_Ol
 
                 string ph = textBox1_Phone.Text;
                 var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
-                if (phone!=null)
+                if (phone!=null)//проверка на телефона есть или нет его в БД
                 {
                     label14_Phone_Error.Visible = true;
                     return;
                 }
 
-                var id = tests.Role.FirstOrDefault(z => z.Title == "User");
-                if (id == null)
+                var id = tests.Role.FirstOrDefault(z => z.Title == "User");//роль
+                if (id == null)//проверка роли есть он в БД 
                 {
                     return;
                 }
-
+                //Создаем пользователя
                 User rUser=new User
                 {
                     Address = textBox1_Adres.Text,
@@ -146,7 +156,7 @@ namespace Kursak_Ol
                 tests.User.Add(rUser);
                 tests.SaveChanges();
             }
-
+            //все происходят манипуляции
             this.label16_Log_Opov.Text = textBox1_Login_Registr.Text;
             bunifuTransition3.ShowSync(this.panel12_Opovesh);
             timer1.Start();

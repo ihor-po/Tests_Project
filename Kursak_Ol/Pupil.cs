@@ -18,12 +18,15 @@ namespace Kursak_Ol
         {
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
+            //bunifu это теже кнопки 
+            // 4 кнопки которые закрывают сворачивают и т.д
             this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
             this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
             this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
             this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
             this.panel14_Opoves.Visible = false;
             this.label16_Log_Opov.Text = user.Login;
+            //выводит на несколько секунд сообщение
             timer1.Tick += Timer1_Tick;
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
@@ -31,6 +34,7 @@ namespace Kursak_Ol
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            //Вывожу а потом закрываю таймером потока
             timer1.Stop();
             bunifuTransition1.ShowSync(panel14_Opoves);
             TimerCallback startCallback=new TimerCallback(Panal_Visibl);
@@ -46,6 +50,7 @@ namespace Kursak_Ol
 
         private void Button1_Close_Click(object sender, EventArgs e)
         {
+            //для вас как она будет функционировать не знаю
             MessageBox.Show("Событие еще не определенно! что делать", "Оповещение", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
