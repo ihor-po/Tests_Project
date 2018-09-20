@@ -76,7 +76,7 @@ namespace Kursak_Ol
 
                 if (user.Role.Title == "User")
                 {
-                    Pupil pupil=new Pupil();
+                    Pupil pupil=new Pupil(user);
                     pupil.ShowDialog();
                 }
                 else
@@ -111,7 +111,6 @@ namespace Kursak_Ol
             using (Tests_DBContainer tests =new Tests_DBContainer())
             {
                 string login = textBox1_Login_Registr.Text;
-                //var log = tests.User.Where(z => z.Login == login).ToList();
                 var log = tests.User.FirstOrDefault(z => z.Login == login);
                 if (log!=null)
                 {

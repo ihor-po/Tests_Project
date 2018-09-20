@@ -27,3 +27,4 @@ D:\git\Kursak\Tests_Project\Kursak_Ol\bin\Debug\EntityFramework.dll
 D:\git\Kursak\Tests_Project\Kursak_Ol\bin\Debug\EntityFramework.SqlServer.dll
 D:\git\Kursak\Tests_Project\Kursak_Ol\bin\Debug\EntityFramework.xml
 D:\git\Kursak\Tests_Project\Kursak_Ol\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\Kursak\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.Pupil.resources

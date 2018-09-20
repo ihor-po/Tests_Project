@@ -29,16 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
-            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
             this.panel1_Top = new System.Windows.Forms.Panel();
-            this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1_Min = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1_Close = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,7 +44,6 @@
             this.button2_Registretion_Form = new System.Windows.Forms.Button();
             this.button2_Vhod_Form = new System.Windows.Forms.Button();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.pictureBox3_Slider = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel6_rr = new System.Windows.Forms.Panel();
             this.label15_Vhod_Null = new System.Windows.Forms.Label();
@@ -63,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1_Login = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -88,7 +81,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1_Name = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7_Registr = new System.Windows.Forms.Panel();
             this.panel12_Opovesh = new System.Windows.Forms.Panel();
             this.label16_Log_Opov = new System.Windows.Forms.Label();
@@ -102,30 +94,40 @@
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuTransition3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3_Slider = new System.Windows.Forms.PictureBox();
+            this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1_Min = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1_Close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1_Top.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6_rr.SuspendLayout();
+            this.panel7_Suda.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel9_Border.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel7_Registr.SuspendLayout();
+            this.panel12_Opovesh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Slider)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel6_rr.SuspendLayout();
-            this.panel7_Suda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel9_Border.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel7_Registr.SuspendLayout();
-            this.panel12_Opovesh.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
             // 
             this.panel1_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel1_Top.Controls.Add(this.label15);
             this.panel1_Top.Controls.Add(this.bunifuImageButton1_Max);
             this.panel1_Top.Controls.Add(this.bunifuImageButton1_Min);
             this.panel1_Top.Controls.Add(this.bunifuImageButton2_Norm);
@@ -139,92 +141,6 @@
             this.panel1_Top.Name = "panel1_Top";
             this.panel1_Top.Size = new System.Drawing.Size(829, 50);
             this.panel1_Top.TabIndex = 0;
-            // 
-            // bunifuImageButton1_Max
-            // 
-            this.bunifuImageButton1_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1_Max.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1_Max.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1_Max, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1_Max, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.bunifuImageButton1_Max, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton1_Max.Image = global::Kursak_Ol.Properties.Resources._552;
-            this.bunifuImageButton1_Max.ImageActive = null;
-            this.bunifuImageButton1_Max.Location = new System.Drawing.Point(762, 13);
-            this.bunifuImageButton1_Max.Name = "bunifuImageButton1_Max";
-            this.bunifuImageButton1_Max.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1_Max.TabIndex = 2;
-            this.bunifuImageButton1_Max.TabStop = false;
-            this.bunifuImageButton1_Max.Zoom = 10;
-            // 
-            // bunifuImageButton1_Min
-            // 
-            this.bunifuImageButton1_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1_Min.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1_Min.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1_Min, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1_Min, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.bunifuImageButton1_Min, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton1_Min.Image = global::Kursak_Ol.Properties.Resources.min;
-            this.bunifuImageButton1_Min.ImageActive = null;
-            this.bunifuImageButton1_Min.Location = new System.Drawing.Point(727, 13);
-            this.bunifuImageButton1_Min.Name = "bunifuImageButton1_Min";
-            this.bunifuImageButton1_Min.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1_Min.TabIndex = 1;
-            this.bunifuImageButton1_Min.TabStop = false;
-            this.bunifuImageButton1_Min.Zoom = 10;
-            // 
-            // bunifuImageButton2_Norm
-            // 
-            this.bunifuImageButton2_Norm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton2_Norm.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2_Norm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton2_Norm, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuImageButton2_Norm, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.bunifuImageButton2_Norm, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton2_Norm.Image = global::Kursak_Ol.Properties.Resources.Max;
-            this.bunifuImageButton2_Norm.ImageActive = null;
-            this.bunifuImageButton2_Norm.Location = new System.Drawing.Point(762, 13);
-            this.bunifuImageButton2_Norm.Name = "bunifuImageButton2_Norm";
-            this.bunifuImageButton2_Norm.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton2_Norm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2_Norm.TabIndex = 1;
-            this.bunifuImageButton2_Norm.TabStop = false;
-            this.bunifuImageButton2_Norm.Visible = false;
-            this.bunifuImageButton2_Norm.Zoom = 10;
-            // 
-            // bunifuImageButton1_Close
-            // 
-            this.bunifuImageButton1_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1_Close.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition3.SetDecoration(this.bunifuImageButton1_Close, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton1_Close.Image = global::Kursak_Ol.Properties.Resources.close;
-            this.bunifuImageButton1_Close.ImageActive = null;
-            this.bunifuImageButton1_Close.Location = new System.Drawing.Point(797, 13);
-            this.bunifuImageButton1_Close.Name = "bunifuImageButton1_Close";
-            this.bunifuImageButton1_Close.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1_Close.TabIndex = 1;
-            this.bunifuImageButton1_Close.TabStop = false;
-            this.bunifuImageButton1_Close.Zoom = 10;
-            // 
-            // pictureBox1
-            // 
-            this.bunifuTransition3.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = global::Kursak_Ol.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -357,35 +273,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Scale;
             this.bunifuTransition1.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation7;
-            // 
-            // pictureBox3_Slider
-            // 
-            this.bunifuTransition3.SetDecoration(this.pictureBox3_Slider, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox3_Slider, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox3_Slider, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3_Slider.Image = global::Kursak_Ol.Properties.Resources._0;
-            this.pictureBox3_Slider.Location = new System.Drawing.Point(24, 89);
-            this.pictureBox3_Slider.Name = "pictureBox3_Slider";
-            this.pictureBox3_Slider.Size = new System.Drawing.Size(100, 85);
-            this.pictureBox3_Slider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3_Slider.TabIndex = 13;
-            this.pictureBox3_Slider.TabStop = false;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation4;
             // 
             // panel9
             // 
@@ -572,19 +475,6 @@
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Логин:";
-            // 
-            // pictureBox2
-            // 
-            this.bunifuTransition3.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox2.Image = global::Kursak_Ol.Properties.Resources.sign_in;
-            this.pictureBox2.Location = new System.Drawing.Point(97, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 98);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // panel7
             // 
@@ -925,20 +815,6 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Имя:";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuTransition3.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Image = global::Kursak_Ol.Properties.Resources.registration;
-            this.pictureBox3.Location = new System.Drawing.Point(215, 16);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 98);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel7_Registr
             // 
             this.panel7_Registr.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1002,22 +878,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.bunifuTransition2.Cursor = null;
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 20;
-            animation8.Padding = new System.Windows.Forms.Padding(30);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation8;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 20;
+            animation5.Padding = new System.Windows.Forms.Padding(30);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation5;
             // 
             // bunifuDragControl1
             // 
@@ -1055,26 +931,166 @@
             // 
             this.bunifuTransition3.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition3.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(0);
-            animation9.RotateCoeff = 0F;
-            animation9.RotateLimit = 0F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 0F;
-            this.bunifuTransition3.DefaultAnimation = animation9;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.bunifuTransition3.DefaultAnimation = animation6;
             // 
             // timer1
             // 
             this.timer1.Interval = 2500;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.bunifuTransition3.SetDecoration(this.label15, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label15, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label15, BunifuAnimatorNS.DecorationType.None);
+            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(65, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "TASTER";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuTransition3.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox3.Image = global::Kursak_Ol.Properties.Resources.registration;
+            this.pictureBox3.Location = new System.Drawing.Point(215, 16);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 98);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.bunifuTransition3.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox2.Image = global::Kursak_Ol.Properties.Resources.sign_in;
+            this.pictureBox2.Location = new System.Drawing.Point(97, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 98);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3_Slider
+            // 
+            this.bunifuTransition3.SetDecoration(this.pictureBox3_Slider, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox3_Slider, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox3_Slider, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox3_Slider.Image = global::Kursak_Ol.Properties.Resources._0;
+            this.pictureBox3_Slider.Location = new System.Drawing.Point(24, 89);
+            this.pictureBox3_Slider.Name = "pictureBox3_Slider";
+            this.pictureBox3_Slider.Size = new System.Drawing.Size(100, 85);
+            this.pictureBox3_Slider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3_Slider.TabIndex = 13;
+            this.pictureBox3_Slider.TabStop = false;
+            // 
+            // bunifuImageButton1_Max
+            // 
+            this.bunifuImageButton1_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1_Max.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1_Max.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1_Max, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1_Max, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.bunifuImageButton1_Max, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1_Max.Image = global::Kursak_Ol.Properties.Resources._552;
+            this.bunifuImageButton1_Max.ImageActive = null;
+            this.bunifuImageButton1_Max.Location = new System.Drawing.Point(762, 13);
+            this.bunifuImageButton1_Max.Name = "bunifuImageButton1_Max";
+            this.bunifuImageButton1_Max.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1_Max.TabIndex = 2;
+            this.bunifuImageButton1_Max.TabStop = false;
+            this.bunifuImageButton1_Max.Zoom = 10;
+            // 
+            // bunifuImageButton1_Min
+            // 
+            this.bunifuImageButton1_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1_Min.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1_Min.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1_Min, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1_Min, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.bunifuImageButton1_Min, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1_Min.Image = global::Kursak_Ol.Properties.Resources.min;
+            this.bunifuImageButton1_Min.ImageActive = null;
+            this.bunifuImageButton1_Min.Location = new System.Drawing.Point(727, 13);
+            this.bunifuImageButton1_Min.Name = "bunifuImageButton1_Min";
+            this.bunifuImageButton1_Min.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1_Min.TabIndex = 1;
+            this.bunifuImageButton1_Min.TabStop = false;
+            this.bunifuImageButton1_Min.Zoom = 10;
+            // 
+            // bunifuImageButton2_Norm
+            // 
+            this.bunifuImageButton2_Norm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton2_Norm.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2_Norm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton2_Norm, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton2_Norm, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.bunifuImageButton2_Norm, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton2_Norm.Image = global::Kursak_Ol.Properties.Resources.Max;
+            this.bunifuImageButton2_Norm.ImageActive = null;
+            this.bunifuImageButton2_Norm.Location = new System.Drawing.Point(762, 13);
+            this.bunifuImageButton2_Norm.Name = "bunifuImageButton2_Norm";
+            this.bunifuImageButton2_Norm.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton2_Norm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2_Norm.TabIndex = 1;
+            this.bunifuImageButton2_Norm.TabStop = false;
+            this.bunifuImageButton2_Norm.Visible = false;
+            this.bunifuImageButton2_Norm.Zoom = 10;
+            // 
+            // bunifuImageButton1_Close
+            // 
+            this.bunifuImageButton1_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1_Close.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.bunifuImageButton1_Close, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.bunifuImageButton1_Close, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition3.SetDecoration(this.bunifuImageButton1_Close, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1_Close.Image = global::Kursak_Ol.Properties.Resources.close;
+            this.bunifuImageButton1_Close.ImageActive = null;
+            this.bunifuImageButton1_Close.Location = new System.Drawing.Point(797, 13);
+            this.bunifuImageButton1_Close.Name = "bunifuImageButton1_Close";
+            this.bunifuImageButton1_Close.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1_Close.TabIndex = 1;
+            this.bunifuImageButton1_Close.TabStop = false;
+            this.bunifuImageButton1_Close.Zoom = 10;
+            // 
+            // pictureBox1
+            // 
+            this.bunifuTransition3.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::Kursak_Ol.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Registration
             // 
@@ -1099,30 +1115,31 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.panel1_Top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1_Top.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Slider)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel6_rr.ResumeLayout(false);
             this.panel6_rr.PerformLayout();
             this.panel7_Suda.ResumeLayout(false);
             this.panel7_Suda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel9_Border.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7_Registr.ResumeLayout(false);
             this.panel12_Opovesh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Slider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1198,5 +1215,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label15_Vhod_Null;
+        private System.Windows.Forms.Label label15;
     }
 }
