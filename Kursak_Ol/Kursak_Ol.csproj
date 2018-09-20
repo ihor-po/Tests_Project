@@ -86,6 +86,12 @@
     <Compile Include="Role.cs">
       <DependentUpon>Tests_DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.Designer.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test.cs">
       <DependentUpon>Tests_DB.tt</DependentUpon>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -208,6 +217,9 @@
     <None Include="images\registration.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\edit.png" />
+    <None Include="images\add.png" />
+    <None Include="images\open.png" />
     <Content Include="Tests_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Tests_DB.Context.cs</LastGenOutput>
