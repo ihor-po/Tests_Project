@@ -10,11 +10,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Threading.Timer;
 
+
 namespace Kursak_Ol
 {
-    public partial class Pupil : Form
+    public partial class Teacher : Form
     {
-        public Pupil(User user)
+        public Teacher( User user)
         {
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
@@ -31,14 +32,13 @@ namespace Kursak_Ol
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
         }
-
         private void Timer1_Tick(object sender, EventArgs e)
         {
             //Вывожу а потом закрываю таймером потока
             timer1.Stop();
             bunifuTransition1.ShowSync(panel14_Opoves);
-            TimerCallback startCallback=new TimerCallback(Panal_Visibl);
-            Timer timer=new Timer(startCallback);
+            TimerCallback stCallback=new TimerCallback(Panal_Visibl);
+            Timer timer = new Timer(stCallback);
             timer.Change(2500, 3000);
         }
 
@@ -54,7 +54,6 @@ namespace Kursak_Ol
             MessageBox.Show("Событие еще не определенно! что делать", "Оповещение", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
-
         private void BunifuImageButton1_Min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
