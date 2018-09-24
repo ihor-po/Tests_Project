@@ -13,25 +13,46 @@ using Timer = System.Threading.Timer;
 
 namespace Kursak_Ol
 {
-    public partial class Teacher : Form
+    public partial class Teacher : MyForm
     {
         public Teacher( User user)
         {
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
-            //bunifu это теже кнопки 
-            // 4 кнопки которые закрывают сворачивают и т.д
-            this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
-            this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
-            this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
-            this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
+            //наследуемый метод
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
             this.panel14_Opoves.Visible = false;
             this.label16_Log_Opov.Text = user.Login;
+            //Кнопка для создания окна добавить тест
+            this.bunifuImageButton_AddNewTest.Click += BunifuImageButton_AddNewTest_Click;
+            //Кнопка для окна создания редактировать тест
+            this.bunifuImageButton1_Edit_Test.Click += BunifuImageButton1_Edit_Test_Click;
+            //Кнопка для создания вывода результатов
+            this.bunifuImageButton3_Rezult.Click += BunifuImageButton3_Rezult_Click;
             //выводит на несколько секунд сообщение
             timer1.Tick += Timer1_Tick;
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
         }
+
+        private void BunifuImageButton3_Rezult_Click(object sender, EventArgs e)
+        {
+            Result_For_Teacher result=new Result_For_Teacher();
+            result.ShowDialog();
+        }
+
+        private void BunifuImageButton1_Edit_Test_Click(object sender, EventArgs e)
+        {
+            Select_Test_To_Edit selectTest=new Select_Test_To_Edit();
+            selectTest.ShowDialog();
+        }
+
+        private void BunifuImageButton_AddNewTest_Click(object sender, EventArgs e)
+        {
+            Add_Test test = new Add_Test();
+            test.ShowDialog();
+        }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
             //Вывожу а потом закрываю таймером потока
@@ -53,29 +74,6 @@ namespace Kursak_Ol
             //для вас как она будет функционировать не знаю
             MessageBox.Show("Событие еще не определенно! что делать", "Оповещение", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
-        }
-        private void BunifuImageButton1_Min_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BunifuImageButton2_Norm_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            this.bunifuImageButton2_Norm.Visible = false;
-            this.bunifuImageButton1_Max.Visible = true;
-        }
-
-        private void BunifuImageButton1_Max_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.bunifuImageButton1_Max.Visible = false;
-            this.bunifuImageButton2_Norm.Visible = true;
-        }
-
-        private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

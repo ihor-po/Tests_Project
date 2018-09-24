@@ -60,14 +60,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Test.Designer.cs">
+      <DependentUpon>Add_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>Tests_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Test.Designer.cs">
+      <DependentUpon>Edit_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,8 +98,26 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Result_For_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result_For_Teacher.Designer.cs">
+      <DependentUpon>Result_For_Teacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>Tests_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Question_To_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Question_To_Edit.Designer.cs">
+      <DependentUpon>Select_Question_To_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Test_To_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Test_To_Edit.Designer.cs">
+      <DependentUpon>Select_Test_To_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
       <SubType>Form</SubType>
@@ -128,6 +161,12 @@
     <Compile Include="UserTestAnswer.cs">
       <DependentUpon>Tests_DB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_Test.resx">
+      <DependentUpon>Add_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Test.resx">
+      <DependentUpon>Edit_Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +185,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result_For_Teacher.resx">
+      <DependentUpon>Result_For_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Question_To_Edit.resx">
+      <DependentUpon>Select_Question_To_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Test_To_Edit.resx">
+      <DependentUpon>Select_Test_To_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher.resx">
       <DependentUpon>Teacher.cs</DependentUpon>

@@ -12,18 +12,14 @@ using Timer = System.Threading.Timer;
 
 namespace Kursak_Ol
 {
-    public partial class Pupil : Form
+    public partial class Pupil : MyForm
     {
         public Pupil(User user)
         {
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
-            //bunifu это теже кнопки 
-            // 4 кнопки которые закрывают сворачивают и т.д
-            this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
-            this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
-            this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
-            this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
+            //наследуемый метод
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
             this.panel14_Opoves.Visible = false;
             this.label16_Log_Opov.Text = user.Login;
             //выводит на несколько секунд сообщение
@@ -54,29 +50,6 @@ namespace Kursak_Ol
             MessageBox.Show("Событие еще не определенно! что делать", "Оповещение", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
-
-        private void BunifuImageButton1_Min_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BunifuImageButton2_Norm_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            this.bunifuImageButton2_Norm.Visible = false;
-            this.bunifuImageButton1_Max.Visible = true;
-        }
-
-        private void BunifuImageButton1_Max_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.bunifuImageButton1_Max.Visible = false;
-            this.bunifuImageButton2_Norm.Visible = true;
-        }
-
-        private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

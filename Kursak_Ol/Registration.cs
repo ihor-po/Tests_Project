@@ -13,33 +13,32 @@ using Timer = System.Threading.Timer;
 
 namespace Kursak_Ol
 {
-    public partial class Registration : Form
+    public partial class Registration : MyForm
     {
         private int iSlaider;
         public Registration()
         {
             InitializeComponent();
             //bunifu это теже кнопки 
-            // 4 кнопки которые закрывают сворачивают и т.д
+
             this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
-            this.bunifuImageButton1_Max.Click += BunifuImageButton1_Max_Click;
-            this.bunifuImageButton2_Norm.Click += BunifuImageButton2_Norm_Click;
-            this.bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
+            //наследуемый метод
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.Load += Registration_Load;
             this.button2_Vhod_Form.Click += Button2_Vhod_Form_Click;
             this.button2_Registretion_Form.Click += Button2_Registretion_Form_Click;
             this.button1_Registretion.Click += Button2_Registretion_Form_Click;
             //Работа логотипа
-            TimerCallback startCallback=new TimerCallback(Show_Slider);
-            Timer timer=new Timer(startCallback);
-            timer.Change(4000,4000);
+            TimerCallback startCallback = new TimerCallback(Show_Slider);
+            Timer timer = new Timer(startCallback);
+            timer.Change(4000, 4000);
 
         }
 
         private void Registration_Load(object sender, EventArgs e)//загружаю все события 
         {
             //проверки всех боксов на пробелы
-            this.textBox1_Adres.TextChanged+= new EventHandler(textBox);
+            this.textBox1_Adres.TextChanged += new EventHandler(textBox);
             this.textBox1_LastName.TextChanged += new EventHandler(textBox);
             this.textBox1_Login.TextChanged += new EventHandler(textBox);
             this.textBox1_Login_Registr.TextChanged += new EventHandler(textBox);
@@ -73,7 +72,7 @@ namespace Kursak_Ol
             {
                 var user = tests.User.FirstOrDefault(z =>
                     z.Login == textBox1_Login.Text && z.Password == textBox1_Password.Text);
-                if (user==null)
+                if (user == null)
                 {
                     this.label6_Error.Visible = true;
                     return;
@@ -81,14 +80,14 @@ namespace Kursak_Ol
 
                 if (user.Role.Title == "Студент")
                 {
-                    Pupil pupil=new Pupil(user);
+                    Pupil pupil = new Pupil(user);
                     textBox1_Login.Text = null;
                     textBox1_Password.Text = null;
                     pupil.ShowDialog();
                 }
-                else if(user.Role.Title == "Преподователь")
+                else if (user.Role.Title == "Преподователь")
                 {
-                    Teacher teacher=new Teacher(user);
+                    Teacher teacher = new Teacher(user);
                     textBox1_Login.Text = null;
                     textBox1_Password.Text = null;
                     teacher.ShowDialog();
@@ -111,18 +110,18 @@ namespace Kursak_Ol
                 label14_Null.Visible = true;
                 return;
             }
-            string phoneNumber = @"380\d{9}";
-            if (!Regex.Match(textBox1_Phone.Text, phoneNumber).Success)//проверка на правильность написания телефона
+            string phoneNumber = @"^380\d{9}$";
+            if (!Regex.IsMatch(textBox1_Phone.Text, phoneNumber, RegexOptions.IgnoreCase))//проверка на правильность написания телефона
             {
                 label14_phone.Visible = true;
                 return;
             }
 
-            using (Tests_DBContainer tests =new Tests_DBContainer())
+            using (Tests_DBContainer tests = new Tests_DBContainer())
             {
                 string login = textBox1_Login_Registr.Text;
                 var log = tests.User.FirstOrDefault(z => z.Login == login);
-                if (log!=null)//проверка на логин есть или нет его в БД
+                if (log != null)//проверка на логин есть или нет его в БД
                 {
                     label14_Log_Povtor.Visible = true;
                     return;
@@ -130,7 +129,7 @@ namespace Kursak_Ol
 
                 string ph = textBox1_Phone.Text;
                 var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
-                if (phone!=null)//проверка на телефона есть или нет его в БД
+                if (phone != null)//проверка на телефона есть или нет его в БД
                 {
                     label14_Phone_Error.Visible = true;
                     return;
@@ -142,7 +141,7 @@ namespace Kursak_Ol
                     return;
                 }
                 //Создаем пользователя
-                User rUser=new User
+                User rUser = new User
                 {
                     Address = textBox1_Adres.Text,
                     FirstName = textBox1_Name.Text,
@@ -177,7 +176,7 @@ namespace Kursak_Ol
             label6_Error.Visible = false;
             label14_Phone_Error.Visible = false;
             label15_Vhod_Null.Visible = false;
-            TextBox text=sender as TextBox;
+            TextBox text = sender as TextBox;
             if (text.Name == textBox1_Adres.Name)
             {
                 if (String.IsNullOrWhiteSpace(textBox1_Adres.Text))
@@ -249,18 +248,12 @@ namespace Kursak_Ol
             Show_Slaider();
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            Close_Slaider();
-            Show_Slaider();
-        }
-
         private void Show_Slaider()
         {
             Bitmap My_image = new Bitmap(String.Format(@"..\..\images\Slider\{0}.png", iSlaider));
             this.pictureBox3_Slider.Image = My_image;
             this.bunifuTransition1.Show(this.pictureBox3_Slider);
-            
+
         }
 
         private void Button2_Registretion_Form_Click(object sender, EventArgs e)
@@ -288,26 +281,7 @@ namespace Kursak_Ol
             {
                 iSlaider = 0;
             }
-            
-        }
 
-        private void BunifuImageButton1_Min_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BunifuImageButton2_Norm_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            this.bunifuImageButton2_Norm.Visible = false;
-            this.bunifuImageButton1_Max.Visible = true;
-        }
-
-        private void BunifuImageButton1_Max_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.bunifuImageButton1_Max.Visible = false;
-            this.bunifuImageButton2_Norm.Visible = true;
         }
 
         private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
