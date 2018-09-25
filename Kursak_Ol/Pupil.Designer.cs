@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pupil));
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
@@ -42,9 +42,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel14_Opoves = new System.Windows.Forms.Panel();
-            this.label16_Log_Opov = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1_Predmet = new System.Windows.Forms.ComboBox();
             this.label1_Name = new System.Windows.Forms.Label();
@@ -64,6 +61,9 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.panel14_Opoves = new System.Windows.Forms.Panel();
+            this.label16_Log_Opov = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -71,9 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel14_Opoves.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel14_Opoves.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -224,44 +224,6 @@
             this.panel4.Size = new System.Drawing.Size(819, 74);
             this.panel4.TabIndex = 4;
             // 
-            // panel14_Opoves
-            // 
-            this.panel14_Opoves.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel14_Opoves.BackColor = System.Drawing.Color.DarkGray;
-            this.panel14_Opoves.Controls.Add(this.label16_Log_Opov);
-            this.panel14_Opoves.Controls.Add(this.label14);
-            this.bunifuTransition1.SetDecoration(this.panel14_Opoves, BunifuAnimatorNS.DecorationType.None);
-            this.panel14_Opoves.Location = new System.Drawing.Point(265, 13);
-            this.panel14_Opoves.Name = "panel14_Opoves";
-            this.panel14_Opoves.Size = new System.Drawing.Size(312, 50);
-            this.panel14_Opoves.TabIndex = 3;
-            // 
-            // label16_Log_Opov
-            // 
-            this.bunifuTransition1.SetDecoration(this.label16_Log_Opov, BunifuAnimatorNS.DecorationType.None);
-            this.label16_Log_Opov.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label16_Log_Opov.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16_Log_Opov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.label16_Log_Opov.Location = new System.Drawing.Point(0, 17);
-            this.label16_Log_Opov.Name = "label16_Log_Opov";
-            this.label16_Log_Opov.Size = new System.Drawing.Size(312, 17);
-            this.label16_Log_Opov.TabIndex = 3;
-            this.label16_Log_Opov.Text = "null";
-            this.label16_Log_Opov.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label14
-            // 
-            this.bunifuTransition1.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(312, 17);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Вы вошли как пользователь под логином:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -269,7 +231,7 @@
             this.bunifuTransition1.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.label1.Location = new System.Drawing.Point(475, 33);
+            this.label1.Location = new System.Drawing.Point(311, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 17);
             this.label1.TabIndex = 2;
@@ -284,9 +246,9 @@
             this.comboBox1_Predmet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1_Predmet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1_Predmet.FormattingEnabled = true;
-            this.comboBox1_Predmet.Location = new System.Drawing.Point(617, 28);
+            this.comboBox1_Predmet.Location = new System.Drawing.Point(453, 28);
             this.comboBox1_Predmet.Name = "comboBox1_Predmet";
-            this.comboBox1_Predmet.Size = new System.Drawing.Size(173, 26);
+            this.comboBox1_Predmet.Size = new System.Drawing.Size(337, 26);
             this.comboBox1_Predmet.TabIndex = 1;
             // 
             // label1_Name
@@ -458,22 +420,60 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
+            // 
+            // panel14_Opoves
+            // 
+            this.panel14_Opoves.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel14_Opoves.BackColor = System.Drawing.Color.DarkGray;
+            this.panel14_Opoves.Controls.Add(this.label16_Log_Opov);
+            this.panel14_Opoves.Controls.Add(this.label14);
+            this.bunifuTransition1.SetDecoration(this.panel14_Opoves, BunifuAnimatorNS.DecorationType.None);
+            this.panel14_Opoves.Location = new System.Drawing.Point(253, 12);
+            this.panel14_Opoves.Name = "panel14_Opoves";
+            this.panel14_Opoves.Size = new System.Drawing.Size(312, 50);
+            this.panel14_Opoves.TabIndex = 4;
+            // 
+            // label16_Log_Opov
+            // 
+            this.bunifuTransition1.SetDecoration(this.label16_Log_Opov, BunifuAnimatorNS.DecorationType.None);
+            this.label16_Log_Opov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label16_Log_Opov.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16_Log_Opov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.label16_Log_Opov.Location = new System.Drawing.Point(0, 17);
+            this.label16_Log_Opov.Name = "label16_Log_Opov";
+            this.label16_Log_Opov.Size = new System.Drawing.Size(312, 17);
+            this.label16_Log_Opov.TabIndex = 3;
+            this.label16_Log_Opov.Text = "null";
+            this.label16_Log_Opov.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label14
+            // 
+            this.bunifuTransition1.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(312, 17);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Вы вошли как пользователь под логином:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Pupil
             // 
@@ -505,9 +505,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel14_Opoves.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel14_Opoves.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -540,12 +540,12 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button1_Statistika;
         private System.Windows.Forms.Button button1_Close;
-        private System.Windows.Forms.Panel panel14_Opoves;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16_Log_Opov;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Timer timer1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        private System.Windows.Forms.Panel panel14_Opoves;
+        private System.Windows.Forms.Label label16_Log_Opov;
+        private System.Windows.Forms.Label label14;
     }
 }
