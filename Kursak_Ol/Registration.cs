@@ -85,7 +85,7 @@ namespace Kursak_Ol
                     textBox1_Password.Text = null;
                     pupil.ShowDialog();
                 }
-                else if (user.Role.Title == "Преподователь")
+                else if (user.Role.Title == "Преподаватель")
                 {
                     Teacher teacher = new Teacher(user);
                     textBox1_Login.Text = null;
