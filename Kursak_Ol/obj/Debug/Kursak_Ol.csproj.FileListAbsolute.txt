@@ -52,3 +52,5 @@ C:\Users\Oleg\Desktop\Tests_Project\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.
 C:\Users\Oleg\Desktop\Tests_Project\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CopyComplete
 C:\Users\Oleg\Desktop\Tests_Project\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.exe
 C:\Users\Oleg\Desktop\Tests_Project\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.pdb
+C:\Users\Oleg\Desktop\Tests_Project\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.Pupil_Test.resources
+C:\Users\Oleg\Desktop\Tests_Project\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.Result_For_Pupil.resources
