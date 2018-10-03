@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pupil_Test));
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -53,10 +54,10 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel_ShowAnswer = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.listBox_SelectQuestion = new System.Windows.Forms.ListBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel_ShowAnswer = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
@@ -340,25 +341,6 @@
             this.panel13.Size = new System.Drawing.Size(717, 372);
             this.panel13.TabIndex = 39;
             // 
-            // panel_ShowAnswer
-            // 
-            this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
-            this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_ShowAnswer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
-            this.panel_ShowAnswer.Name = "panel_ShowAnswer";
-            this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
-            this.panel_ShowAnswer.TabIndex = 30;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(509, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(3, 372);
-            this.panel14.TabIndex = 31;
-            // 
             // panel17
             // 
             this.panel17.Controls.Add(this.listBox_SelectQuestion);
@@ -378,6 +360,25 @@
             this.listBox_SelectQuestion.Name = "listBox_SelectQuestion";
             this.listBox_SelectQuestion.Size = new System.Drawing.Size(509, 372);
             this.listBox_SelectQuestion.TabIndex = 30;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel14.Location = new System.Drawing.Point(509, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(3, 372);
+            this.panel14.TabIndex = 31;
+            // 
+            // panel_ShowAnswer
+            // 
+            this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
+            this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_ShowAnswer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
+            this.panel_ShowAnswer.Name = "panel_ShowAnswer";
+            this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
+            this.panel_ShowAnswer.TabIndex = 30;
             // 
             // bunifuDragControl1
             // 
@@ -407,6 +408,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1_Top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pupil_Test";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pupil_Test";

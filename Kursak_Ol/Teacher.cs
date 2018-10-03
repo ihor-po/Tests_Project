@@ -15,6 +15,7 @@ namespace Kursak_Ol
 {
     public partial class Teacher : MyForm
     {
+
         public Teacher( User user)
         {
             InitializeComponent();
@@ -71,9 +72,7 @@ namespace Kursak_Ol
 
         private void Button1_Close_Click(object sender, EventArgs e)
         {
-            //для вас как она будет функционировать не знаю
-            MessageBox.Show("Событие еще не определенно! что делать", "Оповещение", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Test));
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -44,10 +45,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox_AddTestTitle = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
-            this.textBox_AddTestTitle = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,11 +57,11 @@
             this.button_AddNewQuestion = new System.Windows.Forms.Button();
             this.button_FinishAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
@@ -248,6 +249,16 @@
             this.panel8.Size = new System.Drawing.Size(723, 133);
             this.panel8.TabIndex = 37;
             // 
+            // textBox_AddTestTitle
+            // 
+            this.textBox_AddTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_AddTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_AddTestTitle.Location = new System.Drawing.Point(147, 17);
+            this.textBox_AddTestTitle.Name = "textBox_AddTestTitle";
+            this.textBox_AddTestTitle.Size = new System.Drawing.Size(570, 26);
+            this.textBox_AddTestTitle.TabIndex = 32;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -280,16 +291,6 @@
             this.textBox_AddQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_AddQuestion.Size = new System.Drawing.Size(629, 77);
             this.textBox_AddQuestion.TabIndex = 29;
-            // 
-            // textBox_AddTestTitle
-            // 
-            this.textBox_AddTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_AddTestTitle.Location = new System.Drawing.Point(147, 17);
-            this.textBox_AddTestTitle.Name = "textBox_AddTestTitle";
-            this.textBox_AddTestTitle.Size = new System.Drawing.Size(570, 26);
-            this.textBox_AddTestTitle.TabIndex = 32;
             // 
             // panel9
             // 
@@ -394,32 +395,14 @@
             this.panel5.Size = new System.Drawing.Size(723, 282);
             this.panel5.TabIndex = 40;
             // 
-            // panel11
+            // panel15
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(3, 282);
-            this.panel11.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(3, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(720, 3);
-            this.panel12.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(720, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(3, 279);
-            this.panel13.TabIndex = 2;
+            this.panel15.AutoScroll = true;
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(717, 276);
+            this.panel15.TabIndex = 32;
             // 
             // panel14
             // 
@@ -430,14 +413,32 @@
             this.panel14.Size = new System.Drawing.Size(717, 3);
             this.panel14.TabIndex = 3;
             // 
-            // panel15
+            // panel13
             // 
-            this.panel15.AutoScroll = true;
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(3, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(717, 276);
-            this.panel15.TabIndex = 32;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel13.Location = new System.Drawing.Point(720, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(3, 279);
+            this.panel13.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(3, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(720, 3);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(3, 282);
+            this.panel11.TabIndex = 0;
             // 
             // bunifuDragControl1
             // 
@@ -464,6 +465,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit_Test";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit_Test";

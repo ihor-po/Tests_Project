@@ -51,9 +51,6 @@ namespace Kursak_Ol
             //labl который будет выводить ошибки на форме для пользователя
             label14_Null.Visible = false;
             label6_Error.Visible = false;
-            label14_phone.Visible = false;
-            label14_Log_Povtor.Visible = false;
-            label14_Phone_Error.Visible = false;
             panel12_Opovesh.Visible = false;
             label15_Vhod_Null.Visible = false;
             timer1.Tick += Timer1_Tick1;
@@ -83,14 +80,27 @@ namespace Kursak_Ol
                     Pupil pupil = new Pupil(user);
                     textBox1_Login.Text = null;
                     textBox1_Password.Text = null;
-                    pupil.ShowDialog();
+                    this.ShowInTaskbar = false;
+                    this.Opacity = 0;
+                    if (pupil.ShowDialog() == DialogResult.OK)
+                    {
+                        this.ShowInTaskbar = true;
+                        this.Opacity = 1;
+                    }
+
                 }
                 else if (user.Role.Title == "Преподователь")
                 {
                     Teacher teacher = new Teacher(user);
                     textBox1_Login.Text = null;
                     textBox1_Password.Text = null;
-                    teacher.ShowDialog();
+                    this.ShowInTaskbar = false;
+                    this.Opacity = 0;
+                    if (teacher.ShowDialog() == DialogResult.OK)
+                    {
+                        this.ShowInTaskbar = true;
+                        this.Opacity = 1;
+                    }
                 }
             }
         }
@@ -105,25 +115,56 @@ namespace Kursak_Ol
         {
             if (textBox1_Adres.Text == "" || textBox1_LastName.Text == "" || textBox1_Phone.Text == "" ||
                 textBox1_Login_Registr.Text == "" ||
-                textBox1_Middle_name.Text == "" || textBox1_Password_Registr.Text == "" || textBox1_Name.Text == "")
+                textBox1_Middle_name.Text == "" || textBox1_Password_Registr.Text == "" || textBox1_Name.Text == "" || textBox1_Povtor_password.Text == "")
             {
+                label14_Null.Text = "Заполните все поля!";
                 label14_Null.Visible = true;
                 return;
             }
             string phoneNumber = @"^380\d{9}$";
             if (!Regex.IsMatch(textBox1_Phone.Text, phoneNumber, RegexOptions.IgnoreCase))//проверка на правильность написания телефона
             {
-                label14_phone.Visible = true;
+                label14_Null.Text = "Телефон не соответствует формату 380000000000";
+                label14_Null.Visible = true;
                 return;
             }
+            //string rLog= @"^[a-zA-Z0-9 -]{2,25}";
+            //if (!Regex.IsMatch(textBox1_Login.Text, rLog, RegexOptions.IgnoreCase))//проверка по регулярному выражению Логина
+            //{
+            //    label14_Null.Text = "Логин не может быть кирилицей ";
+            //    label14_Null.Visible = true;
+            //    return;
+            //}
+            //string rPas = @"(?=.*\d).{6,}";
+            //if (!Regex.IsMatch(textBox1_Password_Registr.Text, rPas, RegexOptions.IgnoreCase)) //проверка на пароль
+            //{
+            //    label14_Null.Text = "Пароль не менише 6 символов и одн цифра!";
+            //    label14_Null.Visible = true;
+            //    return;
+            //}
+            //string rAddress = @"^[a-zA-Zа-яА-ЯіІїЇ0-9/ ,\-]{2,50}";
+            //if (!Regex.IsMatch(textBox1_Adres.Text, rAddress, RegexOptions.IgnoreCase))//проверка адресса
+            //{
+            //    label14_Null.Text = "Не верный формат адреса!";
+            //    label14_Null.Visible = true;
+            //    return;
+            //}
 
+            if (textBox1_Password_Registr.Text != textBox1_Povtor_password.Text)
+            {
+                label14_Null.Text = "Повторный пароль не соответствует вашему паролю!";
+                label14_Null.Visible = true;
+                textBox1_Povtor_password.Text = null;
+                return;
+            }
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
                 string login = textBox1_Login_Registr.Text;
                 var log = tests.User.FirstOrDefault(z => z.Login == login);
                 if (log != null)//проверка на логин есть или нет его в БД
                 {
-                    label14_Log_Povtor.Visible = true;
+                    label14_Null.Text = "Такой логин уже занят другим пользователем!";
+                    label14_Null.Visible = true;
                     return;
                 }
 
@@ -131,7 +172,8 @@ namespace Kursak_Ol
                 var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
                 if (phone != null)//проверка на телефона есть или нет его в БД
                 {
-                    label14_Phone_Error.Visible = true;
+                    label14_Null.Text = "Такой телефон уже занят другим пользователем!";
+                    label14_Null.Visible = true;
                     return;
                 }
 
@@ -166,15 +208,13 @@ namespace Kursak_Ol
             this.textBox1_Password_Registr.Text = null;
             this.textBox1_Name.Text = null;
             this.textBox1_Phone.Text = null;
+            this.textBox1_Povtor_password.Text = null;
         }
 
         private void textBox(object sender, EventArgs a)
         {
             label14_Null.Visible = false;
-            label14_phone.Visible = false;
-            label14_Log_Povtor.Visible = false;
             label6_Error.Visible = false;
-            label14_Phone_Error.Visible = false;
             label15_Vhod_Null.Visible = false;
             TextBox text = sender as TextBox;
             if (text.Name == textBox1_Adres.Name)
@@ -240,6 +280,13 @@ namespace Kursak_Ol
                     textBox1_Phone.Text = null;
                 }
             }
+            else if(text.Name==textBox1_Povtor_password.Name)
+            {
+                if (String.IsNullOrWhiteSpace(textBox1_Povtor_password.Text))
+                {
+                    textBox1_Povtor_password.Text = null;
+                }
+            }
         }
 
         private void Show_Slider(object state)
@@ -258,6 +305,10 @@ namespace Kursak_Ol
 
         private void Button2_Registretion_Form_Click(object sender, EventArgs e)
         {
+            textBox1_Login.Text = null;
+            textBox1_Password.Text = null;
+            label6_Error.Visible = false;
+            label15_Vhod_Null.Visible = false;
             this.panel7_Registr.Visible = true;
         }
 
@@ -271,6 +322,8 @@ namespace Kursak_Ol
             this.textBox1_Password_Registr.Text = null;
             this.textBox1_Name.Text = null;
             this.textBox1_Phone.Text = null;
+            this.textBox1_Povtor_password.Text = null;
+            label14_Null.Visible = false;
         }
 
         private void Close_Slaider()
