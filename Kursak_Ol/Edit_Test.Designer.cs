@@ -44,23 +44,26 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox_AddTestTitle = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
-            this.textBox_AddTestTitle = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button__Add = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button_AddNewQuestion = new System.Windows.Forms.Button();
             this.button_FinishAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsAnswer = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
@@ -73,6 +76,8 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -248,6 +253,16 @@
             this.panel8.Size = new System.Drawing.Size(723, 133);
             this.panel8.TabIndex = 37;
             // 
+            // textBox_AddTestTitle
+            // 
+            this.textBox_AddTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_AddTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_AddTestTitle.Location = new System.Drawing.Point(147, 17);
+            this.textBox_AddTestTitle.Name = "textBox_AddTestTitle";
+            this.textBox_AddTestTitle.Size = new System.Drawing.Size(570, 26);
+            this.textBox_AddTestTitle.TabIndex = 32;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -281,19 +296,8 @@
             this.textBox_AddQuestion.Size = new System.Drawing.Size(629, 77);
             this.textBox_AddQuestion.TabIndex = 29;
             // 
-            // textBox_AddTestTitle
-            // 
-            this.textBox_AddTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_AddTestTitle.Location = new System.Drawing.Point(147, 17);
-            this.textBox_AddTestTitle.Name = "textBox_AddTestTitle";
-            this.textBox_AddTestTitle.Size = new System.Drawing.Size(570, 26);
-            this.textBox_AddTestTitle.TabIndex = 32;
-            // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.button__Add);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -302,23 +306,12 @@
             this.panel9.Size = new System.Drawing.Size(723, 45);
             this.panel9.TabIndex = 38;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(572, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Активность ответа";
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(341, 10);
+            this.label3.Location = new System.Drawing.Point(482, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(215, 20);
             this.label3.TabIndex = 36;
@@ -338,6 +331,7 @@
             this.button__Add.TabIndex = 35;
             this.button__Add.Text = "Добавить вариант ответа";
             this.button__Add.UseVisualStyleBackColor = false;
+            this.button__Add.Click += new System.EventHandler(this.button__Add_Click);
             // 
             // panel10
             // 
@@ -364,6 +358,7 @@
             this.button_AddNewQuestion.TabIndex = 35;
             this.button_AddNewQuestion.Text = "Сохранить";
             this.button_AddNewQuestion.UseVisualStyleBackColor = false;
+            this.button_AddNewQuestion.Click += new System.EventHandler(this.button_AddNewQuestion_Click);
             // 
             // button_FinishAddTest
             // 
@@ -380,6 +375,7 @@
             this.button_FinishAddTest.TabIndex = 34;
             this.button_FinishAddTest.Text = "Выход";
             this.button_FinishAddTest.UseVisualStyleBackColor = false;
+            this.button_FinishAddTest.Click += new System.EventHandler(this.button_FinishAddTest_Click);
             // 
             // panel5
             // 
@@ -394,32 +390,49 @@
             this.panel5.Size = new System.Drawing.Size(723, 282);
             this.panel5.TabIndex = 40;
             // 
-            // panel11
+            // panel15
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(3, 282);
-            this.panel11.TabIndex = 0;
+            this.panel15.AutoScroll = true;
+            this.panel15.Controls.Add(this.dataGridView1);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(717, 276);
+            this.panel15.TabIndex = 32;
             // 
-            // panel12
+            // dataGridView1
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(3, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(720, 3);
-            this.panel12.TabIndex = 1;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Answer,
+            this.IsAnswer,
+            this.Id});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(717, 276);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // panel13
+            // Answer
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(720, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(3, 279);
-            this.panel13.TabIndex = 2;
+            this.Answer.HeaderText = "Ответ";
+            this.Answer.Name = "Answer";
+            this.Answer.Width = 500;
+            // 
+            // IsAnswer
+            // 
+            this.IsAnswer.HeaderText = "Правильный ответ";
+            this.IsAnswer.Name = "IsAnswer";
+            this.IsAnswer.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IsAnswer.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.IsAnswer.Width = 180;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
             // 
             // panel14
             // 
@@ -430,14 +443,32 @@
             this.panel14.Size = new System.Drawing.Size(717, 3);
             this.panel14.TabIndex = 3;
             // 
-            // panel15
+            // panel13
             // 
-            this.panel15.AutoScroll = true;
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(3, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(717, 276);
-            this.panel15.TabIndex = 32;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel13.Location = new System.Drawing.Point(720, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(3, 279);
+            this.panel13.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(3, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(720, 3);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(3, 282);
+            this.panel11.TabIndex = 0;
             // 
             // bunifuDragControl1
             // 
@@ -482,6 +513,8 @@
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -508,7 +541,6 @@
         private System.Windows.Forms.TextBox textBox_AddQuestion;
         private System.Windows.Forms.TextBox textBox_AddTestTitle;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button__Add;
         private System.Windows.Forms.Panel panel10;
@@ -521,5 +553,9 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Answer;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn IsAnswer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

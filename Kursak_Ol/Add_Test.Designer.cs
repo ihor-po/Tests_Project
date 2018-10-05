@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Test));
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
@@ -54,11 +54,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button_AddCategory = new System.Windows.Forms.Button();
             this.comboBox_SelectCategory = new System.Windows.Forms.ComboBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.button_AddCategory = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,11 +72,11 @@
             this.button_AddNewQuestion = new System.Windows.Forms.Button();
             this.button_FinishAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1_Top.SuspendLayout();
@@ -88,9 +88,9 @@
             this.panel4.SuspendLayout();
             this.panel_AddNewCategory.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -385,15 +385,30 @@
             this.panel12.Size = new System.Drawing.Size(723, 62);
             this.panel12.TabIndex = 29;
             // 
-            // panel13
+            // panel15
             // 
-            this.panel13.Controls.Add(this.label10);
-            this.bunifuTransition1.SetDecoration(this.panel13, BunifuAnimatorNS.DecorationType.None);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(144, 62);
-            this.panel13.TabIndex = 0;
+            this.panel15.Controls.Add(this.comboBox_SelectCategory);
+            this.bunifuTransition1.SetDecoration(this.panel15, BunifuAnimatorNS.DecorationType.None);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(144, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(400, 62);
+            this.panel15.TabIndex = 2;
+            // 
+            // comboBox_SelectCategory
+            // 
+            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.comboBox_SelectCategory, BunifuAnimatorNS.DecorationType.None);
+            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_SelectCategory.FormattingEnabled = true;
+            this.comboBox_SelectCategory.Location = new System.Drawing.Point(3, 17);
+            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
+            this.comboBox_SelectCategory.Size = new System.Drawing.Size(390, 26);
+            this.comboBox_SelectCategory.TabIndex = 31;
             // 
             // panel14
             // 
@@ -404,16 +419,6 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(179, 62);
             this.panel14.TabIndex = 1;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.comboBox_SelectCategory);
-            this.bunifuTransition1.SetDecoration(this.panel15, BunifuAnimatorNS.DecorationType.None);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(144, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(400, 62);
-            this.panel15.TabIndex = 2;
             // 
             // button_AddCategory
             // 
@@ -432,20 +437,15 @@
             this.button_AddCategory.Text = "Добавить категорию";
             this.button_AddCategory.UseVisualStyleBackColor = false;
             // 
-            // comboBox_SelectCategory
+            // panel13
             // 
-            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.comboBox_SelectCategory, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_SelectCategory.FormattingEnabled = true;
-            this.comboBox_SelectCategory.Location = new System.Drawing.Point(3, 17);
-            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
-            this.comboBox_SelectCategory.Size = new System.Drawing.Size(390, 26);
-            this.comboBox_SelectCategory.TabIndex = 31;
+            this.panel13.Controls.Add(this.label10);
+            this.bunifuTransition1.SetDecoration(this.panel13, BunifuAnimatorNS.DecorationType.None);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(144, 62);
+            this.panel13.TabIndex = 0;
             // 
             // label10
             // 
@@ -618,35 +618,15 @@
             this.panel5.Size = new System.Drawing.Size(723, 215);
             this.panel5.TabIndex = 33;
             // 
-            // panel19
+            // panel23
             // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.bunifuTransition1.SetDecoration(this.panel19, BunifuAnimatorNS.DecorationType.None);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel19.Location = new System.Drawing.Point(0, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(3, 215);
-            this.panel19.TabIndex = 0;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.bunifuTransition1.SetDecoration(this.panel20, BunifuAnimatorNS.DecorationType.None);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel20.Location = new System.Drawing.Point(720, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(3, 215);
-            this.panel20.TabIndex = 1;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.bunifuTransition1.SetDecoration(this.panel21, BunifuAnimatorNS.DecorationType.None);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(3, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(717, 3);
-            this.panel21.TabIndex = 2;
+            this.panel23.AutoScroll = true;
+            this.bunifuTransition1.SetDecoration(this.panel23, BunifuAnimatorNS.DecorationType.None);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(3, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(717, 209);
+            this.panel23.TabIndex = 25;
             // 
             // panel22
             // 
@@ -658,15 +638,35 @@
             this.panel22.Size = new System.Drawing.Size(717, 3);
             this.panel22.TabIndex = 3;
             // 
-            // panel23
+            // panel21
             // 
-            this.panel23.AutoScroll = true;
-            this.bunifuTransition1.SetDecoration(this.panel23, BunifuAnimatorNS.DecorationType.None);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(3, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(717, 209);
-            this.panel23.TabIndex = 25;
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel21, BunifuAnimatorNS.DecorationType.None);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(3, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(717, 3);
+            this.panel21.TabIndex = 2;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel20, BunifuAnimatorNS.DecorationType.None);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel20.Location = new System.Drawing.Point(720, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(3, 215);
+            this.panel20.TabIndex = 1;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel19, BunifuAnimatorNS.DecorationType.None);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel19.Location = new System.Drawing.Point(0, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(3, 215);
+            this.panel19.TabIndex = 0;
             // 
             // bunifuDragControl1
             // 
@@ -679,22 +679,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
             // Add_Test
             // 
@@ -731,10 +731,10 @@
             this.panel_AddNewCategory.ResumeLayout(false);
             this.panel_AddNewCategory.PerformLayout();
             this.panel12.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
