@@ -65,43 +65,52 @@ namespace Kursak_Ol
                 return;
             }
 
-            using (Tests_DBContainer tests = new Tests_DBContainer())
+            try //Отлавливание ошибок при подключении БД
             {
-                var user = tests.User.FirstOrDefault(z =>
-                    z.Login == textBox1_Login.Text && z.Password == textBox1_Password.Text);
-                if (user == null)
+                using (Tests_DBContainer tests = new Tests_DBContainer())
                 {
-                    this.label6_Error.Visible = true;
-                    return;
-                }
-
-                if (user.Role.Title == "Студент")
-                {
-                    Pupil pupil = new Pupil(user);
-                    textBox1_Login.Text = null;
-                    textBox1_Password.Text = null;
-                    this.ShowInTaskbar = false;
-                    this.Opacity = 0;
-                    if (pupil.ShowDialog() == DialogResult.OK)
+                    var user = tests.User.FirstOrDefault(z =>
+                        z.Login == textBox1_Login.Text && z.Password == textBox1_Password.Text);
+                    if (user == null)
                     {
-                        this.ShowInTaskbar = true;
-                        this.Opacity = 1;
+                        this.label6_Error.Visible = true;
+                        return;
                     }
 
-                }
-                else if (user.Role.Title == "Преподователь")
-                {
-                    Teacher teacher = new Teacher(user);
-                    textBox1_Login.Text = null;
-                    textBox1_Password.Text = null;
-                    this.ShowInTaskbar = false;
-                    this.Opacity = 0;
-                    if (teacher.ShowDialog() == DialogResult.OK)
+                    if (user.Role.Title == "Студент")
                     {
-                        this.ShowInTaskbar = true;
-                        this.Opacity = 1;
+                        Pupil pupil = new Pupil(user);
+                        textBox1_Login.Text = null;
+                        textBox1_Password.Text = null;
+                        this.ShowInTaskbar = false;
+                        this.Opacity = 0;
+                        if (pupil.ShowDialog() == DialogResult.OK)
+                        {
+                            this.ShowInTaskbar = true;
+                            this.Opacity = 1;
+                        }
+
+                    }
+                    else if (user.Role.Title == "Преподователь")
+                    {
+                        Teacher teacher = new Teacher(user);
+                        textBox1_Login.Text = null;
+                        textBox1_Password.Text = null;
+                        this.ShowInTaskbar = false;
+                        this.Opacity = 0;
+                        if (teacher.ShowDialog() == DialogResult.OK)
+                        {
+                            this.ShowInTaskbar = true;
+                            this.Opacity = 1;
+                        }
                     }
                 }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
@@ -157,58 +166,67 @@ namespace Kursak_Ol
                 textBox1_Povtor_password.Text = null;
                 return;
             }
-            using (Tests_DBContainer tests = new Tests_DBContainer())
+
+            try //Отлавливание ошибок при подключении БД
             {
-                string login = textBox1_Login_Registr.Text;
-                var log = tests.User.FirstOrDefault(z => z.Login == login);
-                if (log != null)//проверка на логин есть или нет его в БД
+                using (Tests_DBContainer tests = new Tests_DBContainer())
                 {
-                    label14_Null.Text = "Такой логин уже занят другим пользователем!";
-                    label14_Null.Visible = true;
-                    return;
-                }
+                    string login = textBox1_Login_Registr.Text;
+                    var log = tests.User.FirstOrDefault(z => z.Login == login);
+                    if (log != null)//проверка на логин есть или нет его в БД
+                    {
+                        label14_Null.Text = "Такой логин уже занят другим пользователем!";
+                        label14_Null.Visible = true;
+                        return;
+                    }
 
-                string ph = textBox1_Phone.Text;
-                var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
-                if (phone != null)//проверка на телефона есть или нет его в БД
-                {
-                    label14_Null.Text = "Такой телефон уже занят другим пользователем!";
-                    label14_Null.Visible = true;
-                    return;
-                }
+                    string ph = textBox1_Phone.Text;
+                    var phone = tests.User.FirstOrDefault(z => z.Phone == ph);
+                    if (phone != null)//проверка на телефона есть или нет его в БД
+                    {
+                        label14_Null.Text = "Такой телефон уже занят другим пользователем!";
+                        label14_Null.Visible = true;
+                        return;
+                    }
 
-                var id = tests.Role.FirstOrDefault(z => z.Title == "Студент");//роль
-                if (id == null)//проверка роли есть она в БД 
-                {
-                    return;
+                    var id = tests.Role.FirstOrDefault(z => z.Title == "Студент");//роль
+                    if (id == null)//проверка роли есть она в БД 
+                    {
+                        return;
+                    }
+                    //Создаем пользователя
+                    User rUser = new User
+                    {
+                        Address = textBox1_Adres.Text,
+                        FirstName = textBox1_Name.Text,
+                        Login = textBox1_Login_Registr.Text,
+                        LastName = textBox1_LastName.Text,
+                        MiddleName = textBox1_Middle_name.Text,
+                        Password = textBox1_Password_Registr.Text,
+                        Phone = textBox1_Phone.Text,
+                        RoleId = id.Id
+                    };
+                    tests.User.Add(rUser);
+                    tests.SaveChanges();
                 }
-                //Создаем пользователя
-                User rUser = new User
-                {
-                    Address = textBox1_Adres.Text,
-                    FirstName = textBox1_Name.Text,
-                    Login = textBox1_Login_Registr.Text,
-                    LastName = textBox1_LastName.Text,
-                    MiddleName = textBox1_Middle_name.Text,
-                    Password = textBox1_Password_Registr.Text,
-                    Phone = textBox1_Phone.Text,
-                    RoleId = id.Id
-                };
-                tests.User.Add(rUser);
-                tests.SaveChanges();
+                //все происходят манипуляции
+                this.label16_Log_Opov.Text = textBox1_Login_Registr.Text;
+                bunifuTransition3.ShowSync(this.panel12_Opovesh);
+                timer1.Start();
+                this.textBox1_Adres.Text = null;
+                this.textBox1_LastName.Text = null;
+                this.textBox1_Login_Registr.Text = null;
+                this.textBox1_Middle_name.Text = null;
+                this.textBox1_Password_Registr.Text = null;
+                this.textBox1_Name.Text = null;
+                this.textBox1_Phone.Text = null;
+                this.textBox1_Povtor_password.Text = null;
             }
-            //все происходят манипуляции
-            this.label16_Log_Opov.Text = textBox1_Login_Registr.Text;
-            bunifuTransition3.ShowSync(this.panel12_Opovesh);
-            timer1.Start();
-            this.textBox1_Adres.Text = null;
-            this.textBox1_LastName.Text = null;
-            this.textBox1_Login_Registr.Text = null;
-            this.textBox1_Middle_name.Text = null;
-            this.textBox1_Password_Registr.Text = null;
-            this.textBox1_Name.Text = null;
-            this.textBox1_Phone.Text = null;
-            this.textBox1_Povtor_password.Text = null;
+            catch (Exception exception)
+            {
+                MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBox(object sender, EventArgs a)
