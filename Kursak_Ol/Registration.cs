@@ -69,8 +69,11 @@ namespace Kursak_Ol
             {
                 using (Tests_DBContainer tests = new Tests_DBContainer())
                 {
-                    var user = tests.User.FirstOrDefault(z =>
-                        z.Login == textBox1_Login.Text && z.Password == textBox1_Password.Text);
+                    string pass = textBox1_Password.Text.GetHashCode().ToString(); //получение хеш кода введенного пароля 
+
+                    User user = tests.User.FirstOrDefault(z =>
+                        z.Login == textBox1_Login.Text && z.Password == pass);
+
                     if (user == null)
                     {
                         this.label6_Error.Visible = true;
@@ -89,7 +92,6 @@ namespace Kursak_Ol
                             this.ShowInTaskbar = true;
                             this.Opacity = 1;
                         }
-
                     }
                     else if (user.Role.Title == "Преподователь")
                     {
@@ -110,7 +112,6 @@ namespace Kursak_Ol
             {
                 MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
             }
         }
 
@@ -130,6 +131,40 @@ namespace Kursak_Ol
                 label14_Null.Visible = true;
                 return;
             }
+
+            string rLog = @"(?m)^.[a-zA-Z\d\s-_]{2,30}(?=\r?$)";
+            if (!Regex.IsMatch(textBox1_Login_Registr.Text, rLog))//проверка по регулярному выражению Логина
+            {
+                label14_Null.Text = "Логин - только латинские символы!";
+                label14_Null.Visible = true;
+                return;
+            }
+
+            //Проверка регулярным выражением имени
+            string rFIO = @"^[а-яА-ЯіІїЇ-]{2,30}$";
+            if (!Regex.IsMatch(textBox1_Name.Text, rFIO))
+            {
+                label14_Null.Text = "Имя - недопустисые символы!";
+                label14_Null.Visible = true;
+                return;
+            }
+
+            //Проверка регулярным выражением фамилии
+            if (!Regex.IsMatch(textBox1_LastName.Text, rFIO))
+            {
+                label14_Null.Text = "Фамилия - недопустисые символы!";
+                label14_Null.Visible = true;
+                return;
+            }
+
+            //Проверка регулярным выражением отчества
+            if (!Regex.IsMatch(textBox1_Middle_name.Text, rFIO))
+            {
+                label14_Null.Text = "Отчество - недопустисые символы!";
+                label14_Null.Visible = true;
+                return;
+            }
+
             string phoneNumber = @"^380\d{9}$";
             if (!Regex.IsMatch(textBox1_Phone.Text, phoneNumber, RegexOptions.IgnoreCase))//проверка на правильность написания телефона
             {
@@ -137,31 +172,27 @@ namespace Kursak_Ol
                 label14_Null.Visible = true;
                 return;
             }
-            //string rLog= @"^[a-zA-Z0-9 -]{2,25}";
-            //if (!Regex.IsMatch(textBox1_Login.Text, rLog, RegexOptions.IgnoreCase))//проверка по регулярному выражению Логина
-            //{
-            //    label14_Null.Text = "Логин не может быть кирилицей ";
-            //    label14_Null.Visible = true;
-            //    return;
-            //}
-            //string rPas = @"(?=.*\d).{6,}";
-            //if (!Regex.IsMatch(textBox1_Password_Registr.Text, rPas, RegexOptions.IgnoreCase)) //проверка на пароль
-            //{
-            //    label14_Null.Text = "Пароль не менише 6 символов и одн цифра!";
-            //    label14_Null.Visible = true;
-            //    return;
-            //}
-            //string rAddress = @"^[a-zA-Zа-яА-ЯіІїЇ0-9/ ,\-]{2,50}";
-            //if (!Regex.IsMatch(textBox1_Adres.Text, rAddress, RegexOptions.IgnoreCase))//проверка адресса
-            //{
-            //    label14_Null.Text = "Не верный формат адреса!";
-            //    label14_Null.Visible = true;
-            //    return;
-            //}
 
+            string rPas = @"(?=.*\d).{6,}";
+            if (!Regex.IsMatch(textBox1_Password_Registr.Text, rPas, RegexOptions.IgnoreCase)) //проверка на пароль
+            {
+                label14_Null.Text = "Пароль не менише 6 символов и одна цифра!";
+                label14_Null.Visible = true;
+                return;
+            }
+
+            string rAddress = @"^[а-яА-Я\d\s\/-]{2,}$";
+            if (!Regex.IsMatch(textBox1_Adres.Text, rAddress, RegexOptions.IgnoreCase))//проверка адреса
+            {
+                label14_Null.Text = "Не верный формат адреса!";
+                label14_Null.Visible = true;
+                return;
+            }
+
+            //Проверка введенных паролей
             if (textBox1_Password_Registr.Text != textBox1_Povtor_password.Text)
             {
-                label14_Null.Text = "Повторный пароль не соответствует вашему паролю!";
+                label14_Null.Text = "Введеные пароли не совпадают!";
                 label14_Null.Visible = true;
                 textBox1_Povtor_password.Text = null;
                 return;
@@ -202,7 +233,7 @@ namespace Kursak_Ol
                         Login = textBox1_Login_Registr.Text,
                         LastName = textBox1_LastName.Text,
                         MiddleName = textBox1_Middle_name.Text,
-                        Password = textBox1_Password_Registr.Text,
+                        Password = textBox1_Password_Registr.Text.GetHashCode().ToString(), //хеширование пароля
                         Phone = textBox1_Phone.Text,
                         RoleId = id.Id
                     };
