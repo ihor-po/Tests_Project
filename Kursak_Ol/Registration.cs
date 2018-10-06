@@ -93,7 +93,7 @@ namespace Kursak_Ol
                             this.Opacity = 1;
                         }
                     }
-                    else if (user.Role.Title == "Преподователь")
+                    else if (user.Role.Title == "Преподаватель")
                     {
                         Teacher teacher = new Teacher(user);
                         textBox1_Login.Text = null;
