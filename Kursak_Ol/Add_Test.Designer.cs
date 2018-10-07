@@ -73,6 +73,7 @@ namespace Kursak_Ol
             this.button_FinishAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
+
             this.panelAddQuestion = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@ namespace Kursak_Ol
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -638,8 +640,10 @@ namespace Kursak_Ol
             // panel23
             // 
             this.panel23.AutoScroll = true;
+
             this.panel23.Controls.Add(this.panelAddQuestion);
             this.panel23.Controls.Add(this.checkedListBox1);
+
             this.bunifuTransition1.SetDecoration(this.panel23, BunifuAnimatorNS.DecorationType.None);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(3, 3);
@@ -647,6 +651,7 @@ namespace Kursak_Ol
             this.panel23.Size = new System.Drawing.Size(717, 209);
             this.panel23.TabIndex = 25;
             // 
+
             // panelAddQuestion
             // 
             this.panelAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -826,6 +831,7 @@ namespace Kursak_Ol
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation1;
+
             // 
             // label_ErrorAddTest
             // 
@@ -836,6 +842,7 @@ namespace Kursak_Ol
             this.label_ErrorAddTest.Name = "label_ErrorAddTest";
             this.label_ErrorAddTest.Size = new System.Drawing.Size(0, 20);
             this.label_ErrorAddTest.TabIndex = 29;
+
             // 
             // Add_Test
             // 

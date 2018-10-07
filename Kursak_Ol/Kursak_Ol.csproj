@@ -139,6 +139,7 @@
     <Compile Include="Select_Test_To_Edit.Designer.cs">
       <DependentUpon>Select_Test_To_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="Teacher.cs">
       <SubType>Form</SubType>
     </Compile>
