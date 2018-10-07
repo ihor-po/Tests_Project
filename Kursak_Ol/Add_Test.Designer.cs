@@ -1,4 +1,4 @@
-﻿namespace Kursak_Ol
+namespace Kursak_Ol
 {
     partial class Add_Test
     {

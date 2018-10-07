@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Test));
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -464,6 +465,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit_Test";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit_Test";

@@ -96,3 +96,7 @@ D:\step\kurs\Kursak_Ol\obj\Debug\Kursak_Ol.pdb
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\Kursak_Ol.exe
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\Kursak_Ol.pdb
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CopyComplete
+\\Mac\iCloud\Step\TestsProject\Kursak_Ol\obj\Debug\Kursak_Ol.MyForm.resources
+\\Mac\iCloud\Step\TestsProject\Kursak_Ol\obj\Debug\Kursak_Ol.Pupil_Test.resources
+\\Mac\iCloud\Step\TestsProject\Kursak_Ol\obj\Debug\Kursak_Ol.Result_For_Pupil.resources
+\\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
