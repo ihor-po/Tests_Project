@@ -96,7 +96,7 @@ namespace Kursak_Ol
                     }
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -241,7 +241,7 @@ namespace Kursak_Ol
                 this.textBox1_Phone.Text = null;
                 this.textBox1_Povtor_password.Text = null;
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
