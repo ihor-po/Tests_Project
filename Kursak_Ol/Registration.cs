@@ -78,34 +78,6 @@ namespace Kursak_Ol
                     return;
                 }
 
-<<<<<<< HEAD
-                    if (user.Role.Title == "Студент")
-                    {
-                        Pupil pupil = new Pupil(user);
-                        textBox1_Login.Text = null;
-                        textBox1_Password.Text = null;
-                        this.ShowInTaskbar = false;
-                        this.Opacity = 0;
-                        if (pupil.ShowDialog() == DialogResult.OK)
-                        {
-                            this.ShowInTaskbar = true;
-                            this.Opacity = 1;
-                        }
-                    }
-                    else if (user.Role.Title == "Преподаватель")
-                    {
-                        Teacher teacher = new Teacher(user);
-                        textBox1_Login.Text = null;
-                        textBox1_Password.Text = null;
-                        this.ShowInTaskbar = false;
-                        this.Opacity = 0;
-                        if (teacher.ShowDialog() == DialogResult.OK)
-                        {
-                            this.ShowInTaskbar = true;
-                            this.Opacity = 1;
-                        }
-                    }
-=======
                 if (user.Role.Title == "Студент")
                 {
                     Pupil pupil = new Pupil(user);
@@ -119,7 +91,6 @@ namespace Kursak_Ol
                     textBox1_Login.Text = null;
                     textBox1_Password.Text = null;
                     teacher.ShowDialog();
->>>>>>> parent of 42ad1c5... update file with fixes
                 }
             }
         }
