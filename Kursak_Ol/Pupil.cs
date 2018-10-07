@@ -26,6 +26,13 @@ namespace Kursak_Ol
             timer1.Tick += Timer1_Tick;
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
+            this.button1_Statistika.Click += Button1_Statistika_Click;
+        }
+
+        private void Button1_Statistika_Click(object sender, EventArgs e)
+        {
+            Result_For_Pupil pub=new Result_For_Pupil();
+            pub.ShowDialog();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -46,9 +53,7 @@ namespace Kursak_Ol
 
         private void Button1_Close_Click(object sender, EventArgs e)
         {
-            //для вас как она будет функционировать не знаю
-            MessageBox.Show("Событие еще не определенно! что делать", "Оповещение", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
         }
         
     }

@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Tests_DB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Tests_DBStoreContainer">
+    <EntitySet Name="Role" EntityType="Tests_DB.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="Tests_DB.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="Tests_DB.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Test" EntityType="Tests_DB.Store.Test" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestCreator" EntityType="Tests_DB.Store.TestCreator" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestQuestion" EntityType="Tests_DB.Store.TestQuestion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestQuestionAnswer" EntityType="Tests_DB.Store.TestQuestionAnswer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserTest" EntityType="Tests_DB.Store.UserTest" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserTestAnswer" EntityType="Tests_DB.Store.UserTestAnswer" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserRole" Association="Tests_DB.Store.UserRole">
+      <End Role="User" EntitySet="User" />
+      <End Role="Role" EntitySet="Role" />
+    </AssociationSet>
+    <AssociationSet Name="TestCategory" Association="Tests_DB.Store.TestCategory">
+      <End Role="Test" EntitySet="Test" />
+      <End Role="Category" EntitySet="Category" />
+    </AssociationSet>
+    <AssociationSet Name="TestQuestionTest" Association="Tests_DB.Store.TestQuestionTest">
+      <End Role="TestQuestion" EntitySet="TestQuestion" />
+      <End Role="Test" EntitySet="Test" />
+    </AssociationSet>
+    <AssociationSet Name="TestQuestionAnswerTestQuestion" Association="Tests_DB.Store.TestQuestionAnswerTestQuestion">
+      <End Role="TestQuestionAnswer" EntitySet="TestQuestionAnswer" />
+      <End Role="TestQuestion" EntitySet="TestQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="UserTestCreator" Association="Tests_DB.Store.UserTestCreator">
+      <End Role="User" EntitySet="User" />
+      <End Role="TestCreator" EntitySet="TestCreator" />
+    </AssociationSet>
+    <AssociationSet Name="TestTestCreator" Association="Tests_DB.Store.TestTestCreator">
+      <End Role="Test" EntitySet="Test" />
+      <End Role="TestCreator" EntitySet="TestCreator" />
+    </AssociationSet>
+    <AssociationSet Name="UserTestUser" Association="Tests_DB.Store.UserTestUser">
+      <End Role="UserTest" EntitySet="UserTest" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="UserTestTest" Association="Tests_DB.Store.UserTestTest">
+      <End Role="UserTest" EntitySet="UserTest" />
+      <End Role="Test" EntitySet="Test" />
+    </AssociationSet>
+    <AssociationSet Name="UserTestAnswerUserTest" Association="Tests_DB.Store.UserTestAnswerUserTest">
+      <End Role="UserTestAnswer" EntitySet="UserTestAnswer" />
+      <End Role="UserTest" EntitySet="UserTest" />
+    </AssociationSet>
+    <AssociationSet Name="UserTestAnswerTestQuestion" Association="Tests_DB.Store.UserTestAnswerTestQuestion">
+      <End Role="UserTestAnswer" EntitySet="UserTestAnswer" />
+      <End Role="TestQuestion" EntitySet="TestQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="TestQuestionAnswerUserTestAnswer" Association="Tests_DB.Store.TestQuestionAnswerUserTestAnswer">
+      <End Role="TestQuestionAnswer" EntitySet="TestQuestionAnswer" />
+      <End Role="UserTestAnswer" EntitySet="UserTestAnswer" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="MiddleName" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Phone" Type="nchar" Nullable="false" MaxLength="12" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="IsActual" Type="tinyint" Nullable="false" DefaultValue="1" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestCreator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestQuestion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActual" Type="tinyint" Nullable="false" DefaultValue="1" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestQuestionAnswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Answer" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="IsAnswer" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="TestQuestionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserTest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+    <Property Name="Result" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserTestAnswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserTestId" Type="int" Nullable="false" />
+    <Property Name="TestQuestionId" Type="int" Nullable="false" />
+    <Property Name="UserTestQuestionAnswerId" Type="int" Nullable="false" />
+    <Property Name="AnswerDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="UserRole">
+    <End Role="User" Type="Tests_DB.Store.User" Multiplicity="*" />
+    <End Role="Role" Type="Tests_DB.Store.Role" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TestCategory">
+    <End Role="Test" Type="Tests_DB.Store.Test" Multiplicity="*" />
+    <End Role="Category" Type="Tests_DB.Store.Category" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Test">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TestQuestionTest">
+    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestion" Multiplicity="*" />
+    <End Role="Test" Type="Tests_DB.Store.Test" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestQuestion">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TestQuestionAnswerTestQuestion">
+    <End Role="TestQuestionAnswer" Type="Tests_DB.Store.TestQuestionAnswer" Multiplicity="*" />
+    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestion" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="TestQuestion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestQuestionAnswer">
+        <PropertyRef Name="TestQuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserTestCreator">
+    <End Role="User" Type="Tests_DB.Store.User" Multiplicity="1" />
+    <End Role="TestCreator" Type="Tests_DB.Store.TestCreator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestCreator">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TestTestCreator">
+    <End Role="Test" Type="Tests_DB.Store.Test" Multiplicity="1" />
+    <End Role="TestCreator" Type="Tests_DB.Store.TestCreator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestCreator">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserTestUser">
+    <End Role="UserTest" Type="Tests_DB.Store.UserTest" Multiplicity="*" />
+    <End Role="User" Type="Tests_DB.Store.User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTest">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserTestTest">
+    <End Role="UserTest" Type="Tests_DB.Store.UserTest" Multiplicity="*" />
+    <End Role="Test" Type="Tests_DB.Store.Test" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTest">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserTestAnswerUserTest">
+    <End Role="UserTestAnswer" Type="Tests_DB.Store.UserTestAnswer" Multiplicity="*" />
+    <End Role="UserTest" Type="Tests_DB.Store.UserTest" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="UserTest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTestAnswer">
+        <PropertyRef Name="UserTestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserTestAnswerTestQuestion">
+    <End Role="UserTestAnswer" Type="Tests_DB.Store.UserTestAnswer" Multiplicity="*" />
+    <End Role="TestQuestion" Type="Tests_DB.Store.TestQuestion" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="TestQuestion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTestAnswer">
+        <PropertyRef Name="TestQuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TestQuestionAnswerUserTestAnswer">
+    <End Role="TestQuestionAnswer" Type="Tests_DB.Store.TestQuestionAnswer" Multiplicity="1" />
+    <End Role="UserTestAnswer" Type="Tests_DB.Store.UserTestAnswer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestQuestionAnswer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTestAnswer">
+        <PropertyRef Name="UserTestQuestionAnswerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

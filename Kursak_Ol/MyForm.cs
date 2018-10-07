@@ -47,7 +47,21 @@ namespace Kursak_Ol
 
         private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyForm));
+            this.SuspendLayout();
+            // 
+            // MyForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MyForm";
+            this.ResumeLayout(false);
+
         }
     }
 }

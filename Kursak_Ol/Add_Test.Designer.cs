@@ -1,4 +1,4 @@
-﻿namespace Kursak_Ol
+namespace Kursak_Ol
 {
     partial class Add_Test
     {
@@ -73,12 +73,24 @@
             this.button_FinishAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
+
+            this.panelAddQuestion = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox_TitleQuestion = new System.Windows.Forms.TextBox();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.label_ErrorAddTest = new System.Windows.Forms.Label();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -95,6 +107,8 @@
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panelAddQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -305,6 +319,7 @@
             this.button1_Categiri.TabIndex = 27;
             this.button1_Categiri.Text = "Добавить";
             this.button1_Categiri.UseVisualStyleBackColor = false;
+            this.button1_Categiri.Click += new System.EventHandler(this.button1_Categiri_Click);
             // 
             // textBox_AddNewCategory
             // 
@@ -558,9 +573,11 @@
             this.button__Add.TabIndex = 24;
             this.button__Add.Text = "Добавить вариант ответа";
             this.button__Add.UseVisualStyleBackColor = false;
+            this.button__Add.Click += new System.EventHandler(this.button__Add_Click);
             // 
             // panel18
             // 
+            this.panel18.Controls.Add(this.label_ErrorAddTest);
             this.panel18.Controls.Add(this.button_AddNewQuestion);
             this.panel18.Controls.Add(this.button_FinishAddTest);
             this.bunifuTransition1.SetDecoration(this.panel18, BunifuAnimatorNS.DecorationType.None);
@@ -586,6 +603,7 @@
             this.button_AddNewQuestion.TabIndex = 28;
             this.button_AddNewQuestion.Text = "Сохранить";
             this.button_AddNewQuestion.UseVisualStyleBackColor = false;
+            this.button_AddNewQuestion.Click += new System.EventHandler(this.button_AddNewQuestion_Click);
             // 
             // button_FinishAddTest
             // 
@@ -603,6 +621,7 @@
             this.button_FinishAddTest.TabIndex = 27;
             this.button_FinishAddTest.Text = "Выход";
             this.button_FinishAddTest.UseVisualStyleBackColor = false;
+            this.button_FinishAddTest.Click += new System.EventHandler(this.button_FinishAddTest_Click);
             // 
             // panel5
             // 
@@ -621,12 +640,129 @@
             // panel23
             // 
             this.panel23.AutoScroll = true;
+
+            this.panel23.Controls.Add(this.panelAddQuestion);
+            this.panel23.Controls.Add(this.checkedListBox1);
+
             this.bunifuTransition1.SetDecoration(this.panel23, BunifuAnimatorNS.DecorationType.None);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(3, 3);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(717, 209);
             this.panel23.TabIndex = 25;
+            // 
+
+            // panelAddQuestion
+            // 
+            this.panelAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelAddQuestion.BackColor = System.Drawing.SystemColors.Control;
+            this.panelAddQuestion.Controls.Add(this.button1);
+            this.panelAddQuestion.Controls.Add(this.button2);
+            this.panelAddQuestion.Controls.Add(this.textBox_TitleQuestion);
+            this.panelAddQuestion.Controls.Add(this.panel25);
+            this.panelAddQuestion.Controls.Add(this.panel26);
+            this.panelAddQuestion.Controls.Add(this.panel27);
+            this.panelAddQuestion.Controls.Add(this.panel28);
+            this.bunifuTransition1.SetDecoration(this.panelAddQuestion, BunifuAnimatorNS.DecorationType.None);
+            this.panelAddQuestion.Location = new System.Drawing.Point(7, 6);
+            this.panelAddQuestion.Name = "panelAddQuestion";
+            this.panelAddQuestion.Size = new System.Drawing.Size(291, 102);
+            this.panelAddQuestion.TabIndex = 1;
+            this.panelAddQuestion.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(169, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 31);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Отменить";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(19, 60);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 31);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Добавить";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox_TitleQuestion
+            // 
+            this.bunifuTransition1.SetDecoration(this.textBox_TitleQuestion, BunifuAnimatorNS.DecorationType.None);
+            this.textBox_TitleQuestion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_TitleQuestion.Location = new System.Drawing.Point(19, 17);
+            this.textBox_TitleQuestion.Name = "textBox_TitleQuestion";
+            this.textBox_TitleQuestion.Size = new System.Drawing.Size(257, 23);
+            this.textBox_TitleQuestion.TabIndex = 4;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel25, BunifuAnimatorNS.DecorationType.None);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel25.Location = new System.Drawing.Point(3, 99);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(285, 3);
+            this.panel25.TabIndex = 3;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel26, BunifuAnimatorNS.DecorationType.None);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel26.Location = new System.Drawing.Point(288, 3);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(3, 99);
+            this.panel26.TabIndex = 2;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel27, BunifuAnimatorNS.DecorationType.None);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel27.Location = new System.Drawing.Point(3, 0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(288, 3);
+            this.panel27.TabIndex = 1;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.bunifuTransition1.SetDecoration(this.panel28, BunifuAnimatorNS.DecorationType.None);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel28.Location = new System.Drawing.Point(0, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(3, 102);
+            this.panel28.TabIndex = 0;
+            // 
+            // checkedListBox1
+            // 
+            this.bunifuTransition1.SetDecoration(this.checkedListBox1, BunifuAnimatorNS.DecorationType.None);
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(6, 7);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(705, 199);
+            this.checkedListBox1.TabIndex = 2;
             // 
             // panel22
             // 
@@ -695,6 +831,18 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation1;
+
+            // 
+            // label_ErrorAddTest
+            // 
+            this.label_ErrorAddTest.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label_ErrorAddTest, BunifuAnimatorNS.DecorationType.None);
+            this.label_ErrorAddTest.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_ErrorAddTest.Location = new System.Drawing.Point(9, 14);
+            this.label_ErrorAddTest.Name = "label_ErrorAddTest";
+            this.label_ErrorAddTest.Size = new System.Drawing.Size(0, 20);
+            this.label_ErrorAddTest.TabIndex = 29;
+
             // 
             // Add_Test
             // 
@@ -740,7 +888,11 @@
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panelAddQuestion.ResumeLayout(false);
+            this.panelAddQuestion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -795,5 +947,15 @@
         private System.Windows.Forms.Panel panel19;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        private System.Windows.Forms.Panel panelAddQuestion;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox_TitleQuestion;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label_ErrorAddTest;
     }
 }

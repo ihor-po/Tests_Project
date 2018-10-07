@@ -2,5 +2,7 @@ README.md
 .git/
 .vs/
 Kursak_Ol/bin/
+!Kursak_Ol/bin/Debug/Bunifu_UI_v1.5.3.dll
 Kursak_Ol/obj/
 Kursak_ol/App.config
+Kursak_Ol/Kursak_Ol.csproj

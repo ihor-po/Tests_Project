@@ -239,7 +239,7 @@ ADD CONSTRAINT [FK_UserRole]
     FOREIGN KEY ([RoleId])
     REFERENCES [dbo].[Role]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserRole'
@@ -254,7 +254,7 @@ ADD CONSTRAINT [FK_TestCategory]
     FOREIGN KEY ([CategoryId])
     REFERENCES [dbo].[Category]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestCategory'
@@ -269,7 +269,7 @@ ADD CONSTRAINT [FK_TestQuestionTest]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestQuestionTest'
@@ -284,7 +284,7 @@ ADD CONSTRAINT [FK_TestQuestionAnswerTestQuestion]
     FOREIGN KEY ([TestQuestionId])
     REFERENCES [dbo].[TestQuestion]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestQuestionAnswerTestQuestion'
@@ -299,7 +299,7 @@ ADD CONSTRAINT [FK_UserTestCreator]
     FOREIGN KEY ([UserId])
     REFERENCES [dbo].[User]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestCreator'
@@ -314,7 +314,7 @@ ADD CONSTRAINT [FK_TestTestCreator]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_TestTestCreator'
@@ -329,7 +329,7 @@ ADD CONSTRAINT [FK_UserTestUser]
     FOREIGN KEY ([UserId])
     REFERENCES [dbo].[User]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestUser'
@@ -344,7 +344,7 @@ ADD CONSTRAINT [FK_UserTestTest]
     FOREIGN KEY ([TestId])
     REFERENCES [dbo].[Test]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestTest'
@@ -359,7 +359,7 @@ ADD CONSTRAINT [FK_UserTestAnswerUserTest]
     FOREIGN KEY ([UserTestId])
     REFERENCES [dbo].[UserTest]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UserTestAnswerUserTest'
@@ -401,3 +401,108 @@ GO
 -- --------------------------------------------------
 -- Script has ended
 -- --------------------------------------------------
+
+INSERT INTO dbo.[Role] VALUES
+('Преподаватель'),
+('Студент');
+GO
+
+INSERT INTO dbo.[User] VALUES
+('user', '159167266', 'Тестовый', 'Пользователь', 'Те', '380554443322', 'Тут адреса нет, д. 54', 1);
+GO
+
+INSERT INTO dbo.[Category] VALUES
+('Физика'),
+('Математика'),
+('Химия');
+GO
+
+INSERT INTO dbo.[Test] VALUES
+('Тест по физике №1', 1, 1),
+('Тест по математике №1', 1, 2),
+('Тест по химии №1', 1, 3);
+GO
+
+INSERT INTO dbo.[TestCreator] VALUES
+(1,1),
+(1,2),
+(1,3);
+GO
+
+INSERT INTO dbo.[TestQuestion] VALUES
+('Закон Ома для участка цепи', 1, 1),
+('Закон Кулона описывает взаимодействие', 1,1),
+('Квадрат гипотенузы равен', 1,2),
+('5!!=', 1,2),
+('Формула закиси азота(веселящего газа)', 1,3),
+('При взаимодействии активного металла с водой образуется', 1,3),
+('За два периода полураспада распадутся ', 1, 1),
+('При уменьшении в 2 раза расстояния между обкладками плоского конденсатора емкость: ', 1, 1),
+('Плазма является: ', 1, 1),
+('Позитрон является', 1, 1),
+('При аннигиляции электрон-позитронной пары образуются', 1, 1),
+('Перечисленный ряд 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,  является', 1, 2),
+('Площадь круга равна', 1, 2),
+('Сумма углов треугольника равна', 1, 2),
+('Кубический корень из 512 равен', 1, 2),
+('Катализатор  -- это вещество которое', 1, 3),
+('Йод является индикатором для каких веществ', 1, 3);
+GO
+
+INSERT INTO dbo.[TestQuestionAnswer] VALUES
+('Ток прямо пропорционален напряжению и обратно пропорционален сопротивлению', 1,1),
+('Емкость прямо пропорционален напряжению и обратно пропорционален сопротивлению', 0,1),
+('Индуктивность обратно пропорционален напряжению и прямо пропорциональна сопротивлению', 0,1),
+('Между неподвижными точечными электрическими зарядами', 1,2),
+('Между неподвижными точечными магнитными зарядами', 0,2),
+('Сумме квадратов катетов', 1,3),
+('Квадрату суммы катетов', 0,3),
+('15', 1,4),
+('120', 0,4),
+('N2O', 1,5),
+('NO', 0,5),
+('NO2', 0,5),
+('NH3', 0,5),
+('NH3', 0,5),
+('Щелочь', 1,6),
+('Кислота', 0,6),
+('Соль активного металла', 0,6),
+('100% радиоактивных изотопов', 0,7),
+('75% радиоактивных изотопов', 1,7),
+('0% радиоактивных изотопов', 0,7),
+('25% радиоактивных изотопов', 0,7),
+('уменьшится в 2 раза', 0,8),
+('увеличится в 2 раза', 1,8),
+('останется неизменной', 0,8),
+('феромагнетиком', 0,9),
+('парамагнетиком', 1,9),
+('диамагнетиком', 0,9),
+('барионом', 0,10),
+('лептоном', 1,10),
+('бозоном', 0,10),
+('мезоны', 0,11),
+('барионы', 0,11),
+('фотоны', 1,11),
+('лептоном', 1,11),
+('натуральными числами', 0,12),
+('рядом Фибоначчи', 0,12),
+('простыми числами', 1,12),
+('2*Pi*R', 0,13),
+('Pi*R^2', 1,13),
+('360 градусов', 0,14),
+('90 градусов', 0,14),
+('120 градусов', 0,14),
+('180 градусов', 0,14),
+('64', 0,15),
+('32', 0,15),
+('128', 0,15),
+('4', 0,15),
+('8', 1,15),
+('не оказывающее влияния на скорость реакции', 0,16),
+('многократно замедляет реакцию', 0,16),
+('многократно ускоряет реакцию', 1,16),
+('белков', 0,17),
+('жиров', 0,17),
+('витаминов', 0,17),
+('крахмалов', 1,17);
+GO

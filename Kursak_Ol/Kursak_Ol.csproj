@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Bunifu_for_WinForms\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -42,8 +45,13 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -92,11 +100,23 @@
     <Compile Include="Pupil.Designer.cs">
       <DependentUpon>Pupil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pupil_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pupil_Test.Designer.cs">
+      <DependentUpon>Pupil_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result_For_Pupil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result_For_Pupil.Designer.cs">
+      <DependentUpon>Result_For_Pupil.cs</DependentUpon>
     </Compile>
     <Compile Include="Result_For_Teacher.cs">
       <SubType>Form</SubType>
@@ -167,9 +187,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Test.resx">
       <DependentUpon>Edit_Test.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,8 +208,15 @@
     <EmbeddedResource Include="Pupil.resx">
       <DependentUpon>Pupil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pupil_Test.resx">
+      <DependentUpon>Pupil_Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result_For_Pupil.resx">
+      <DependentUpon>Result_For_Pupil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Result_For_Teacher.resx">
       <DependentUpon>Result_For_Teacher.cs</DependentUpon>
@@ -198,6 +229,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher.resx">
       <DependentUpon>Teacher.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -218,7 +250,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="images\korganizer-icon.png" />
@@ -269,6 +303,7 @@
     <None Include="images\edit.png" />
     <None Include="images\add.png" />
     <None Include="images\open.png" />
+    <Content Include="logo.ico" />
     <Content Include="Tests_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Tests_DB.Context.cs</LastGenOutput>

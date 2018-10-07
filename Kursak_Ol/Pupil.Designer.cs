@@ -42,6 +42,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel14_Opoves = new System.Windows.Forms.Panel();
+            this.label16_Log_Opov = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1_Predmet = new System.Windows.Forms.ComboBox();
             this.label1_Name = new System.Windows.Forms.Label();
@@ -61,9 +64,6 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.panel14_Opoves = new System.Windows.Forms.Panel();
-            this.label16_Log_Opov = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -71,9 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel14_Opoves.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel14_Opoves.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -224,6 +224,44 @@
             this.panel4.Size = new System.Drawing.Size(819, 74);
             this.panel4.TabIndex = 4;
             // 
+            // panel14_Opoves
+            // 
+            this.panel14_Opoves.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel14_Opoves.BackColor = System.Drawing.Color.DarkGray;
+            this.panel14_Opoves.Controls.Add(this.label16_Log_Opov);
+            this.panel14_Opoves.Controls.Add(this.label14);
+            this.bunifuTransition1.SetDecoration(this.panel14_Opoves, BunifuAnimatorNS.DecorationType.None);
+            this.panel14_Opoves.Location = new System.Drawing.Point(253, 12);
+            this.panel14_Opoves.Name = "panel14_Opoves";
+            this.panel14_Opoves.Size = new System.Drawing.Size(312, 50);
+            this.panel14_Opoves.TabIndex = 4;
+            // 
+            // label16_Log_Opov
+            // 
+            this.bunifuTransition1.SetDecoration(this.label16_Log_Opov, BunifuAnimatorNS.DecorationType.None);
+            this.label16_Log_Opov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label16_Log_Opov.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16_Log_Opov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.label16_Log_Opov.Location = new System.Drawing.Point(0, 17);
+            this.label16_Log_Opov.Name = "label16_Log_Opov";
+            this.label16_Log_Opov.Size = new System.Drawing.Size(312, 17);
+            this.label16_Log_Opov.TabIndex = 3;
+            this.label16_Log_Opov.Text = "null";
+            this.label16_Log_Opov.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label14
+            // 
+            this.bunifuTransition1.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(312, 17);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Вы вошли как пользователь под логином:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -351,12 +389,12 @@
             // 
             // listView1_Name_Test
             // 
-            this.listView1_Name_Test.BackColor = System.Drawing.SystemColors.Control;
+            this.listView1_Name_Test.BackColor = System.Drawing.Color.White;
             this.bunifuTransition1.SetDecoration(this.listView1_Name_Test, BunifuAnimatorNS.DecorationType.None);
             this.listView1_Name_Test.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1_Name_Test.Location = new System.Drawing.Point(5, 5);
+            this.listView1_Name_Test.Location = new System.Drawing.Point(3, 3);
             this.listView1_Name_Test.Name = "listView1_Name_Test";
-            this.listView1_Name_Test.Size = new System.Drawing.Size(725, 368);
+            this.listView1_Name_Test.Size = new System.Drawing.Size(729, 372);
             this.listView1_Name_Test.TabIndex = 4;
             this.listView1_Name_Test.UseCompatibleStateImageBehavior = false;
             // 
@@ -365,9 +403,9 @@
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.bunifuTransition1.SetDecoration(this.panel13, BunifuAnimatorNS.DecorationType.None);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(5, 373);
+            this.panel13.Location = new System.Drawing.Point(3, 375);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(725, 5);
+            this.panel13.Size = new System.Drawing.Size(729, 3);
             this.panel13.TabIndex = 3;
             // 
             // panel12
@@ -375,9 +413,9 @@
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.bunifuTransition1.SetDecoration(this.panel12, BunifuAnimatorNS.DecorationType.None);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(0, 5);
+            this.panel12.Location = new System.Drawing.Point(0, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(5, 373);
+            this.panel12.Size = new System.Drawing.Size(3, 375);
             this.panel12.TabIndex = 2;
             // 
             // panel11
@@ -385,9 +423,9 @@
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.bunifuTransition1.SetDecoration(this.panel11, BunifuAnimatorNS.DecorationType.None);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(730, 5);
+            this.panel11.Location = new System.Drawing.Point(732, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 373);
+            this.panel11.Size = new System.Drawing.Size(3, 375);
             this.panel11.TabIndex = 1;
             // 
             // panel10
@@ -397,7 +435,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(735, 5);
+            this.panel10.Size = new System.Drawing.Size(735, 3);
             this.panel10.TabIndex = 0;
             // 
             // bunifuElipse1
@@ -437,44 +475,6 @@
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation1;
             // 
-            // panel14_Opoves
-            // 
-            this.panel14_Opoves.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel14_Opoves.BackColor = System.Drawing.Color.DarkGray;
-            this.panel14_Opoves.Controls.Add(this.label16_Log_Opov);
-            this.panel14_Opoves.Controls.Add(this.label14);
-            this.bunifuTransition1.SetDecoration(this.panel14_Opoves, BunifuAnimatorNS.DecorationType.None);
-            this.panel14_Opoves.Location = new System.Drawing.Point(253, 12);
-            this.panel14_Opoves.Name = "panel14_Opoves";
-            this.panel14_Opoves.Size = new System.Drawing.Size(312, 50);
-            this.panel14_Opoves.TabIndex = 4;
-            // 
-            // label16_Log_Opov
-            // 
-            this.bunifuTransition1.SetDecoration(this.label16_Log_Opov, BunifuAnimatorNS.DecorationType.None);
-            this.label16_Log_Opov.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label16_Log_Opov.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16_Log_Opov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.label16_Log_Opov.Location = new System.Drawing.Point(0, 17);
-            this.label16_Log_Opov.Name = "label16_Log_Opov";
-            this.label16_Log_Opov.Size = new System.Drawing.Size(312, 17);
-            this.label16_Log_Opov.TabIndex = 3;
-            this.label16_Log_Opov.Text = "null";
-            this.label16_Log_Opov.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label14
-            // 
-            this.bunifuTransition1.SetDecoration(this.label14, BunifuAnimatorNS.DecorationType.None);
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(312, 17);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Вы вошли как пользователь под логином:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // Pupil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +493,7 @@
             this.Controls.Add(this.panel1_Top);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pupil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pupil";
@@ -505,9 +506,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel14_Opoves.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel14_Opoves.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
