@@ -73,6 +73,11 @@ namespace Kursak_Ol
 
                     User user = tests.User.FirstOrDefault(z =>
                         z.Login == textBox1_Login.Text && z.Password == pass);
+                    if (user == null)
+                    {
+                        this.label6_Error.Visible = true;
+                        return;
+                    }
 
                     if (user.Role.Title == "Студент")
                     {
@@ -89,11 +94,7 @@ namespace Kursak_Ol
                         teacher.ShowDialog();
                     }
 
-                    if (user == null)
-                    {
-                        this.label6_Error.Visible = true;
-                        return;
-                    }
+                    
                 }
             }
             catch (Exception)
