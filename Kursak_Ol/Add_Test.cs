@@ -89,6 +89,7 @@ namespace Kursak_Ol
 
         private void button_FinishAddTest_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
