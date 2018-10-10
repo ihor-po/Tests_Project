@@ -227,7 +227,7 @@ namespace Kursak_Ol
                             UserTestQuestionAnswerId = item.IdAnswer,
                             AnswerDate = item.date
                         };
-                        var rrr = db.UserTestAnswer.Add(uta);
+                        db.UserTestAnswer.Add(uta);
                     }
                 }
                 //сохраняем изменения
