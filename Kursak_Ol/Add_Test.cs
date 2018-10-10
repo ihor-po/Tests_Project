@@ -100,74 +100,41 @@ namespace Kursak_Ol
 
         private void button_AddNewQuestion_Click(object sender, EventArgs e)
         {
-            //    label_ErrorAddTest.Text = "";
-            //    if (textBox_AddTestTitle.Text == "")
-            //    {
-            //        label_ErrorAddTest.Text = "Введите название";
-            //    }
-            //    else if (textBox_AddQuestion.Text == "")
-            //    {
-            //        label_ErrorAddTest.Text = "Введите вопрос";
-            //    }
-            //    else if(checkedListBox1.Items.Count == 0)
-            //    {
-            //        label_ErrorAddTest.Text = "Добавьте ответы";
-            //    }
-            //    else if(checkedListBox1.SelectedItem == null)
-            //    {
-            //        label_ErrorAddTest.Text = "Выберите верный ответ";
-            //    }
-            //    else
-            //    {
-            //        using (Tests_DBContainer tests = new Tests_DBContainer())
-            //        {
 
-            //            Test test = new Test();
-            //            test.Title = textBox_AddTestTitle.Text;
-            //            test.IsActual = 1;
-            //            int idCat = Convert.ToInt32(comboBox_SelectCategory.SelectedValue.ToString());
-            //            test.Category = tests.Category.FirstOrDefault(cat => cat.Id == idCat);
+            if (textBox_AddTestTitle.Text == "")
+            {
+                label_ErrorAddTest.Text = "Введите название";
+            }
+            else if (textBox_AddTestTitle.Text.Length > 255)
+            {
+                label_ErrorAddTest.Text = "Название не должно превышать 255 символов";
+            }
+            else
+            {
+                using (Tests_DBContainer tests = new Tests_DBContainer())
+                {
+                    Test test = new Test();
+                    test.Title = textBox_AddTestTitle.Text;
+                    test.IsActual = 0;
+                    int idCat = Convert.ToInt32(comboBox_SelectCategory.SelectedValue.ToString());
+                    test.Category = tests.Category.FirstOrDefault(cat => cat.Id == idCat);
 
-            //            tests.Test.Add(test);
+                    tests.Test.Add(test);
 
-            //            TestQuestion testquestion = new TestQuestion();
-            //            testquestion.Question = textBox_AddQuestion.Text;
-            //            testquestion.IsActual = 1;
-            //            testquestion.Test = test;
+                    TestCreator testcreator = new TestCreator();
+                    testcreator.TestId = test.Id;
+                    testcreator.UserId = user.Id;
 
-            //            tests.TestQuestion.Add(testquestion);
+                    tests.TestCreator.Add(testcreator);
 
-            //            TestCreator testcreator = new TestCreator();
-            //            testcreator.TestId = test.Id;
-            //            testcreator.UserId = user.Id;
+                    tests.SaveChanges();
 
-            //            tests.TestCreator.Add(testcreator);
+                    textBox_AddTestTitle.Text = "";
 
-
-
-            //            int i;
-            //            for (i = 0; i <= (checkedListBox1.Items.Count - 1); i++)
-            //            {
-
-            //                TestQuestionAnswer answer = new TestQuestionAnswer();
-            //                answer.Answer = checkedListBox1.Items[i].ToString();
-            //                if (checkedListBox1.GetItemChecked(i))
-            //                {
-            //                    answer.IsAnswer = Convert.ToByte(true);
-            //                }
-            //                answer.TestQuestion = testquestion;
-            //                tests.TestQuestionAnswer.Add(answer);
-
-            //            }
-
-
-
-
-            //            tests.SaveChanges();
-
-            //            this.Close();
-            //        }
-            //    }
+                    Add_Test2 add_test2 = new Add_Test2(test);
+                    add_test2.Show();
+                }
+            }
         }
     }
 }
