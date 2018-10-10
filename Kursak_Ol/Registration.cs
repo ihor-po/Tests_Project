@@ -96,9 +96,9 @@ namespace Kursak_Ol
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
+                MessageBox.Show($"Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!{ex.Message}",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

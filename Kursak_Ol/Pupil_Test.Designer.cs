@@ -355,6 +355,7 @@
             this.listBox_SelectQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_SelectQuestion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_SelectQuestion.FormattingEnabled = true;
+            this.listBox_SelectQuestion.HorizontalScrollbar = true;
             this.listBox_SelectQuestion.ItemHeight = 20;
             this.listBox_SelectQuestion.Location = new System.Drawing.Point(0, 0);
             this.listBox_SelectQuestion.Name = "listBox_SelectQuestion";
@@ -372,9 +373,10 @@
             // 
             // panel_ShowAnswer
             // 
+            this.panel_ShowAnswer.AutoScroll = true;
             this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
             this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_ShowAnswer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_ShowAnswer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
             this.panel_ShowAnswer.Name = "panel_ShowAnswer";
             this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
