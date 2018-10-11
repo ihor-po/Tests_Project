@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -58,6 +59,11 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.checkedListBox_QuestionVariants = new System.Windows.Forms.CheckedListBox();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panelAddQuestion = new System.Windows.Forms.Panel();
             this.button_CancelQuestionVariant = new System.Windows.Forms.Button();
             this.button_AddQuestionVariant = new System.Windows.Forms.Button();
@@ -66,11 +72,7 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.checkedListBox_QuestionVariants = new System.Windows.Forms.CheckedListBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -84,8 +86,8 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panelAddQuestion.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panelAddQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -436,6 +438,54 @@
             this.panel12.Size = new System.Drawing.Size(713, 165);
             this.panel12.TabIndex = 49;
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.checkedListBox_QuestionVariants);
+            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.panel15);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 42);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(713, 123);
+            this.panel13.TabIndex = 32;
+            // 
+            // checkedListBox_QuestionVariants
+            // 
+            this.checkedListBox_QuestionVariants.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox_QuestionVariants.FormattingEnabled = true;
+            this.checkedListBox_QuestionVariants.Location = new System.Drawing.Point(3, 0);
+            this.checkedListBox_QuestionVariants.Name = "checkedListBox_QuestionVariants";
+            this.checkedListBox_QuestionVariants.Size = new System.Drawing.Size(707, 120);
+            this.checkedListBox_QuestionVariants.TabIndex = 33;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(3, 120);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(707, 3);
+            this.panel16.TabIndex = 2;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(710, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(3, 123);
+            this.panel15.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(3, 123);
+            this.panel14.TabIndex = 0;
+            // 
             // panelAddQuestion
             // 
             this.panelAddQuestion.BackColor = System.Drawing.SystemColors.Control;
@@ -531,53 +581,12 @@
             this.panel28.Size = new System.Drawing.Size(3, 42);
             this.panel28.TabIndex = 0;
             // 
-            // panel13
+            // bunifuDragControl1
             // 
-            this.panel13.Controls.Add(this.checkedListBox_QuestionVariants);
-            this.panel13.Controls.Add(this.panel16);
-            this.panel13.Controls.Add(this.panel15);
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 42);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(713, 123);
-            this.panel13.TabIndex = 32;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(3, 123);
-            this.panel14.TabIndex = 0;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(710, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(3, 123);
-            this.panel15.TabIndex = 1;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(3, 120);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(707, 3);
-            this.panel16.TabIndex = 2;
-            // 
-            // checkedListBox_QuestionVariants
-            // 
-            this.checkedListBox_QuestionVariants.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox_QuestionVariants.FormattingEnabled = true;
-            this.checkedListBox_QuestionVariants.Location = new System.Drawing.Point(3, 0);
-            this.checkedListBox_QuestionVariants.Name = "checkedListBox_QuestionVariants";
-            this.checkedListBox_QuestionVariants.Size = new System.Drawing.Size(707, 120);
-            this.checkedListBox_QuestionVariants.TabIndex = 33;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Add_Test2
             // 
@@ -622,9 +631,9 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.panelAddQuestion.ResumeLayout(false);
             this.panelAddQuestion.PerformLayout();
-            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,5 +684,6 @@
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel28;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

@@ -14,7 +14,7 @@
         <EntityTypeShape EntityType="Tests_DB.TestCreator" PointX="1.125" PointY="4.125" Width="1.5" FillColor="192, 255, 255" />
         <EntityTypeShape EntityType="Tests_DB.TestQuestion" Width="1.5" PointX="9.25" PointY="7.375" FillColor="LightSkyBlue" />
         <AssociationConnector Association="Tests_DB.TestQuestionTest" />
-        <EntityTypeShape EntityType="Tests_DB.TestQuestionAnswer" Width="1.5" PointX="12.25" PointY="7.125" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="Tests_DB.TestQuestionAnswer" Width="2.125" PointX="12.25" PointY="7.125" FillColor="LightSkyBlue" />
         <AssociationConnector Association="Tests_DB.TestQuestionAnswerTestQuestion" />
         <EntityTypeShape EntityType="Tests_DB.UserTest" Width="1.5" PointX="9.375" PointY="2.75" FillColor="CornflowerBlue" />
         <AssociationConnector Association="Tests_DB.UserTestCreator" />
