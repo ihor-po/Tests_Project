@@ -50,12 +50,14 @@
             this.label1_Name = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1_Start = new System.Windows.Forms.Button();
             this.button1_Statistika = new System.Windows.Forms.Button();
             this.button1_Close = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.listView1_Name_Test = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -312,6 +314,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.button1_Start);
             this.panel6.Controls.Add(this.button1_Statistika);
             this.panel6.Controls.Add(this.button1_Close);
             this.bunifuTransition1.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
@@ -320,6 +323,24 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(819, 66);
             this.panel6.TabIndex = 6;
+            // 
+            // button1_Start
+            // 
+            this.button1_Start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1_Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button1_Start.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.button1_Start, BunifuAnimatorNS.DecorationType.None);
+            this.button1_Start.Enabled = false;
+            this.button1_Start.FlatAppearance.BorderSize = 0;
+            this.button1_Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1_Start.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1_Start.ForeColor = System.Drawing.Color.White;
+            this.button1_Start.Location = new System.Drawing.Point(308, 18);
+            this.button1_Start.Name = "button1_Start";
+            this.button1_Start.Size = new System.Drawing.Size(164, 31);
+            this.button1_Start.TabIndex = 19;
+            this.button1_Start.Text = "Начать тест";
+            this.button1_Start.UseVisualStyleBackColor = false;
             // 
             // button1_Statistika
             // 
@@ -390,6 +411,8 @@
             // listView1_Name_Test
             // 
             this.listView1_Name_Test.BackColor = System.Drawing.Color.White;
+            this.listView1_Name_Test.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
             this.bunifuTransition1.SetDecoration(this.listView1_Name_Test, BunifuAnimatorNS.DecorationType.None);
             this.listView1_Name_Test.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1_Name_Test.Location = new System.Drawing.Point(3, 3);
@@ -397,6 +420,12 @@
             this.listView1_Name_Test.Size = new System.Drawing.Size(729, 372);
             this.listView1_Name_Test.TabIndex = 4;
             this.listView1_Name_Test.UseCompatibleStateImageBehavior = false;
+            this.listView1_Name_Test.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Название теста";
+            this.columnHeader1.Width = 720;
             // 
             // panel13
             // 
@@ -548,5 +577,7 @@
         private System.Windows.Forms.Panel panel14_Opoves;
         private System.Windows.Forms.Label label16_Log_Opov;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Button button1_Start;
     }
 }

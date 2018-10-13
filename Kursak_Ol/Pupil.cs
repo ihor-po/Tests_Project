@@ -14,8 +14,11 @@ namespace Kursak_Ol
 {
     public partial class Pupil : MyForm
     {
+        string nameTest;
+        int IdUser;
         public Pupil(User user)
         {
+            IdUser = user.Id;
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
             //наследуемый метод
@@ -27,6 +30,63 @@ namespace Kursak_Ol
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
             this.button1_Statistika.Click += Button1_Statistika_Click;
+            //добавляем названия предметов из базы
+            using (Tests_DBContainer db = new Tests_DBContainer())
+            {
+                var category = db.Category.ToList();
+                foreach (var item in category)
+                {
+                    comboBox1_Predmet.Items.Add(item.Title.ToString());
+                }
+            }
+            //изменения предмета
+            comboBox1_Predmet.TextChanged += ComboBox1_Predmet_TextChanged;
+            button1_Start.Click += Button1_Start_Click;
+            listView1_Name_Test.SelectedIndexChanged += ListView1_Name_Test_SelectedIndexChanged;
+        }
+
+        private void ListView1_Name_Test_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1_Name_Test.SelectedItems.Count == 0)
+            {
+                button1_Start.Enabled = false;
+                nameTest = "";
+            }
+            else
+            {
+                nameTest = listView1_Name_Test.SelectedItems[0].Text;
+                button1_Start.Enabled = true;
+            }
+        }
+
+        private void Button1_Start_Click(object sender, EventArgs e)
+        {
+            Pupil_Test form3 = new Pupil_Test(IdUser, nameTest);
+            form3.Show();
+        }
+
+        private void ComboBox1_Predmet_TextChanged(object sender, EventArgs e)
+        {
+            listView1_Name_Test.Items.Clear();
+            var namePredmet = comboBox1_Predmet.SelectedItem.ToString();
+            using (Tests_DBContainer db = new Tests_DBContainer())
+            {
+                var tests = db.Test.Join(
+                    db.Category,
+                    t => t.CategoryId,
+                    c => c.Id,
+                    (t, c) => new
+                    {
+                        TitleTest = t.Title,
+                        TitleCategory = c.Title
+                    }).Where(n => n.TitleCategory.ToString() == namePredmet).ToList();
+
+                foreach (var item in tests)
+                {
+                    ListViewItem list = new ListViewItem(item.TitleTest.ToString());
+                    listView1_Name_Test.Items.Add(list);
+                }
+            }
         }
 
         private void Button1_Statistika_Click(object sender, EventArgs e)
