@@ -111,3 +111,4 @@ D:\git\KursakOl\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CoreCompileIn
 D:\git\KursakOl\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CopyComplete
 D:\git\KursakOl\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.exe
 D:\git\KursakOl\Tests_Project\Kursak_Ol\obj\Debug\Kursak_Ol.pdb
+\\Mac\iCloud\Step\TestsProject\Kursak_Ol\obj\Debug\Kursak_Ol.Add_Test2.resources
