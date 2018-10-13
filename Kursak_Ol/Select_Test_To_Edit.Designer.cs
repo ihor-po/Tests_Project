@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Select_Test_To_Edit));
+
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -37,39 +41,45 @@
             this.bunifuImageButton1_Min = new Bunifu.Framework.UI.BunifuImageButton();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1_Name = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button_EditTest = new System.Windows.Forms.Button();
-            this.button_TurnOn_OffTest = new System.Windows.Forms.Button();
-            this.button_Delete_Test = new System.Windows.Forms.Button();
-            this.button_CancelEditTest = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.comboBox_SelectCategory = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.listBox_SelectTestToEdit = new System.Windows.Forms.ListBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.comboBox_SelectCategory = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button_EditTest = new System.Windows.Forms.Button();
+            this.button_TurnOn_OffTest = new System.Windows.Forms.Button();
+            this.button_Delete_Test = new System.Windows.Forms.Button();
+            this.button_CancelEditTest = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1_Name = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // panel1_Top
             // 
@@ -168,69 +178,101 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // panel4
+            // panel9
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.label1_Name);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(5, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(819, 49);
-            this.panel4.TabIndex = 12;
+            this.panel9.Controls.Add(this.listBox_SelectTestToEdit);
+            this.panel9.Controls.Add(this.panel13);
+            this.panel9.Controls.Add(this.panel12);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(53, 198);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(563, 364);
+            this.panel9.TabIndex = 35;
             // 
-            // label1_Name
+            // listBox_SelectTestToEdit
             // 
-            this.label1_Name.AutoSize = true;
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.label1_Name.Location = new System.Drawing.Point(14, 13);
-            this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(285, 19);
-            this.label1_Name.TabIndex = 0;
-            this.label1_Name.Text = "Выбор теста для редактирования";
+            this.listBox_SelectTestToEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox_SelectTestToEdit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox_SelectTestToEdit.FormattingEnabled = true;
+            this.listBox_SelectTestToEdit.ItemHeight = 17;
+            this.listBox_SelectTestToEdit.Location = new System.Drawing.Point(3, 3);
+            this.listBox_SelectTestToEdit.Name = "listBox_SelectTestToEdit";
+            this.listBox_SelectTestToEdit.Size = new System.Drawing.Size(557, 358);
+            this.listBox_SelectTestToEdit.TabIndex = 31;
+            this.listBox_SelectTestToEdit.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectTestToEdit_SelectedIndexChanged);
             // 
-            // panel1
+            // panel13
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 615);
-            this.panel1.TabIndex = 13;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(3, 361);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(557, 3);
+            this.panel13.TabIndex = 3;
             // 
-            // panel2
+            // panel12
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(824, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 615);
-            this.panel2.TabIndex = 14;
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(560, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(3, 361);
+            this.panel12.TabIndex = 2;
             // 
-            // panel3
+            // panel11
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(5, 610);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(819, 5);
-            this.panel3.TabIndex = 15;
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(3, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(560, 3);
+            this.panel11.TabIndex = 1;
             // 
-            // panel5
+            // panel10
             // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(5, 562);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(819, 48);
-            this.panel5.TabIndex = 31;
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(3, 364);
+            this.panel10.TabIndex = 0;
             // 
-            // panel6
+            // panel8
             // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(5, 99);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(48, 463);
-            this.panel6.TabIndex = 32;
+            this.panel8.Controls.Add(this.comboBox_SelectCategory);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(53, 99);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(563, 99);
+            this.panel8.TabIndex = 34;
+            // 
+            // comboBox_SelectCategory
+            // 
+            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_SelectCategory.FormattingEnabled = true;
+            this.comboBox_SelectCategory.Location = new System.Drawing.Point(147, 36);
+            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
+            this.comboBox_SelectCategory.Size = new System.Drawing.Size(410, 26);
+            this.comboBox_SelectCategory.TabIndex = 19;
+            this.comboBox_SelectCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectCategory_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(6, 38);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(135, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Категория теста:";
             // 
             // panel7
             // 
@@ -275,6 +317,7 @@
             this.button_TurnOn_OffTest.TabIndex = 32;
             this.button_TurnOn_OffTest.Text = "Отключить";
             this.button_TurnOn_OffTest.UseVisualStyleBackColor = false;
+            this.button_TurnOn_OffTest.Click += new System.EventHandler(this.button_TurnOn_OffTest_Click);
             // 
             // button_Delete_Test
             // 
@@ -291,6 +334,7 @@
             this.button_Delete_Test.TabIndex = 31;
             this.button_Delete_Test.Text = "Удалить";
             this.button_Delete_Test.UseVisualStyleBackColor = false;
+            this.button_Delete_Test.Click += new System.EventHandler(this.button_Delete_Test_Click);
             // 
             // button_CancelEditTest
             // 
@@ -307,107 +351,71 @@
             this.button_CancelEditTest.TabIndex = 30;
             this.button_CancelEditTest.Text = "Отмена";
             this.button_CancelEditTest.UseVisualStyleBackColor = false;
+            this.button_CancelEditTest.Click += new System.EventHandler(this.button_CancelEditTest_Click);
             // 
-            // panel8
+            // panel6
             // 
-            this.panel8.Controls.Add(this.comboBox_SelectCategory);
-            this.panel8.Controls.Add(this.label10);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(53, 99);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(563, 99);
-            this.panel8.TabIndex = 34;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(5, 99);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(48, 463);
+            this.panel6.TabIndex = 32;
             // 
-            // comboBox_SelectCategory
+            // panel5
             // 
-            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_SelectCategory.FormattingEnabled = true;
-            this.comboBox_SelectCategory.Location = new System.Drawing.Point(147, 36);
-            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
-            this.comboBox_SelectCategory.Size = new System.Drawing.Size(410, 26);
-            this.comboBox_SelectCategory.TabIndex = 19;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(5, 562);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(819, 48);
+            this.panel5.TabIndex = 31;
             // 
-            // label10
+            // panel3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(6, 38);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Категория теста:";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(5, 610);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(819, 5);
+            this.panel3.TabIndex = 15;
             // 
-            // panel9
+            // panel4
             // 
-            this.panel9.Controls.Add(this.listBox_SelectTestToEdit);
-            this.panel9.Controls.Add(this.panel13);
-            this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(53, 198);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(563, 364);
-            this.panel9.TabIndex = 35;
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.label1_Name);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(5, 50);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(819, 49);
+            this.panel4.TabIndex = 12;
             // 
-            // listBox_SelectTestToEdit
+            // label1_Name
             // 
-            this.listBox_SelectTestToEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_SelectTestToEdit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBox_SelectTestToEdit.FormattingEnabled = true;
-            this.listBox_SelectTestToEdit.ItemHeight = 17;
-            this.listBox_SelectTestToEdit.Location = new System.Drawing.Point(3, 3);
-            this.listBox_SelectTestToEdit.Name = "listBox_SelectTestToEdit";
-            this.listBox_SelectTestToEdit.Size = new System.Drawing.Size(557, 358);
-            this.listBox_SelectTestToEdit.TabIndex = 31;
+            this.label1_Name.AutoSize = true;
+            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.label1_Name.Location = new System.Drawing.Point(14, 13);
+            this.label1_Name.Name = "label1_Name";
+            this.label1_Name.Size = new System.Drawing.Size(285, 19);
+            this.label1_Name.TabIndex = 0;
+            this.label1_Name.Text = "Выбор теста для редактирования";
             // 
-            // panel13
+            // panel2
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(3, 361);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(557, 3);
-            this.panel13.TabIndex = 3;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(824, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 615);
+            this.panel2.TabIndex = 14;
             // 
-            // panel12
+            // panel1
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(560, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(3, 361);
-            this.panel12.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(3, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(560, 3);
-            this.panel11.TabIndex = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(3, 364);
-            this.panel10.TabIndex = 0;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1_Top;
-            this.bunifuDragControl1.Vertical = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 615);
+            this.panel1.TabIndex = 13;
             // 
             // Select_Test_To_Edit
             // 
@@ -437,12 +445,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

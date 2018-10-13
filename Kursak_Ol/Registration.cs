@@ -73,7 +73,6 @@ namespace Kursak_Ol
 
                     User user = tests.User.FirstOrDefault(z =>
                         z.Login == textBox1_Login.Text && z.Password == pass);
-
                     if (user == null)
                     {
                         this.label6_Error.Visible = true;
@@ -85,30 +84,20 @@ namespace Kursak_Ol
                         Pupil pupil = new Pupil(user);
                         textBox1_Login.Text = null;
                         textBox1_Password.Text = null;
-                        this.ShowInTaskbar = false;
-                        this.Opacity = 0;
-                        if (pupil.ShowDialog() == DialogResult.OK)
-                        {
-                            this.ShowInTaskbar = true;
-                            this.Opacity = 1;
-                        }
+                        pupil.ShowDialog();
                     }
-                    else if (user.Role.Title == "Преподователь")
+                    else if (user.Role.Title == "Преподаватель")
                     {
                         Teacher teacher = new Teacher(user);
                         textBox1_Login.Text = null;
                         textBox1_Password.Text = null;
-                        this.ShowInTaskbar = false;
-                        this.Opacity = 0;
-                        if (teacher.ShowDialog() == DialogResult.OK)
-                        {
-                            this.ShowInTaskbar = true;
-                            this.Opacity = 1;
-                        }
+                        teacher.ShowDialog();
                     }
+
+                    
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -253,7 +242,7 @@ namespace Kursak_Ol
                 this.textBox1_Phone.Text = null;
                 this.textBox1_Povtor_password.Text = null;
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);

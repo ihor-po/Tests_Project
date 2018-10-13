@@ -16,6 +16,8 @@ namespace Kursak_Ol
     public partial class Teacher : MyForm
     {
 
+        User user = null;
+
         public Teacher( User user)
         {
             InitializeComponent();
@@ -34,6 +36,8 @@ namespace Kursak_Ol
             timer1.Tick += Timer1_Tick;
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
+
+            this.user = user;
         }
 
         private void BunifuImageButton3_Rezult_Click(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace Kursak_Ol
 
         private void BunifuImageButton_AddNewTest_Click(object sender, EventArgs e)
         {
-            Add_Test test = new Add_Test();
+            Add_Test test = new Add_Test(user);
             test.ShowDialog();
         }
 
