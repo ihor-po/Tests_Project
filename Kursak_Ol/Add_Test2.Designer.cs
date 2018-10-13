@@ -72,7 +72,9 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
+
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -150,6 +152,7 @@
             this.bunifuImageButton1_Close.TabIndex = 7;
             this.bunifuImageButton1_Close.TabStop = false;
             this.bunifuImageButton1_Close.Zoom = 10;
+            this.bunifuImageButton1_Close.Click += new System.EventHandler(this.bunifuImageButton1_Close_Click);
             // 
             // bunifuImageButton1_Min
             // 
@@ -284,6 +287,7 @@
             this.button_AddNewQuestion.TabIndex = 36;
             this.button_AddNewQuestion.Text = "Сохранить";
             this.button_AddNewQuestion.UseVisualStyleBackColor = false;
+            this.button_AddNewQuestion.Click += new System.EventHandler(this.button_AddNewQuestion_Click);
             // 
             // button_FinishAddTest
             // 
@@ -300,6 +304,7 @@
             this.button_FinishAddTest.TabIndex = 35;
             this.button_FinishAddTest.Text = "Выход";
             this.button_FinishAddTest.UseVisualStyleBackColor = false;
+            this.button_FinishAddTest.Click += new System.EventHandler(this.button_FinishAddTest_Click);
             // 
             // label1
             // 
@@ -518,6 +523,7 @@
             this.button_CancelQuestionVariant.TabIndex = 28;
             this.button_CancelQuestionVariant.Text = "Очистить";
             this.button_CancelQuestionVariant.UseVisualStyleBackColor = false;
+            this.button_CancelQuestionVariant.Click += new System.EventHandler(this.button_CancelQuestionVariant_Click);
             // 
             // button_AddQuestionVariant
             // 
@@ -534,6 +540,7 @@
             this.button_AddQuestionVariant.TabIndex = 27;
             this.button_AddQuestionVariant.Text = "Добавить ответ";
             this.button_AddQuestionVariant.UseVisualStyleBackColor = false;
+            this.button_AddQuestionVariant.Click += new System.EventHandler(this.button_AddQuestionVariant_Click);
             // 
             // textBox_TitleQuestion
             // 

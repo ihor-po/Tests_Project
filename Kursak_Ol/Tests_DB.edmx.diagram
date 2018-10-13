@@ -6,26 +6,27 @@
     <edmx:Diagrams>
       <Diagram DiagramId="c60f24fe3f704925af47a8ed2435a170" Name="Diagram1" ZoomLevel="74" >
         <EntityTypeShape EntityType="Tests_DB.Role" Width="1.5" PointX="2.75" PointY="1.125" FillColor="MediumBlue" />
-        <EntityTypeShape EntityType="Tests_DB.User" Width="1.5" PointX="6.125" PointY="1.125" FillColor="MediumBlue" />
+        <EntityTypeShape EntityType="Tests_DB.User" Width="1.5" PointX="4.625" PointY="1.125" FillColor="MediumBlue" />
         <AssociationConnector Association="Tests_DB.UserRole" />
-        <EntityTypeShape EntityType="Tests_DB.Category" Width="1.5" PointX="3.5" PointY="5.125" FillColor="LightSkyBlue" />
-        <EntityTypeShape EntityType="Tests_DB.Test" Width="1.5" PointX="6.125" PointY="6" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="Tests_DB.Category" Width="1.5" PointX="4.625" PointY="4.75" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="Tests_DB.Test" Width="1.5" PointX="6.5" PointY="4.5" FillColor="LightSkyBlue" />
         <AssociationConnector Association="Tests_DB.TestCategory" />
-        <EntityTypeShape EntityType="Tests_DB.TestCreator" PointX="1.125" PointY="4.125" Width="1.5" FillColor="192, 255, 255" />
-        <EntityTypeShape EntityType="Tests_DB.TestQuestion" Width="1.5" PointX="9.25" PointY="7.375" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="Tests_DB.TestCreator" PointX="2.5" PointY="3.125" Width="1.5" FillColor="192, 255, 255" />
+        <EntityTypeShape EntityType="Tests_DB.TestQuestion" Width="1.5" PointX="8.5" PointY="4.5" FillColor="LightSkyBlue" />
         <AssociationConnector Association="Tests_DB.TestQuestionTest" />
+<<<<<<< HEAD
         <EntityTypeShape EntityType="Tests_DB.TestQuestionAnswer" Width="2.125" PointX="12.25" PointY="7.125" FillColor="LightSkyBlue" />
+=======
+        <EntityTypeShape EntityType="Tests_DB.TestQuestionAnswer" Width="1.5" PointX="10.5" PointY="4.375" FillColor="LightSkyBlue" />
+>>>>>>> test
         <AssociationConnector Association="Tests_DB.TestQuestionAnswerTestQuestion" />
-        <EntityTypeShape EntityType="Tests_DB.UserTest" Width="1.5" PointX="9.375" PointY="2.75" FillColor="CornflowerBlue" />
+        <EntityTypeShape EntityType="Tests_DB.UserTest" Width="1.5" PointX="6.875" PointY="1.125" FillColor="CornflowerBlue" />
         <AssociationConnector Association="Tests_DB.UserTestCreator" />
         <AssociationConnector Association="Tests_DB.TestTestCreator" />
         <AssociationConnector Association="Tests_DB.UserTestUser" />
-        <AssociationConnector Association="Tests_DB.UserTestTest" ManuallyRouted="true" >
-          <ConnectorPoint PointX="10.102196440338037" PointY="5.3071907552083317" />
-          <ConnectorPoint PointX="10.102196440338037" PointY="6.9517956888020835" />
-          <ConnectorPoint PointX="7.625" PointY="6.9517956888020835" />
+        <AssociationConnector Association="Tests_DB.UserTestTest" ManuallyRouted="false" >
         </AssociationConnector>
-        <EntityTypeShape EntityType="Tests_DB.UserTestAnswer" Width="1.5" PointX="13.875" PointY="2.75" FillColor="CornflowerBlue" />
+        <EntityTypeShape EntityType="Tests_DB.UserTestAnswer" Width="1.5" PointX="9.125" PointY="1.125" FillColor="CornflowerBlue" />
         <AssociationConnector Association="Tests_DB.UserTestAnswerUserTest" />
         <AssociationConnector Association="Tests_DB.UserTestAnswerTestQuestion" />
         <AssociationConnector Association="Tests_DB.TestQuestionAnswerUserTestAnswer" />
