@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -71,6 +72,9 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
+
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -584,6 +588,13 @@
             this.panel28.Size = new System.Drawing.Size(3, 42);
             this.panel28.TabIndex = 0;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // Add_Test2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,5 +691,6 @@
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel28;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
