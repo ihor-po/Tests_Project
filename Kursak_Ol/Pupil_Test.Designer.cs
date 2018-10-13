@@ -151,11 +151,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(60, 16);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 5;
             this.label15.Text = "TASTER";
             // 
@@ -182,11 +182,11 @@
             // label1_Name
             // 
             this.label1_Name.AutoSize = true;
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.label1_Name.Location = new System.Drawing.Point(14, 13);
             this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(139, 19);
+            this.label1_Name.Size = new System.Drawing.Size(145, 20);
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Название теста";
             // 
@@ -220,10 +220,10 @@
             // label_TestTitle
             // 
             this.label_TestTitle.AutoSize = true;
-            this.label_TestTitle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_TestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_TestTitle.Location = new System.Drawing.Point(45, 13);
             this.label_TestTitle.Name = "label_TestTitle";
-            this.label_TestTitle.Size = new System.Drawing.Size(126, 20);
+            this.label_TestTitle.Size = new System.Drawing.Size(117, 18);
             this.label_TestTitle.TabIndex = 26;
             this.label_TestTitle.Text = "Название теста";
             // 
@@ -269,7 +269,7 @@
             this.button_CancelTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CancelTest.FlatAppearance.BorderSize = 0;
             this.button_CancelTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CancelTest.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_CancelTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_CancelTest.ForeColor = System.Drawing.Color.White;
             this.button_CancelTest.Location = new System.Drawing.Point(380, 21);
             this.button_CancelTest.Name = "button_CancelTest";
@@ -285,7 +285,7 @@
             this.button1_EndTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1_EndTest.FlatAppearance.BorderSize = 0;
             this.button1_EndTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1_EndTest.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1_EndTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1_EndTest.ForeColor = System.Drawing.Color.White;
             this.button1_EndTest.Location = new System.Drawing.Point(553, 21);
             this.button1_EndTest.Name = "button1_EndTest";
@@ -353,10 +353,10 @@
             // listBox_SelectQuestion
             // 
             this.listBox_SelectQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_SelectQuestion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox_SelectQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_SelectQuestion.FormattingEnabled = true;
             this.listBox_SelectQuestion.HorizontalScrollbar = true;
-            this.listBox_SelectQuestion.ItemHeight = 20;
+            this.listBox_SelectQuestion.ItemHeight = 18;
             this.listBox_SelectQuestion.Location = new System.Drawing.Point(0, 0);
             this.listBox_SelectQuestion.Name = "listBox_SelectQuestion";
             this.listBox_SelectQuestion.Size = new System.Drawing.Size(509, 372);
@@ -376,7 +376,7 @@
             this.panel_ShowAnswer.AutoScroll = true;
             this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
             this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_ShowAnswer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_ShowAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
             this.panel_ShowAnswer.Name = "panel_ShowAnswer";
             this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
