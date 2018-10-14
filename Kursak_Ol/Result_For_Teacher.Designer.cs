@@ -333,6 +333,7 @@
             this.listBox_Test_Results_For_Teacher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox_Test_Results_For_Teacher.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_Test_Results_For_Teacher.FormattingEnabled = true;
+            this.listBox_Test_Results_For_Teacher.HorizontalScrollbar = true;
             this.listBox_Test_Results_For_Teacher.ItemHeight = 17;
             this.listBox_Test_Results_For_Teacher.Location = new System.Drawing.Point(3, 3);
             this.listBox_Test_Results_For_Teacher.Name = "listBox_Test_Results_For_Teacher";

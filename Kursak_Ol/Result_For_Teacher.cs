@@ -85,8 +85,6 @@ namespace Kursak_Ol
                     this.comboBox_Select_Test.SelectedIndex = 0;//ставим первый айтем как выбранный
                 }
             }
-
-            
         }
 
         private void Vivod_Users()
@@ -95,16 +93,17 @@ namespace Kursak_Ol
             var test = Ltest.Find(z => z.Title == this.comboBox_Select_Test.SelectedItem.ToString());//находим выбранный тест
             using (Tests_DBContainer db = new Tests_DBContainer())
             {
-                var userTest = db.UserTest.Where(z => z.Id == test.Id).ToList();//по айдишнику теста находим пользователей которые его проходили
+                var userTest = db.UserTest.Where(z => z.TestId == test.Id).ToList();//по айдишнику теста находим пользователей которые его проходили
                 var countQvechin = db.TestQuestion.Count(z => z.TestId == test.Id && z.IsActual == 1);//расчитываем количество вопросов в тесте
                 foreach (var VARIABLE in userTest)
                 {
                     //для расчета времени прохождения теста
                     DateTime a = new DateTime(VARIABLE.StartDate.Millisecond);
                     DateTime b = new DateTime(VARIABLE.EndDate.Millisecond);
+                    TimeSpan span = (VARIABLE.EndDate - VARIABLE.StartDate);
                     //выводим в лист бокс информацию
                     this.listBox_Test_Results_For_Teacher.Items.Add(
-                        $"[{VARIABLE.User.FirstName} {VARIABLE.User.LastName} {VARIABLE.User.MiddleName}] количество вопросов: {countQvechin} количество правельных ответов: {VARIABLE.Result} потрачено времени: {b.Subtract(a).Ticks}");
+                        $"[{VARIABLE.User.FirstName} {VARIABLE.User.LastName} {VARIABLE.User.MiddleName}] количество вопросов: {countQvechin} количество правельных ответов: {VARIABLE.Result} потрачено времени: {span.Duration()}");
                 }
             }
         }
