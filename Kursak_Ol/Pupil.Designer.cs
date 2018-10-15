@@ -416,6 +416,7 @@
             this.bunifuTransition1.SetDecoration(this.listView1_Name_Test, BunifuAnimatorNS.DecorationType.None);
             this.listView1_Name_Test.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1_Name_Test.Location = new System.Drawing.Point(3, 3);
+            this.listView1_Name_Test.MultiSelect = false;
             this.listView1_Name_Test.Name = "listView1_Name_Test";
             this.listView1_Name_Test.Size = new System.Drawing.Size(729, 372);
             this.listView1_Name_Test.TabIndex = 4;

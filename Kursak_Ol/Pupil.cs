@@ -14,10 +14,13 @@ namespace Kursak_Ol
 {
     public partial class Pupil : MyForm
     {
+        //название теста
         string nameTest;
+        //Id юзера
         int IdUser;
         public Pupil(User user)
         {
+            //заполняем название теста
             IdUser = user.Id;
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
@@ -41,8 +44,16 @@ namespace Kursak_Ol
             }
             //изменения предмета
             comboBox1_Predmet.TextChanged += ComboBox1_Predmet_TextChanged;
+            comboBox1_Predmet.Click += ComboBox1_Predmet_Click;
+            //кнопка запуска теста
             button1_Start.Click += Button1_Start_Click;
+            //выбор и изменения значений в listView 
             listView1_Name_Test.SelectedIndexChanged += ListView1_Name_Test_SelectedIndexChanged;
+        }
+
+        private void ComboBox1_Predmet_Click(object sender, EventArgs e)
+        {
+            button1_Start.Enabled = false;
         }
 
         private void ListView1_Name_Test_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,19 +69,52 @@ namespace Kursak_Ol
                 button1_Start.Enabled = true;
             }
         }
-
         private void Button1_Start_Click(object sender, EventArgs e)
         {
-            Pupil_Test form3 = new Pupil_Test(IdUser, nameTest);
-            form3.Show();
+            using (Tests_DBContainer db = new Tests_DBContainer())
+            {
+                //выборка вопросов из базы  
+                var test = db.Test.Join(
+                    db.TestQuestion,
+                    t => t.Id,
+                    tq => tq.TestId,
+                    (t, tq) => new
+                    {
+                        testTitle = t.Title
+                    }).Where(t => t.testTitle == nameTest).ToList();
+                //Проверка на наличие вопросов в данном тесте
+                if (test.Count>0)
+                {
+                    //переход на страницу прохождения теста
+                    Pupil_Test form3 = new Pupil_Test(IdUser, nameTest);
+                    form3.Show();
+                }
+                else
+                {
+                    //вывод ошибки
+                    MessageBox.Show($"Тест {nameTest} не содержит вопросов!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                button1_Start.Enabled = false;
+                //убираем все выбранные элементы listView
+                foreach (var i in listView1_Name_Test.SelectedIndices)
+                {
+                    listView1_Name_Test.Items[Convert.ToInt32(i)].Selected = false;
+                }
+            }
         }
-
         private void ComboBox1_Predmet_TextChanged(object sender, EventArgs e)
         {
+            //отчистка listView
             listView1_Name_Test.Items.Clear();
+            //убираем все выбранные элементы listView
+            foreach (var i in listView1_Name_Test.SelectedIndices)
+            {
+                listView1_Name_Test.Items[Convert.ToInt32(i)].Selected = false;
+            }
             var namePredmet = comboBox1_Predmet.SelectedItem.ToString();
             using (Tests_DBContainer db = new Tests_DBContainer())
             {
+                //выор тестов из базы
                 var tests = db.Test.Join(
                     db.Category,
                     t => t.CategoryId,
@@ -80,7 +124,7 @@ namespace Kursak_Ol
                         TitleTest = t.Title,
                         TitleCategory = c.Title
                     }).Where(n => n.TitleCategory.ToString() == namePredmet).ToList();
-
+                //запись тестов по заданной категории и запись в listView
                 foreach (var item in tests)
                 {
                     ListViewItem list = new ListViewItem(item.TitleTest.ToString());
