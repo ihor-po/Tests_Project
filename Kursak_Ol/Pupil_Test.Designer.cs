@@ -42,8 +42,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label_TestTitle = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -55,10 +53,12 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.listBox_SelectQuestion = new System.Windows.Forms.ListBox();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel_ShowAnswer = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.listBox_SelectQuestion = new System.Windows.Forms.ListBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label_TestTitle = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -66,10 +66,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -217,25 +217,6 @@
             this.panel3.Size = new System.Drawing.Size(819, 5);
             this.panel3.TabIndex = 9;
             // 
-            // label_TestTitle
-            // 
-            this.label_TestTitle.AutoSize = true;
-            this.label_TestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_TestTitle.Location = new System.Drawing.Point(45, 13);
-            this.label_TestTitle.Name = "label_TestTitle";
-            this.label_TestTitle.Size = new System.Drawing.Size(117, 18);
-            this.label_TestTitle.TabIndex = 26;
-            this.label_TestTitle.Text = "Название теста";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label_TestTitle);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(5, 112);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(819, 48);
-            this.panel5.TabIndex = 31;
-            // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
@@ -350,6 +331,24 @@
             this.panel17.Size = new System.Drawing.Size(509, 372);
             this.panel17.TabIndex = 32;
             // 
+            // panel_ShowAnswer
+            // 
+            this.panel_ShowAnswer.AutoScroll = true;
+            this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
+            this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_ShowAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
+            this.panel_ShowAnswer.Name = "panel_ShowAnswer";
+            this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
+            this.panel_ShowAnswer.TabIndex = 30;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // listBox_SelectQuestion
             // 
             this.listBox_SelectQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -371,23 +370,24 @@
             this.panel14.Size = new System.Drawing.Size(3, 372);
             this.panel14.TabIndex = 31;
             // 
-            // panel_ShowAnswer
+            // label_TestTitle
             // 
-            this.panel_ShowAnswer.AutoScroll = true;
-            this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
-            this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_ShowAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
-            this.panel_ShowAnswer.Name = "panel_ShowAnswer";
-            this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
-            this.panel_ShowAnswer.TabIndex = 30;
+            this.label_TestTitle.AutoSize = true;
+            this.label_TestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_TestTitle.Location = new System.Drawing.Point(45, 13);
+            this.label_TestTitle.Name = "label_TestTitle";
+            this.label_TestTitle.Size = new System.Drawing.Size(117, 18);
+            this.label_TestTitle.TabIndex = 26;
+            this.label_TestTitle.Text = "Название теста";
             // 
-            // bunifuDragControl1
+            // panel5
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1_Top;
-            this.bunifuDragControl1.Vertical = true;
+            this.panel5.Controls.Add(this.label_TestTitle);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(5, 112);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(819, 48);
+            this.panel5.TabIndex = 31;
             // 
             // Pupil_Test
             // 
@@ -423,11 +423,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -446,8 +446,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label_TestTitle;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -459,9 +457,11 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.ListBox listBox_SelectQuestion;
-        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel_ShowAnswer;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.ListBox listBox_SelectQuestion;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label_TestTitle;
+        private System.Windows.Forms.Panel panel5;
     }
 }
