@@ -12,17 +12,54 @@ namespace Kursak_Ol
 {
     public partial class Add_Test2 : Form
     {
-        Test test;
+        int testId;
 
-        public Add_Test2(Test test)
+        public Add_Test2(int id)
         {
             InitializeComponent();
-            this.test = test;
+            this.testId = id;
 
             textBox_AddQuestion.TextChanged += new EventHandler(text_changed);
-            comboBox_SelectQuestion.Items.Add(test.Title);
-            comboBox_SelectQuestion.SelectedIndex = 0;
+            comboBox_SelectQuestion.SelectedIndexChanged += new EventHandler(comboBoxChanged);
+            renderListQuestions();
             
+        }
+
+        private void comboBoxChanged(object sender, EventArgs e)
+        {
+            renderListAnswers();
+        }
+
+        private void renderListAnswers()
+        {
+            textBox_EnterdQuestions.Text = "";
+            int id = Convert.ToInt32(comboBox_SelectQuestion.SelectedValue);
+            using (Tests_DBContainer tests = new Tests_DBContainer()) { 
+                foreach (TestQuestionAnswer tqa in tests.TestQuestionAnswer.Where(t => t.TestQuestionId == id))
+                {
+                    textBox_EnterdQuestions.Text += tqa.Answer + Environment.NewLine;
+                }
+            }
+        }
+
+        private void renderListQuestions(int ind = 0)
+        {
+            using (Tests_DBContainer tests = new Tests_DBContainer())
+            {
+
+                comboBox_SelectQuestion.DataSource = tests.TestQuestion.Where(t => t.TestId == this.testId).ToList();
+                comboBox_SelectQuestion.ValueMember = "Id";
+                comboBox_SelectQuestion.DisplayMember = "Question";
+               
+
+                if (comboBox_SelectQuestion.Items.Count > 0)
+                {
+                    comboBox_SelectQuestion.SelectedIndex = ind;
+                    renderListAnswers();
+                }
+                
+                
+            }
         }
 
         private void text_changed(object sender, EventArgs e)
@@ -55,23 +92,35 @@ namespace Kursak_Ol
 
         private void button_AddNewQuestion_Click(object sender, EventArgs e)
         {
-            
-            if (textBox_AddQuestion.Text == "")
+
+            bool error = false;
+
+            using (Tests_DBContainer tests = new Tests_DBContainer())
             {
-                MessageBox.Show("Введите вопрос");
-            }
-            else if (checkedListBox_QuestionVariants.Items.Count == 0)
-            {
-                MessageBox.Show("Добавьте ответы");
-            }
-            else if (checkedListBox_QuestionVariants.SelectedItem == null)
-            {
-                MessageBox.Show("Выберите верный ответ");
-            }
-            else
-            {
-                using (Tests_DBContainer tests = new Tests_DBContainer())
+                if (textBox_AddQuestion.Text == "")
                 {
+                    MessageBox.Show("Введите вопрос");
+                    error = true;
+                }
+                if (checkedListBox_QuestionVariants.Items.Count == 0)
+                {
+                    MessageBox.Show("Добавьте ответы");
+                    error = true;
+                }
+                if (checkedListBox_QuestionVariants.SelectedItem == null)
+                {
+                    MessageBox.Show("Выберите верный ответ");
+                    error = true;
+                }
+
+                if (tests.TestQuestion.Where(t => t.TestId == this.testId && t.Question == textBox_AddQuestion.Text).ToList().Count > 0)
+                {
+                    MessageBox.Show("Есть такой вопрос");
+                    error = true;
+                }
+                if (!error)
+                {
+
 
                     TestQuestion testquestion = new TestQuestion();
                     testquestion.Question = textBox_AddQuestion.Text;
@@ -81,8 +130,8 @@ namespace Kursak_Ol
                     {
                         testquestion.IsActual = 1;
                     }
-                    
-                    testquestion.Test = this.test;
+
+                    testquestion.TestId = this.testId;
                     tests.TestQuestion.Add(testquestion);
 
 
@@ -101,12 +150,13 @@ namespace Kursak_Ol
 
                     }
 
-       
+
                     tests.SaveChanges();
 
                     checkedListBox_QuestionVariants.Items.Clear();
-                    textBox_EnterdQuestions.Text += textBox_AddQuestion.Text + Environment.NewLine;
                     textBox_AddQuestion.Text = "";
+                    renderListQuestions((comboBox_SelectQuestion.Items.Count));
+
                 }
             }
         }
@@ -116,19 +166,24 @@ namespace Kursak_Ol
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
 
-                if(tests.TestQuestion.Where(t => t.TestId == test.Id).Count() == 0)
+                if(tests.TestQuestion.Where(t => t.TestId == this.testId).Count() == 0)
                 {
                     MessageBox.Show("Добавьте вопрос");
                 }
-                else if (tests.TestQuestionAnswer.Where(t => t.TestQuestion.TestId == test.Id).Count() == 0)
+                else if (tests.TestQuestionAnswer.Where(t => t.TestQuestion.TestId == this.testId).Count() == 0)
                 {
                     MessageBox.Show("Добавьте ответы");
                 }
                 else
                 {
-                    this.test.IsActual = 1;
-                    tests.SaveChanges();
-                    this.Close();
+                    Test test = tests.Test.FirstOrDefault(t => t.Id == this.testId);
+                    if(test != null)
+                    {
+                        test.IsActual = 1;
+                        tests.SaveChanges();
+                        this.Close();
+                    }
+                    
                 }
 
             }
