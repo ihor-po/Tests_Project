@@ -107,8 +107,8 @@ namespace Kursak_Ol
                     MessageBox.Show("Добавьте ответы");
                     error = true;
                 }
-                if (checkedListBox_QuestionVariants.SelectedItem == null)
-                {
+                if (checkedListBox_QuestionVariants.SelectedItem == null || checkedListBox_QuestionVariants.CheckedItems.Count == 0)
+                { 
                     MessageBox.Show("Выберите верный ответ");
                     error = true;
                 }
