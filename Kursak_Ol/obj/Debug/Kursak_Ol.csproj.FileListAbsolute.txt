@@ -34,7 +34,6 @@ D:\git\Tests_Project_new\Kursak_Ol\bin\Debug\Microsoft.QualityTools.Testing.Fake
 D:\git\Tests_Project_new\Kursak_Ol\bin\Debug\EntityFramework.xml
 D:\git\Tests_Project_new\Kursak_Ol\bin\Debug\EntityFramework.SqlServer.xml
 D:\git\Tests_Project_new\Kursak_Ol\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
-D:\git\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.csprojAssemblyReference.cache
 D:\git\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.Add_Test.resources
 D:\git\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.Edit_Test.resources
 D:\git\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.Form1.resources
@@ -82,3 +81,4 @@ C:\Users\Oleg\Desktop\Tests_Project_new\Tests_Project_new\Kursak_Ol\obj\Debug\Ku
 C:\Users\Oleg\Desktop\Tests_Project_new\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.csproj.CopyComplete
 C:\Users\Oleg\Desktop\Tests_Project_new\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.exe
 C:\Users\Oleg\Desktop\Tests_Project_new\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.pdb
+D:\git\Tests_Project_new\Kursak_Ol\obj\Debug\Kursak_Ol.Add_Test2.resources
