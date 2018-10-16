@@ -29,8 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Select_Question_To_Edit));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel1_Top = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1_Close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1_Min = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.listBox_SelectQuestionToEdit = new System.Windows.Forms.ListBox();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -49,28 +56,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1_Name = new System.Windows.Forms.Label();
-
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Select_Question_To_Edit));
-
-            this.panel1_Top = new System.Windows.Forms.Panel();
-            this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1_Close = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1_Min = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.textBox_AddEditTestTitle = new System.Windows.Forms.TextBox();
+            this.button_SaveChangeTitleQuestion = new System.Windows.Forms.Button();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -79,6 +78,103 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel1_Top;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // panel1_Top
+            // 
+            this.panel1_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel1_Top.Controls.Add(this.bunifuImageButton1_Max);
+            this.panel1_Top.Controls.Add(this.bunifuImageButton2_Norm);
+            this.panel1_Top.Controls.Add(this.bunifuImageButton1_Close);
+            this.panel1_Top.Controls.Add(this.bunifuImageButton1_Min);
+            this.panel1_Top.Controls.Add(this.label15);
+            this.panel1_Top.Controls.Add(this.pictureBox1);
+            this.panel1_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1_Top.Location = new System.Drawing.Point(5, 0);
+            this.panel1_Top.Name = "panel1_Top";
+            this.panel1_Top.Size = new System.Drawing.Size(819, 50);
+            this.panel1_Top.TabIndex = 4;
+            // 
+            // bunifuImageButton1_Max
+            // 
+            this.bunifuImageButton1_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1_Max.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1_Max.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1_Max.Image = global::Kursak_Ol.Properties.Resources._552;
+            this.bunifuImageButton1_Max.ImageActive = null;
+            this.bunifuImageButton1_Max.Location = new System.Drawing.Point(757, 15);
+            this.bunifuImageButton1_Max.Name = "bunifuImageButton1_Max";
+            this.bunifuImageButton1_Max.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1_Max.TabIndex = 8;
+            this.bunifuImageButton1_Max.TabStop = false;
+            this.bunifuImageButton1_Max.Zoom = 10;
+            // 
+            // bunifuImageButton2_Norm
+            // 
+            this.bunifuImageButton2_Norm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton2_Norm.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2_Norm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton2_Norm.Image = global::Kursak_Ol.Properties.Resources.Max;
+            this.bunifuImageButton2_Norm.ImageActive = null;
+            this.bunifuImageButton2_Norm.Location = new System.Drawing.Point(757, 15);
+            this.bunifuImageButton2_Norm.Name = "bunifuImageButton2_Norm";
+            this.bunifuImageButton2_Norm.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton2_Norm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2_Norm.TabIndex = 9;
+            this.bunifuImageButton2_Norm.TabStop = false;
+            this.bunifuImageButton2_Norm.Visible = false;
+            this.bunifuImageButton2_Norm.Zoom = 10;
+            // 
+            // bunifuImageButton1_Close
+            // 
+            this.bunifuImageButton1_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1_Close.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1_Close.Image = global::Kursak_Ol.Properties.Resources.close;
+            this.bunifuImageButton1_Close.ImageActive = null;
+            this.bunifuImageButton1_Close.Location = new System.Drawing.Point(790, 15);
+            this.bunifuImageButton1_Close.Name = "bunifuImageButton1_Close";
+            this.bunifuImageButton1_Close.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1_Close.TabIndex = 7;
+            this.bunifuImageButton1_Close.TabStop = false;
+            this.bunifuImageButton1_Close.Zoom = 10;
+            // 
+            // bunifuImageButton1_Min
+            // 
+            this.bunifuImageButton1_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1_Min.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1_Min.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1_Min.Image = global::Kursak_Ol.Properties.Resources.min;
+            this.bunifuImageButton1_Min.ImageActive = null;
+            this.bunifuImageButton1_Min.Location = new System.Drawing.Point(725, 15);
+            this.bunifuImageButton1_Min.Name = "bunifuImageButton1_Min";
+            this.bunifuImageButton1_Min.Size = new System.Drawing.Size(20, 20);
+            this.bunifuImageButton1_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1_Min.TabIndex = 6;
+            this.bunifuImageButton1_Min.TabStop = false;
+            this.bunifuImageButton1_Min.Zoom = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(60, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "TASTER";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Kursak_Ol.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel9
             // 
@@ -143,6 +239,8 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.button_SaveChangeTitleQuestion);
+            this.panel8.Controls.Add(this.textBox_AddEditTestTitle);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(53, 99);
@@ -155,7 +253,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Window;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(3, 41);
+            this.label10.Location = new System.Drawing.Point(3, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 20);
             this.label10.TabIndex = 17;
@@ -286,103 +384,6 @@
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Выбор вопроса для редактирования";
             // 
-            // panel1_Top
-            // 
-            this.panel1_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel1_Top.Controls.Add(this.bunifuImageButton1_Max);
-            this.panel1_Top.Controls.Add(this.bunifuImageButton2_Norm);
-            this.panel1_Top.Controls.Add(this.bunifuImageButton1_Close);
-            this.panel1_Top.Controls.Add(this.bunifuImageButton1_Min);
-            this.panel1_Top.Controls.Add(this.label15);
-            this.panel1_Top.Controls.Add(this.pictureBox1);
-            this.panel1_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1_Top.Location = new System.Drawing.Point(5, 0);
-            this.panel1_Top.Name = "panel1_Top";
-            this.panel1_Top.Size = new System.Drawing.Size(819, 50);
-            this.panel1_Top.TabIndex = 4;
-            // 
-            // bunifuImageButton1_Max
-            // 
-            this.bunifuImageButton1_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1_Max.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1_Max.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1_Max.Image = global::Kursak_Ol.Properties.Resources._552;
-            this.bunifuImageButton1_Max.ImageActive = null;
-            this.bunifuImageButton1_Max.Location = new System.Drawing.Point(757, 15);
-            this.bunifuImageButton1_Max.Name = "bunifuImageButton1_Max";
-            this.bunifuImageButton1_Max.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1_Max.TabIndex = 8;
-            this.bunifuImageButton1_Max.TabStop = false;
-            this.bunifuImageButton1_Max.Zoom = 10;
-            // 
-            // bunifuImageButton2_Norm
-            // 
-            this.bunifuImageButton2_Norm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton2_Norm.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2_Norm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2_Norm.Image = global::Kursak_Ol.Properties.Resources.Max;
-            this.bunifuImageButton2_Norm.ImageActive = null;
-            this.bunifuImageButton2_Norm.Location = new System.Drawing.Point(757, 15);
-            this.bunifuImageButton2_Norm.Name = "bunifuImageButton2_Norm";
-            this.bunifuImageButton2_Norm.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton2_Norm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2_Norm.TabIndex = 9;
-            this.bunifuImageButton2_Norm.TabStop = false;
-            this.bunifuImageButton2_Norm.Visible = false;
-            this.bunifuImageButton2_Norm.Zoom = 10;
-            // 
-            // bunifuImageButton1_Close
-            // 
-            this.bunifuImageButton1_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1_Close.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1_Close.Image = global::Kursak_Ol.Properties.Resources.close;
-            this.bunifuImageButton1_Close.ImageActive = null;
-            this.bunifuImageButton1_Close.Location = new System.Drawing.Point(790, 15);
-            this.bunifuImageButton1_Close.Name = "bunifuImageButton1_Close";
-            this.bunifuImageButton1_Close.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1_Close.TabIndex = 7;
-            this.bunifuImageButton1_Close.TabStop = false;
-            this.bunifuImageButton1_Close.Zoom = 10;
-            // 
-            // bunifuImageButton1_Min
-            // 
-            this.bunifuImageButton1_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1_Min.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1_Min.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1_Min.Image = global::Kursak_Ol.Properties.Resources.min;
-            this.bunifuImageButton1_Min.ImageActive = null;
-            this.bunifuImageButton1_Min.Location = new System.Drawing.Point(725, 15);
-            this.bunifuImageButton1_Min.Name = "bunifuImageButton1_Min";
-            this.bunifuImageButton1_Min.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1_Min.TabIndex = 6;
-            this.bunifuImageButton1_Min.TabStop = false;
-            this.bunifuImageButton1_Min.Zoom = 10;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(60, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "TASTER";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Kursak_Ol.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
@@ -400,6 +401,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 615);
             this.panel1.TabIndex = 14;
+            // 
+            // textBox_AddEditTestTitle
+            // 
+            this.textBox_AddEditTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_AddEditTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_AddEditTestTitle.Location = new System.Drawing.Point(7, 35);
+            this.textBox_AddEditTestTitle.Name = "textBox_AddEditTestTitle";
+            this.textBox_AddEditTestTitle.Size = new System.Drawing.Size(425, 26);
+            this.textBox_AddEditTestTitle.TabIndex = 23;
+            // 
+            // button_SaveChangeTitleQuestion
+            // 
+            this.button_SaveChangeTitleQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_SaveChangeTitleQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button_SaveChangeTitleQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_SaveChangeTitleQuestion.FlatAppearance.BorderSize = 0;
+            this.button_SaveChangeTitleQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SaveChangeTitleQuestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_SaveChangeTitleQuestion.ForeColor = System.Drawing.Color.White;
+            this.button_SaveChangeTitleQuestion.Location = new System.Drawing.Point(447, 34);
+            this.button_SaveChangeTitleQuestion.Name = "button_SaveChangeTitleQuestion";
+            this.button_SaveChangeTitleQuestion.Size = new System.Drawing.Size(106, 31);
+            this.button_SaveChangeTitleQuestion.TabIndex = 38;
+            this.button_SaveChangeTitleQuestion.Text = "Изменить";
+            this.button_SaveChangeTitleQuestion.UseVisualStyleBackColor = false;
             // 
             // Select_Question_To_Edit
             // 
@@ -422,12 +449,6 @@
             this.Name = "Select_Question_To_Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select_Question_To_Edit";
-            this.panel9.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel1_Top.ResumeLayout(false);
             this.panel1_Top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).EndInit();
@@ -435,6 +456,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -469,5 +496,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Button button_SaveChangeTitleQuestion;
+        private System.Windows.Forms.TextBox textBox_AddEditTestTitle;
     }
 }
