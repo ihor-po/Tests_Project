@@ -155,6 +155,7 @@ namespace Kursak_Ol
 
                     checkedListBox_QuestionVariants.Items.Clear();
                     textBox_AddQuestion.Text = "";
+                    checkBox_QuestionTrue.Checked = true;
                     renderListQuestions((comboBox_SelectQuestion.Items.Count));
 
                 }
