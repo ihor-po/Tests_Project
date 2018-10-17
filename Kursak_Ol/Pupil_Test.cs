@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Kursak_Ol
 {
 
-    public partial class Pupil_Test : MyForm
+    public partial class Pupil_Test : Form
     {
         public class Answer
         {
@@ -34,16 +34,22 @@ namespace Kursak_Ol
         bool flag = true;
         //флаг проверки закрытия формы
         bool flagClose = true;
+        //кол-во вопросов в тесте
+        int countQuestion = 0;
+        //результат прохождения
+        int res = 0;
         //массив ответов
         List<Answer> ListAnswer = new List<Answer>();
         public Pupil_Test(int idUser, string nameTest)
         {
             InitializeComponent();
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            bunifuImageButton1_Min.Click += BunifuImageButton1_Min_Click;
+            bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
             FormClosing += Pupil_Test_FormClosing;
             //изменяем название теста
-            label_TestTitle.Text = nameTest;
+            WindowState = FormWindowState.Maximized;
+            label1_Name.Text = nameTest;
             using (Tests_DBContainer db = new Tests_DBContainer())
             {
                 //определения пользователя
@@ -59,14 +65,14 @@ namespace Kursak_Ol
                         idTest = t.Id,
                         testTitle = t.Title,
                         testQuestion = tq.Question
-                    }).Where(t => t.testTitle == nameTest);
+                    }).Where(t => t.testTitle == nameTest).ToList();
                 //заполняем объект userTest начальными данными
                 userTest = new UserTest
                 {
                     UserId = idUser,
                     StartDate = DateTime.Now,
                 };
-
+                countQuestion = test.Count;
                 foreach (var item in test)
                 {
                     //добавления вопросов в listBox
@@ -83,6 +89,16 @@ namespace Kursak_Ol
             button1_EndTest.Click += Button1_EndTest_Click;
         }
 
+        private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BunifuImageButton1_Min_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         private void Pupil_Test_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flagClose)
@@ -97,6 +113,8 @@ namespace Kursak_Ol
             RecordSelectedAnswer();
             flagClose = false;
             Result(true);
+            //Сообщение о прохождении теста
+            MessageBox.Show($"Тест завершен,\nправельных ответов {res} из {countQuestion}", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
@@ -186,19 +204,18 @@ namespace Kursak_Ol
         //заполнение таблица UserTest на основе отвеченных вопросов
         void Result(bool flag1)
         {
-            int a = 0;
             if (flag1)
             {
                 foreach (var item in ListAnswer)
                 {
                     if (item.IsAnswer == 1)
                     {
-                        a += 1;
+                        res += 1;
                     }
                 }
             }
             //результат прохождения
-            userTest.Result = a.ToString();
+            userTest.Result = $"{res}/{countQuestion}";
             userTest.EndDate = DateTime.Now;
             using (Tests_DBContainer db = new Tests_DBContainer())
             {

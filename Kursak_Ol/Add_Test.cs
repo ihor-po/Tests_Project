@@ -25,6 +25,8 @@ namespace Kursak_Ol
             //Кнопка для скрытия панели добавить категорию
             this.button2_Categori_Close.Click += Button2_Categori_Close_Click;
 
+           
+
             this.renderCategoryList();
 
             this.user = user;
@@ -131,7 +133,7 @@ namespace Kursak_Ol
 
                     textBox_AddTestTitle.Text = "";
 
-                    Add_Test2 add_test2 = new Add_Test2(test);
+                    Add_Test2 add_test2 = new Add_Test2(test.Id);
                     add_test2.Show();
                 }
             }
