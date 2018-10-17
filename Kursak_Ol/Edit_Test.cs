@@ -30,7 +30,7 @@ namespace Kursak_Ol
                 var rowTest = tests.Test.FirstOrDefault(t => t.Id == testId);
                 if (rowTest != null)
                 {
-                    //textBox_AddTestTitle.Text = rowTest.Title;
+                    textBox_AddTestTitle.Text = rowTest.Title;
                 }
 
                 var rowQuestion = tests.TestQuestion.FirstOrDefault(t => t.Id == questionId);
@@ -93,7 +93,7 @@ namespace Kursak_Ol
                 var test = tests.Test.FirstOrDefault(t => t.Id == testId);
                 if (test != null)
                 {
-                   // test.Title = textBox_AddTestTitle.Text;
+                    test.Title = textBox_AddTestTitle.Text;
                     tests.SaveChanges();
                 }
             }
