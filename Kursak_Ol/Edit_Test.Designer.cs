@@ -45,8 +45,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox_AddTestTitle = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -57,17 +55,16 @@
             this.button_FinishAddTest = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsAnswer = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.button_DeleteAnswer = new System.Windows.Forms.Button();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -246,8 +243,6 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox_AddTestTitle);
-            this.panel8.Controls.Add(this.label10);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.textBox_AddQuestion);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
@@ -256,31 +251,11 @@
             this.panel8.Size = new System.Drawing.Size(723, 133);
             this.panel8.TabIndex = 37;
             // 
-            // textBox_AddTestTitle
-            // 
-            this.textBox_AddTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_AddTestTitle.Location = new System.Drawing.Point(147, 17);
-            this.textBox_AddTestTitle.Name = "textBox_AddTestTitle";
-            this.textBox_AddTestTitle.Size = new System.Drawing.Size(570, 26);
-            this.textBox_AddTestTitle.TabIndex = 32;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(11, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 20);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Название теста:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(11, 53);
+            this.label2.Location = new System.Drawing.Point(11, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 30;
@@ -292,7 +267,7 @@
             this.textBox_AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_AddQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_AddQuestion.Location = new System.Drawing.Point(88, 50);
+            this.textBox_AddQuestion.Location = new System.Drawing.Point(88, 26);
             this.textBox_AddQuestion.Multiline = true;
             this.textBox_AddQuestion.Name = "textBox_AddQuestion";
             this.textBox_AddQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -301,6 +276,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.button_DeleteAnswer);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.button__Add);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -330,7 +306,7 @@
             this.button__Add.ForeColor = System.Drawing.Color.White;
             this.button__Add.Location = new System.Drawing.Point(1, 6);
             this.button__Add.Name = "button__Add";
-            this.button__Add.Size = new System.Drawing.Size(214, 31);
+            this.button__Add.Size = new System.Drawing.Size(170, 31);
             this.button__Add.TabIndex = 35;
             this.button__Add.Text = "Добавить вариант ответа";
             this.button__Add.UseVisualStyleBackColor = false;
@@ -416,14 +392,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(717, 276);
             this.dataGridView1.TabIndex = 0;
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(3, 279);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(717, 3);
-            this.panel14.TabIndex = 3;
             // 
             // Answer
             // 
@@ -445,14 +413,14 @@
             this.Id.Name = "Id";
             this.Id.Visible = false;
             // 
-            // panel12
+            // panel14
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(3, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(720, 3);
-            this.panel12.TabIndex = 1;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(3, 279);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(717, 3);
+            this.panel14.TabIndex = 3;
             // 
             // panel13
             // 
@@ -487,6 +455,21 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel1_Top;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // button_DeleteAnswer
+            // 
+            this.button_DeleteAnswer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button_DeleteAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_DeleteAnswer.FlatAppearance.BorderSize = 0;
+            this.button_DeleteAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_DeleteAnswer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_DeleteAnswer.ForeColor = System.Drawing.Color.White;
+            this.button_DeleteAnswer.Location = new System.Drawing.Point(187, 6);
+            this.button_DeleteAnswer.Name = "button_DeleteAnswer";
+            this.button_DeleteAnswer.Size = new System.Drawing.Size(112, 31);
+            this.button_DeleteAnswer.TabIndex = 37;
+            this.button_DeleteAnswer.Text = "Удалить ответ";
+            this.button_DeleteAnswer.UseVisualStyleBackColor = false;
             // 
             // Edit_Test
             // 
@@ -548,10 +531,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_AddQuestion;
-        private System.Windows.Forms.TextBox textBox_AddTestTitle;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button__Add;
@@ -569,5 +550,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Answer;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsAnswer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.Button button_DeleteAnswer;
     }
 }
