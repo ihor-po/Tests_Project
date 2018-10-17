@@ -16,8 +16,10 @@ namespace Kursak_Ol
     {
         string nameTest;
         int IdUser;
+        private User user;
         public Pupil(User user)
         {
+            this.user = user;
             IdUser = user.Id;
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
@@ -91,7 +93,7 @@ namespace Kursak_Ol
 
         private void Button1_Statistika_Click(object sender, EventArgs e)
         {
-            Result_For_Pupil pub=new Result_For_Pupil();
+            Result_For_Pupil pub=new Result_For_Pupil(user);
             pub.ShowDialog();
         }
 

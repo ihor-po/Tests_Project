@@ -42,7 +42,7 @@ namespace Kursak_Ol
 
         private void BunifuImageButton3_Rezult_Click(object sender, EventArgs e)
         {
-            Result_For_Teacher result=new Result_For_Teacher();
+            Result_For_Teacher result=new Result_For_Teacher(user);
             result.ShowDialog();
         }
 
