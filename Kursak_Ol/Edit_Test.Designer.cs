@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button_DeleteAnswer = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button__Add = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -64,7 +65,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.button_DeleteAnswer = new System.Windows.Forms.Button();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -285,6 +285,22 @@
             this.panel9.Size = new System.Drawing.Size(723, 45);
             this.panel9.TabIndex = 38;
             // 
+            // button_DeleteAnswer
+            // 
+            this.button_DeleteAnswer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button_DeleteAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_DeleteAnswer.FlatAppearance.BorderSize = 0;
+            this.button_DeleteAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_DeleteAnswer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_DeleteAnswer.ForeColor = System.Drawing.Color.White;
+            this.button_DeleteAnswer.Location = new System.Drawing.Point(187, 6);
+            this.button_DeleteAnswer.Name = "button_DeleteAnswer";
+            this.button_DeleteAnswer.Size = new System.Drawing.Size(112, 31);
+            this.button_DeleteAnswer.TabIndex = 37;
+            this.button_DeleteAnswer.Text = "Удалить ответ";
+            this.button_DeleteAnswer.UseVisualStyleBackColor = false;
+            this.button_DeleteAnswer.Click += new System.EventHandler(this.button_DeleteAnswer_Click);
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -455,21 +471,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel1_Top;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // button_DeleteAnswer
-            // 
-            this.button_DeleteAnswer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.button_DeleteAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_DeleteAnswer.FlatAppearance.BorderSize = 0;
-            this.button_DeleteAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_DeleteAnswer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_DeleteAnswer.ForeColor = System.Drawing.Color.White;
-            this.button_DeleteAnswer.Location = new System.Drawing.Point(187, 6);
-            this.button_DeleteAnswer.Name = "button_DeleteAnswer";
-            this.button_DeleteAnswer.Size = new System.Drawing.Size(112, 31);
-            this.button_DeleteAnswer.TabIndex = 37;
-            this.button_DeleteAnswer.Text = "Удалить ответ";
-            this.button_DeleteAnswer.UseVisualStyleBackColor = false;
             // 
             // Edit_Test
             // 

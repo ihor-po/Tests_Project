@@ -41,7 +41,7 @@ namespace Kursak_Ol
         {
             if (currentTest > 0)
             {
-                Select_Question_To_Edit selectQuestion = new Select_Question_To_Edit(currentTest);
+                Select_Question_To_Edit selectQuestion = new Select_Question_To_Edit(currentTest, this);
                 selectQuestion.ShowDialog();
             }
         }
@@ -52,7 +52,7 @@ namespace Kursak_Ol
             this.renderTestList();
         }
 
-        private void renderTestList()
+        public void renderTestList()
         {
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {

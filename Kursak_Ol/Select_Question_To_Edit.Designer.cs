@@ -45,6 +45,8 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button_SaveChangeTitleQuestion = new System.Windows.Forms.Button();
+            this.textBox_AddEditTestTitle = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button_EditQuestion = new System.Windows.Forms.Button();
@@ -58,8 +60,7 @@
             this.label1_Name = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox_AddEditTestTitle = new System.Windows.Forms.TextBox();
-            this.button_SaveChangeTitleQuestion = new System.Windows.Forms.Button();
+            this.button_AddQuestion = new System.Windows.Forms.Button();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -248,6 +249,33 @@
             this.panel8.Size = new System.Drawing.Size(563, 88);
             this.panel8.TabIndex = 38;
             // 
+            // button_SaveChangeTitleQuestion
+            // 
+            this.button_SaveChangeTitleQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_SaveChangeTitleQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button_SaveChangeTitleQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_SaveChangeTitleQuestion.FlatAppearance.BorderSize = 0;
+            this.button_SaveChangeTitleQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SaveChangeTitleQuestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_SaveChangeTitleQuestion.ForeColor = System.Drawing.Color.White;
+            this.button_SaveChangeTitleQuestion.Location = new System.Drawing.Point(447, 34);
+            this.button_SaveChangeTitleQuestion.Name = "button_SaveChangeTitleQuestion";
+            this.button_SaveChangeTitleQuestion.Size = new System.Drawing.Size(106, 31);
+            this.button_SaveChangeTitleQuestion.TabIndex = 38;
+            this.button_SaveChangeTitleQuestion.Text = "Изменить";
+            this.button_SaveChangeTitleQuestion.UseVisualStyleBackColor = false;
+            this.button_SaveChangeTitleQuestion.Click += new System.EventHandler(this.button_SaveChangeTitleQuestion_Click);
+            // 
+            // textBox_AddEditTestTitle
+            // 
+            this.textBox_AddEditTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_AddEditTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_AddEditTestTitle.Location = new System.Drawing.Point(7, 35);
+            this.textBox_AddEditTestTitle.Name = "textBox_AddEditTestTitle";
+            this.textBox_AddEditTestTitle.Size = new System.Drawing.Size(425, 26);
+            this.textBox_AddEditTestTitle.TabIndex = 23;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -261,6 +289,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.button_AddQuestion);
             this.panel7.Controls.Add(this.button_EditQuestion);
             this.panel7.Controls.Add(this.button_TurnOn_OffQuestion);
             this.panel7.Controls.Add(this.button_Delete_Question);
@@ -402,31 +431,22 @@
             this.panel1.Size = new System.Drawing.Size(5, 615);
             this.panel1.TabIndex = 14;
             // 
-            // textBox_AddEditTestTitle
+            // button_AddQuestion
             // 
-            this.textBox_AddEditTestTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddEditTestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_AddEditTestTitle.Location = new System.Drawing.Point(7, 35);
-            this.textBox_AddEditTestTitle.Name = "textBox_AddEditTestTitle";
-            this.textBox_AddEditTestTitle.Size = new System.Drawing.Size(425, 26);
-            this.textBox_AddEditTestTitle.TabIndex = 23;
-            // 
-            // button_SaveChangeTitleQuestion
-            // 
-            this.button_SaveChangeTitleQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_SaveChangeTitleQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.button_SaveChangeTitleQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_SaveChangeTitleQuestion.FlatAppearance.BorderSize = 0;
-            this.button_SaveChangeTitleQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_SaveChangeTitleQuestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_SaveChangeTitleQuestion.ForeColor = System.Drawing.Color.White;
-            this.button_SaveChangeTitleQuestion.Location = new System.Drawing.Point(447, 34);
-            this.button_SaveChangeTitleQuestion.Name = "button_SaveChangeTitleQuestion";
-            this.button_SaveChangeTitleQuestion.Size = new System.Drawing.Size(106, 31);
-            this.button_SaveChangeTitleQuestion.TabIndex = 38;
-            this.button_SaveChangeTitleQuestion.Text = "Изменить";
-            this.button_SaveChangeTitleQuestion.UseVisualStyleBackColor = false;
+            this.button_AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_AddQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.button_AddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_AddQuestion.FlatAppearance.BorderSize = 0;
+            this.button_AddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddQuestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_AddQuestion.ForeColor = System.Drawing.Color.White;
+            this.button_AddQuestion.Location = new System.Drawing.Point(22, 230);
+            this.button_AddQuestion.Name = "button_AddQuestion";
+            this.button_AddQuestion.Size = new System.Drawing.Size(164, 31);
+            this.button_AddQuestion.TabIndex = 38;
+            this.button_AddQuestion.Text = "Добавить";
+            this.button_AddQuestion.UseVisualStyleBackColor = false;
+            this.button_AddQuestion.Click += new System.EventHandler(this.button_AddQuestion_Click);
             // 
             // Select_Question_To_Edit
             // 
@@ -498,5 +518,6 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Button button_SaveChangeTitleQuestion;
         private System.Windows.Forms.TextBox textBox_AddEditTestTitle;
+        private System.Windows.Forms.Button button_AddQuestion;
     }
 }
