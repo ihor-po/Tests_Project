@@ -48,7 +48,7 @@ namespace Kursak_Ol
 
         private void BunifuImageButton1_Edit_Test_Click(object sender, EventArgs e)
         {
-            Select_Test_To_Edit selectTest=new Select_Test_To_Edit();
+            Select_Test_To_Edit selectTest=new Select_Test_To_Edit(this.user);
             selectTest.ShowDialog();
         }
 
