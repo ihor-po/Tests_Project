@@ -3,7 +3,6 @@
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\Kursak_Ol.pdb
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\EntityFramework.dll
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\EntityFramework.SqlServer.dll
-\\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\EntityFramework.xml
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\bin\Debug\EntityFramework.SqlServer.xml
 \\Mac\iCloud\Step\TestsProject\Kursak_Ol\obj\Debug\Kursak_Ol.csprojAssemblyReference.cache
