@@ -15,13 +15,16 @@ namespace Kursak_Ol
         private int currentCategory = 0;
         private int currentTest = 0;
         private byte testIsActual = 0;
+        private User user;
 
-        public Select_Test_To_Edit()
+        public Select_Test_To_Edit(User user)
         {
             InitializeComponent();
             //наследуемый метод
             base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
             this.button_EditTest.Click += Button_EditTest_Click;
+
+            this.user = user;
 
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
@@ -56,7 +59,12 @@ namespace Kursak_Ol
         {
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
-                var ds = tests.Test.Where(t => t.CategoryId == currentCategory).ToList();
+                var ds = tests.Test
+                    .Join(tests.TestCreator, t => t.Id, tc => tc.TestId, (t, tc) => new { t, tc })
+                    .Where(ttc => ttc.t.Id == ttc.tc.TestId && ttc.tc.UserId == this.user.Id && ttc.t.CategoryId == currentCategory)
+                    .Select(ttc => ttc.t)
+                    .ToList();
+
                 listBox_SelectTestToEdit.DataSource = ds;
                 listBox_SelectTestToEdit.DisplayMember = "Title";
                 listBox_SelectTestToEdit.ValueMember = "Id";
