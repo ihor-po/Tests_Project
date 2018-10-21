@@ -74,6 +74,12 @@ namespace Kursak_Ol
             if (!this.saveAnswers(true))
                 return;
 
+            if (textBox_AddQuestion.Text == "")
+            {
+                MessageBox.Show("Вопрос не может быть пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
                 var question = tests.TestQuestion.FirstOrDefault(t => t.Id == questionId);
@@ -136,7 +142,7 @@ namespace Kursak_Ol
                 {
                     if (row.Cells["Answer"].Value.ToString() == "")
                     {
-                        MessageBox.Show("Вопрос не может быть пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ответ не может быть пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
 
