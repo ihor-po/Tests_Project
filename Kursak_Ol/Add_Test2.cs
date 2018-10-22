@@ -87,7 +87,7 @@ namespace Kursak_Ol
 
         private void button_CancelQuestionVariant_Click(object sender, EventArgs e)
         {
-
+            textBox_TitleQuestion.Text = "";
         }
 
         private void button_AddNewQuestion_Click(object sender, EventArgs e)
