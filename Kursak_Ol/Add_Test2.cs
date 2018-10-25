@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Kursak_Ol
 {
-    public partial class Add_Test2 : Form
+    public partial class Add_Test2 : MyForm
     {
         int testId;
 
@@ -18,9 +18,11 @@ namespace Kursak_Ol
         {
             InitializeComponent();
             this.testId = id;
-
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             textBox_AddQuestion.TextChanged += new EventHandler(text_changed);
             comboBox_SelectQuestion.SelectedIndexChanged += new EventHandler(comboBoxChanged);
+            this.button_AddQuestionVariant.Click += button_AddQuestionVariant_Click;
+            this.button_CancelQuestionVariant.Click += button_CancelQuestionVariant_Click;
             renderListQuestions();
             
         }
@@ -67,7 +69,9 @@ namespace Kursak_Ol
 
             if (textBox_AddQuestion.Text != "" && textBox_AddQuestion.Text.Length <= 255)
             {
+                checkedListBox_QuestionVariants.Visible = false;
                 panelAddQuestion.Visible = true;
+                checkedListBox_QuestionVariants.Visible = true;
             }
             else
             {
@@ -87,7 +91,7 @@ namespace Kursak_Ol
 
         private void button_CancelQuestionVariant_Click(object sender, EventArgs e)
         {
-
+            textBox_TitleQuestion.Text = "";
         }
 
         private void button_AddNewQuestion_Click(object sender, EventArgs e)
@@ -182,7 +186,7 @@ namespace Kursak_Ol
                     {
                         test.IsActual = 1;
                         tests.SaveChanges();
-                        this.Close();
+                        this.DialogResult = DialogResult.OK;
                     }
                     
                 }

@@ -148,11 +148,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(60, 16);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 5;
             this.label15.Text = "TASTER";
             // 
@@ -179,11 +179,11 @@
             // label1_Name
             // 
             this.label1_Name.AutoSize = true;
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.label1_Name.Location = new System.Drawing.Point(14, 13);
             this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(159, 19);
+            this.label1_Name.Size = new System.Drawing.Size(174, 20);
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Результаты тестов";
             // 
@@ -258,7 +258,7 @@
             this.button_CancelTestResultShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CancelTestResultShow.FlatAppearance.BorderSize = 0;
             this.button_CancelTestResultShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CancelTestResultShow.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_CancelTestResultShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_CancelTestResultShow.ForeColor = System.Drawing.Color.White;
             this.button_CancelTestResultShow.Location = new System.Drawing.Point(550, 64);
             this.button_CancelTestResultShow.Name = "button_CancelTestResultShow";
@@ -284,10 +284,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(8, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 39;
             this.label1.Text = "Тест:";
             // 
@@ -308,10 +308,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(8, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 20);
+            this.label10.Size = new System.Drawing.Size(126, 18);
             this.label10.TabIndex = 37;
             this.label10.Text = "Категория теста:";
             // 
@@ -331,10 +331,10 @@
             // listBox_Test_Results_For_Teacher
             // 
             this.listBox_Test_Results_For_Teacher.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_Test_Results_For_Teacher.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox_Test_Results_For_Teacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_Test_Results_For_Teacher.FormattingEnabled = true;
             this.listBox_Test_Results_For_Teacher.HorizontalScrollbar = true;
-            this.listBox_Test_Results_For_Teacher.ItemHeight = 17;
+            this.listBox_Test_Results_For_Teacher.ItemHeight = 15;
             this.listBox_Test_Results_For_Teacher.Location = new System.Drawing.Point(3, 3);
             this.listBox_Test_Results_For_Teacher.Name = "listBox_Test_Results_For_Teacher";
             this.listBox_Test_Results_For_Teacher.Size = new System.Drawing.Size(717, 336);

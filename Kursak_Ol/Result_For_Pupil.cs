@@ -20,19 +20,26 @@ namespace Kursak_Ol
             InitializeComponent();
             this.user = user;
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
              
             this.comboBox_SelectCategory.SelectedIndexChanged += ComboBox_SelectCategory_SelectedIndexChanged;
 
             this.comboBox_Select_Test.SelectedIndexChanged += ComboBox_Select_Test_SelectedIndexChanged;
             this.Load += Result_For_Teacher_Load;
             this.button_CancelStatistic.Click += Button_CancelTestResultShow_Click;
-        }
-        private void Button_CancelTestResultShow_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.bunifuImageButton1_Close.Click+= Button_CancelTestResultShow_Click;
         }
 
+
+        private void Button_CancelTestResultShow_Click(object sender, EventArgs e)
+        {
+            Closee();
+        }
+
+        private void Closee()
+        {
+            this.DialogResult = DialogResult.OK;
+        }
         private void Result_For_Teacher_Load(object sender, EventArgs e)//загружаю боксы по умолчанию
         {
             ComboBox_SelectCategory_Show();// метод который выводит категории в комбобокс наследованный от интерфейса
@@ -106,17 +113,62 @@ namespace Kursak_Ol
                 if (userTest.Count != 0)
                 {
                     this.listBox_ShowStatistic.Items.Add(
-                        $"[{user.LastName.ToUpper()} { user.FirstName.ToUpper()} {user.MiddleName.ToUpper()}]");
+                        $"[  {user.LastName.ToUpper()} { user.FirstName.ToUpper()} {user.MiddleName.ToUpper()}  ]");
                     foreach (var VARIABLE in userTest)
                     {
                         //для расчета времени прохождения теста
                         TimeSpan span = (VARIABLE.EndDate - VARIABLE.StartDate);
+                       
                         //выводим в лист бокс информацию
+                        
                         this.listBox_ShowStatistic.Items.Add(
-                            $"Дата прохождения: {VARIABLE.StartDate.ToString("d")} Результат: {VARIABLE.Result} Время прохождения: {span.Duration()}");
+                            $"Дата прохождения: {VARIABLE.StartDate.ToString("d")}     Результат: {VARIABLE.Result}      Время прохождения: {FormatedTime(span)}");
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Формирование вывода времени
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        private string FormatedTime(TimeSpan time)
+        {
+            string res = "";
+
+            int hours = time.Hours;
+            int minuts = time.Minutes;
+            int seconds = time.Seconds;
+
+            if (hours < 10)
+            {
+                res += '0' + hours.ToString() + ':'; 
+            }
+            else
+            {
+                res += hours.ToString() + ':';
+            }
+
+            if (minuts < 10)
+            {
+                res += '0' + minuts.ToString() + ':';
+            }
+            else
+            {
+                res += minuts.ToString() + ':';
+            }
+
+            if (seconds < 10)
+            {
+                res += '0' + seconds.ToString();
+            }
+            else
+            {
+                res += seconds.ToString();
+            }
+
+            return res;
         }
     }
 }

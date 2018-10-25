@@ -84,14 +84,28 @@ namespace Kursak_Ol
                         Pupil pupil = new Pupil(user);
                         textBox1_Login.Text = null;
                         textBox1_Password.Text = null;
-                        pupil.ShowDialog();
+                        this.ShowInTaskbar = false;
+                        Opacity = 0;
+                        if (pupil.ShowDialog() == DialogResult.OK)
+                        {
+                            Opacity = 1;
+                            this.ShowInTaskbar = true;
+                        }
+                        
+                        
                     }
                     else if (user.Role.Title == "Преподаватель")
                     {
                         Teacher teacher = new Teacher(user);
                         textBox1_Login.Text = null;
                         textBox1_Password.Text = null;
-                        teacher.ShowDialog();
+                        this.ShowInTaskbar = false;
+                        Opacity = 0;
+                        if (teacher.ShowDialog() == DialogResult.OK)
+                        {
+                            Opacity = 1;
+                            this.ShowInTaskbar = true;
+                        }
                     }
 
                     

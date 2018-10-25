@@ -91,7 +91,7 @@ namespace Kursak_Ol
 
         private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void BunifuImageButton1_Min_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace Kursak_Ol
             Result(true);
             //Сообщение о прохождении теста
             MessageBox.Show($"Тест завершен,\nправельных ответов {res} из {countQuestion}", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
+            this.DialogResult = DialogResult.OK;
         }
 
         private void Button_CancelTest_Click(object sender, EventArgs e)
@@ -254,7 +254,7 @@ namespace Kursak_Ol
         //запись выбранного ответа
         void RecordSelectedAnswer()
         {
-            //проверка на выбор отета RadioButton
+            //проверка на выбор ответа RadioButton
             if (!flag)
             {
                 var er = ListAnswer.FirstOrDefault(ee => ee.Id == tempidQues);

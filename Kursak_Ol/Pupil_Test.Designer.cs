@@ -51,14 +51,12 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.panel_ShowAnswer = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-
             this.listBox_SelectQuestion = new System.Windows.Forms.ListBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel_ShowAnswer = new System.Windows.Forms.Panel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label_TestTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Min)).BeginInit();
@@ -293,26 +291,8 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(509, 420);
+            this.panel17.Size = new System.Drawing.Size(248, 420);
             this.panel17.TabIndex = 32;
-            // 
-            // panel_ShowAnswer
-            // 
-            this.panel_ShowAnswer.AutoScroll = true;
-            this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
-            this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_ShowAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel_ShowAnswer.Location = new System.Drawing.Point(512, 0);
-            this.panel_ShowAnswer.Name = "panel_ShowAnswer";
-            this.panel_ShowAnswer.Size = new System.Drawing.Size(205, 372);
-            this.panel_ShowAnswer.TabIndex = 30;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1_Top;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // listBox_SelectQuestion
             // 
@@ -323,17 +303,35 @@
             this.listBox_SelectQuestion.ItemHeight = 18;
             this.listBox_SelectQuestion.Location = new System.Drawing.Point(0, 0);
             this.listBox_SelectQuestion.Name = "listBox_SelectQuestion";
-            this.listBox_SelectQuestion.Size = new System.Drawing.Size(509, 372);
+            this.listBox_SelectQuestion.Size = new System.Drawing.Size(248, 420);
             this.listBox_SelectQuestion.TabIndex = 30;
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(509, 0);
+            this.panel14.Location = new System.Drawing.Point(248, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(3, 372);
+            this.panel14.Size = new System.Drawing.Size(3, 420);
             this.panel14.TabIndex = 31;
+            // 
+            // panel_ShowAnswer
+            // 
+            this.panel_ShowAnswer.AutoScroll = true;
+            this.panel_ShowAnswer.BackColor = System.Drawing.Color.White;
+            this.panel_ShowAnswer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_ShowAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_ShowAnswer.Location = new System.Drawing.Point(251, 0);
+            this.panel_ShowAnswer.Name = "panel_ShowAnswer";
+            this.panel_ShowAnswer.Size = new System.Drawing.Size(466, 420);
+            this.panel_ShowAnswer.TabIndex = 30;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // label_TestTitle
             // 
@@ -353,27 +351,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(819, 48);
             this.panel5.TabIndex = 31;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(509, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(3, 420);
-            this.panel14.TabIndex = 31;
-            // 
-            // listBox_SelectQuestion
-            // 
-            this.listBox_SelectQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_SelectQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBox_SelectQuestion.FormattingEnabled = true;
-            this.listBox_SelectQuestion.HorizontalScrollbar = true;
-            this.listBox_SelectQuestion.ItemHeight = 18;
-            this.listBox_SelectQuestion.Location = new System.Drawing.Point(0, 0);
-            this.listBox_SelectQuestion.Name = "listBox_SelectQuestion";
-            this.listBox_SelectQuestion.Size = new System.Drawing.Size(509, 420);
-            this.listBox_SelectQuestion.TabIndex = 30;
             // 
             // Pupil_Test
             // 

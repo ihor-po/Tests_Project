@@ -20,17 +20,37 @@ namespace Kursak_Ol
             InitializeComponent();
             this.user = user;
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.comboBox_SelectCategory.SelectedIndexChanged += ComboBox_SelectCategory_SelectedIndexChanged;
-            
+            this.bunifuImageButton1_Close.Click += Button_CancelTestResultShow_Click;
             this.comboBox_Select_Test.SelectedIndexChanged += ComboBox_Select_Test_SelectedIndexChanged;
             this.Load += Result_For_Teacher_Load;
             this.button_CancelTestResultShow.Click += Button_CancelTestResultShow_Click;
+            listBox_Test_Results_For_Teacher.KeyUp += ListBox_Test_Results_For_Teacher_KeyUp;
+            listBox_Test_Results_For_Teacher.Click += ListBox_Test_Results_For_Teacher_Click;
         }
 
-        private void Button_CancelTestResultShow_Click(object sender, EventArgs e)
+        private void ListBox_Test_Results_For_Teacher_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (listBox_Test_Results_For_Teacher.SelectedIndex % 2 == 0)
+            {
+                ChangeIndex(listBox_Test_Results_For_Teacher, false);
+            }
+            
+            
+        }
+
+        private void ListBox_Test_Results_For_Teacher_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                ChangeIndex(sender as ListBox, true);
+            }
+
+            if (e.KeyCode == Keys.Down)
+            {
+                ChangeIndex(sender as ListBox, false);
+            }
         }
 
         private void Result_For_Teacher_Load(object sender, EventArgs e)//загружаю боксы по умолчанию
@@ -118,11 +138,91 @@ namespace Kursak_Ol
                         //для расчета времени прохождения теста
                         TimeSpan span = (VARIABLE.EndDate - VARIABLE.StartDate);
                         //выводим в лист бокс информацию
+                        this.listBox_Test_Results_For_Teacher.Items.Add($"{VARIABLE.User.FirstName} {VARIABLE.User.LastName} {VARIABLE.User.MiddleName}");
                         this.listBox_Test_Results_For_Teacher.Items.Add(
-                            $"[{VARIABLE.User.FirstName} {VARIABLE.User.LastName} {VARIABLE.User.MiddleName}] Дата прохождения теста: {VARIABLE.StartDate.ToString("d")} Результат: {VARIABLE.Result} Потрачено времени: {span.Duration()}");
+                            $"Дата прохождения теста: {VARIABLE.StartDate.ToString("d")}     Результат: {VARIABLE.Result}     Потрачено времени: {FormatedTime(span)}");
                     }
                 }
             }
+        }
+
+        private void ChangeIndex(ListBox lb, bool up)
+        {
+            if (up)
+            {
+                if (lb.SelectedIndex == 0)
+                {
+                    lb.SelectedIndex = lb.Items.Count - 1;
+                }
+                else
+                {
+                    lb.SelectedIndex = lb.SelectedIndex - 1;
+                }
+            }
+            else
+            {
+                if (lb.SelectedIndex == lb.Items.Count - 1)
+                {
+                    lb.SelectedIndex = 1;
+                }
+                else
+                {
+                    lb.SelectedIndex = lb.SelectedIndex + 1;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Закрытие формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_CancelTestResultShow_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Формирование вывода времени
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        private string FormatedTime(TimeSpan time)
+        {
+            string res = "";
+
+            int hours = time.Hours;
+            int minuts = time.Minutes;
+            int seconds = time.Seconds;
+
+            if (hours < 10)
+            {
+                res += '0' + hours.ToString() + ':';
+            }
+            else
+            {
+                res += hours.ToString() + ':';
+            }
+
+            if (minuts < 10)
+            {
+                res += '0' + minuts.ToString() + ':';
+            }
+            else
+            {
+                res += minuts.ToString() + ':';
+            }
+
+            if (seconds < 10)
+            {
+                res += '0' + seconds.ToString();
+            }
+            else
+            {
+                res += seconds.ToString();
+            }
+
+            return res;
         }
     }
 }
