@@ -61,6 +61,7 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -76,7 +77,6 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -315,12 +315,12 @@
             this.textBox_EnterdQuestions.BackColor = System.Drawing.Color.Silver;
             this.textBox_EnterdQuestions.Enabled = false;
             this.textBox_EnterdQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_EnterdQuestions.Location = new System.Drawing.Point(20, 3);
+            this.textBox_EnterdQuestions.Location = new System.Drawing.Point(0, 3);
             this.textBox_EnterdQuestions.Multiline = true;
             this.textBox_EnterdQuestions.Name = "textBox_EnterdQuestions";
             this.textBox_EnterdQuestions.ReadOnly = true;
             this.textBox_EnterdQuestions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_EnterdQuestions.Size = new System.Drawing.Size(630, 70);
+            this.textBox_EnterdQuestions.Size = new System.Drawing.Size(713, 70);
             this.textBox_EnterdQuestions.TabIndex = 38;
             // 
             // label4
@@ -356,9 +356,9 @@
             this.comboBox_SelectQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_SelectQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox_SelectQuestion.FormattingEnabled = true;
-            this.comboBox_SelectQuestion.Location = new System.Drawing.Point(20, 27);
+            this.comboBox_SelectQuestion.Location = new System.Drawing.Point(1, 27);
             this.comboBox_SelectQuestion.Name = "comboBox_SelectQuestion";
-            this.comboBox_SelectQuestion.Size = new System.Drawing.Size(630, 26);
+            this.comboBox_SelectQuestion.Size = new System.Drawing.Size(711, 26);
             this.comboBox_SelectQuestion.TabIndex = 39;
             // 
             // panel5
@@ -471,6 +471,22 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(713, 47);
             this.panel10.TabIndex = 47;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Location = new System.Drawing.Point(7, 8);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(164, 31);
+            this.btn_cancel.TabIndex = 37;
+            this.btn_cancel.Text = "Отмена";
+            this.btn_cancel.UseVisualStyleBackColor = false;
             // 
             // panel11
             // 
@@ -629,22 +645,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel1_Top;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.FlatAppearance.BorderSize = 0;
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(7, 8);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(164, 31);
-            this.btn_cancel.TabIndex = 37;
-            this.btn_cancel.Text = "Отмена";
-            this.btn_cancel.UseVisualStyleBackColor = false;
             // 
             // Add_Test2
             // 

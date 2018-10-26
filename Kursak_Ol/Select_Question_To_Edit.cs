@@ -47,6 +47,19 @@ namespace Kursak_Ol
                 listBox_SelectQuestionToEdit.DataSource = ds;
                 listBox_SelectQuestionToEdit.DisplayMember = "Question";
                 listBox_SelectQuestionToEdit.ValueMember = "Id";
+
+                if (listBox_SelectQuestionToEdit.Items.Count == 0)
+                {
+                    button_EditQuestion.Enabled = false;
+                    button_TurnOn_OffQuestion.Enabled = false;
+                    button_Delete_Question.Enabled = false;
+                }
+                else
+                {
+                    button_EditQuestion.Enabled = true;
+                    button_TurnOn_OffQuestion.Enabled = true;
+                    button_Delete_Question.Enabled = true;
+                }
             }
         }
 
