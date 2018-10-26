@@ -24,6 +24,9 @@ namespace Kursak_Ol
             this.button_AddQuestionVariant.Click += button_AddQuestionVariant_Click;
             this.button_CancelQuestionVariant.Click += button_CancelQuestionVariant_Click;
             renderListQuestions();
+
+            this.ActiveControl = textBox_AddQuestion; //Устанавливаем активные элемент - для создания вопроса
+
             btn_cancel.Click += Btn_cancel_Click;
         }
 
@@ -75,11 +78,21 @@ namespace Kursak_Ol
         {
             textBox_EnterdQuestions.Text = "";
             int id = Convert.ToInt32(comboBox_SelectQuestion.SelectedValue);
-            using (Tests_DBContainer tests = new Tests_DBContainer()) { 
+            using (Tests_DBContainer tests = new Tests_DBContainer()) {
+                StringBuilder answer = new StringBuilder();
                 foreach (TestQuestionAnswer tqa in tests.TestQuestionAnswer.Where(t => t.TestQuestionId == id))
                 {
-                    textBox_EnterdQuestions.Text += tqa.Answer + Environment.NewLine;
+                    if (tqa.IsAnswer == 1)
+                    {
+                        answer.AppendLine("+    " + tqa.Answer);
+                    }
+                    else
+                    {
+                        answer.AppendLine("     " + tqa.Answer);
+                    }
+                   
                 }
+                textBox_EnterdQuestions.Text = answer.ToString();
             }
         }
 

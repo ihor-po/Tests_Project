@@ -35,7 +35,7 @@ namespace Kursak_Ol
 
                 if (comboBox_SelectCategory.Items.Count > 0)
                 {
-                    comboBox_SelectCategory.SelectedIndex = comboBox_SelectCategory.Items.Count - 1;
+                    comboBox_SelectCategory.SelectedIndex = 0;
                     this.renderTestList();
                 }
             }
@@ -69,6 +69,19 @@ namespace Kursak_Ol
                 listBox_SelectTestToEdit.DataSource = ds;
                 listBox_SelectTestToEdit.DisplayMember = "Title";
                 listBox_SelectTestToEdit.ValueMember = "Id";
+
+                if (listBox_SelectTestToEdit.Items.Count > 0)
+                {
+                    button_EditTest.Enabled = true;
+                    button_TurnOn_OffTest.Enabled = true;
+                    button_Delete_Test.Enabled = true;
+                }
+                else
+                {
+                    button_EditTest.Enabled = false;
+                    button_TurnOn_OffTest.Enabled = false;
+                    button_Delete_Test.Enabled = false;
+                }
             }
         }
 
