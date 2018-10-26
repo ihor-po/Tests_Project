@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1_Top = new System.Windows.Forms.Panel();
             this.bunifuImageButton1_Max = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2_Norm = new Bunifu.Framework.UI.BunifuImageButton();
@@ -41,7 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button_AddNewQuestion = new System.Windows.Forms.Button();
             this.button_FinishAddTest = new System.Windows.Forms.Button();
@@ -55,22 +55,28 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.textBox_AddQuestion = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.checkedListBox_QuestionVariants = new System.Windows.Forms.CheckedListBox();
             this.panelAddQuestion = new System.Windows.Forms.Panel();
             this.button_CancelQuestionVariant = new System.Windows.Forms.Button();
             this.button_AddQuestionVariant = new System.Windows.Forms.Button();
             this.textBox_TitleQuestion = new System.Windows.Forms.TextBox();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.checkedListBox_QuestionVariants = new System.Windows.Forms.CheckedListBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -84,8 +90,9 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panelAddQuestion.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panelAddQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1_Top
@@ -148,6 +155,7 @@
             this.bunifuImageButton1_Close.TabIndex = 7;
             this.bunifuImageButton1_Close.TabStop = false;
             this.bunifuImageButton1_Close.Zoom = 10;
+            this.bunifuImageButton1_Close.Click += new System.EventHandler(this.bunifuImageButton1_Close_Click);
             // 
             // bunifuImageButton1_Min
             // 
@@ -167,11 +175,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(60, 16);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 5;
             this.label15.Text = "TASTER";
             // 
@@ -198,11 +206,11 @@
             // label1_Name
             // 
             this.label1_Name.AutoSize = true;
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.label1_Name.Location = new System.Drawing.Point(14, 13);
             this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(151, 19);
+            this.label1_Name.Size = new System.Drawing.Size(156, 20);
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Добавить вопрос";
             // 
@@ -236,34 +244,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(71, 243);
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(71, 249);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 33;
             this.label2.Text = "Вопрос:";
-            // 
-            // textBox_AddQuestion
-            // 
-            this.textBox_AddQuestion.AcceptsReturn = true;
-            this.textBox_AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_AddQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_AddQuestion.Location = new System.Drawing.Point(25, 28);
-            this.textBox_AddQuestion.Multiline = true;
-            this.textBox_AddQuestion.Name = "textBox_AddQuestion";
-            this.textBox_AddQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_AddQuestion.Size = new System.Drawing.Size(582, 59);
-            this.textBox_AddQuestion.TabIndex = 31;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(245, 3);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(245, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 20);
+            this.label3.Size = new System.Drawing.Size(211, 18);
             this.label3.TabIndex = 34;
             this.label3.Text = "Отметьте правильный ответ:";
             // 
@@ -274,14 +270,15 @@
             this.button_AddNewQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_AddNewQuestion.FlatAppearance.BorderSize = 0;
             this.button_AddNewQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddNewQuestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_AddNewQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_AddNewQuestion.ForeColor = System.Drawing.Color.White;
-            this.button_AddNewQuestion.Location = new System.Drawing.Point(370, 8);
+            this.button_AddNewQuestion.Location = new System.Drawing.Point(365, 8);
             this.button_AddNewQuestion.Name = "button_AddNewQuestion";
             this.button_AddNewQuestion.Size = new System.Drawing.Size(158, 31);
             this.button_AddNewQuestion.TabIndex = 36;
-            this.button_AddNewQuestion.Text = "Сохранить";
+            this.button_AddNewQuestion.Text = "Сохранить вопрос";
             this.button_AddNewQuestion.UseVisualStyleBackColor = false;
+            this.button_AddNewQuestion.Click += new System.EventHandler(this.button_AddNewQuestion_Click);
             // 
             // button_FinishAddTest
             // 
@@ -290,48 +287,50 @@
             this.button_FinishAddTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_FinishAddTest.FlatAppearance.BorderSize = 0;
             this.button_FinishAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_FinishAddTest.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_FinishAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_FinishAddTest.ForeColor = System.Drawing.Color.White;
-            this.button_FinishAddTest.Location = new System.Drawing.Point(545, 8);
+            this.button_FinishAddTest.Location = new System.Drawing.Point(537, 8);
             this.button_FinishAddTest.Name = "button_FinishAddTest";
             this.button_FinishAddTest.Size = new System.Drawing.Size(164, 31);
             this.button_FinishAddTest.TabIndex = 35;
-            this.button_FinishAddTest.Text = "Выход";
+            this.button_FinishAddTest.Text = "Сохранить тест";
             this.button_FinishAddTest.UseVisualStyleBackColor = false;
+            this.button_FinishAddTest.Click += new System.EventHandler(this.button_FinishAddTest_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(16, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 20);
+            this.label1.Size = new System.Drawing.Size(153, 18);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Текст названия теста:";
+            this.label1.Text = "Созданные вопросы";
             // 
             // textBox_EnterdQuestions
             // 
             this.textBox_EnterdQuestions.AcceptsReturn = true;
             this.textBox_EnterdQuestions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_EnterdQuestions.BackColor = System.Drawing.Color.White;
+            this.textBox_EnterdQuestions.BackColor = System.Drawing.Color.Silver;
+            this.textBox_EnterdQuestions.Enabled = false;
             this.textBox_EnterdQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_EnterdQuestions.Location = new System.Drawing.Point(20, 3);
+            this.textBox_EnterdQuestions.Location = new System.Drawing.Point(0, 3);
             this.textBox_EnterdQuestions.Multiline = true;
             this.textBox_EnterdQuestions.Name = "textBox_EnterdQuestions";
             this.textBox_EnterdQuestions.ReadOnly = true;
             this.textBox_EnterdQuestions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_EnterdQuestions.Size = new System.Drawing.Size(630, 70);
+            this.textBox_EnterdQuestions.Size = new System.Drawing.Size(713, 70);
             this.textBox_EnterdQuestions.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(528, 5);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(518, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 20);
+            this.label4.Size = new System.Drawing.Size(166, 18);
             this.label4.TabIndex = 40;
             this.label4.Text = "Актуальность вопроса";
             // 
@@ -341,7 +340,7 @@
             this.checkBox_QuestionTrue.AutoSize = true;
             this.checkBox_QuestionTrue.Checked = true;
             this.checkBox_QuestionTrue.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_QuestionTrue.Location = new System.Drawing.Point(649, 47);
+            this.checkBox_QuestionTrue.Location = new System.Drawing.Point(643, 54);
             this.checkBox_QuestionTrue.Name = "checkBox_QuestionTrue";
             this.checkBox_QuestionTrue.Size = new System.Drawing.Size(15, 14);
             this.checkBox_QuestionTrue.TabIndex = 41;
@@ -353,12 +352,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox_SelectQuestion.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.comboBox_SelectQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_SelectQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_SelectQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_SelectQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox_SelectQuestion.FormattingEnabled = true;
-            this.comboBox_SelectQuestion.Location = new System.Drawing.Point(20, 27);
+            this.comboBox_SelectQuestion.Location = new System.Drawing.Point(1, 27);
             this.comboBox_SelectQuestion.Name = "comboBox_SelectQuestion";
-            this.comboBox_SelectQuestion.Size = new System.Drawing.Size(630, 26);
+            this.comboBox_SelectQuestion.Size = new System.Drawing.Size(711, 26);
             this.comboBox_SelectQuestion.TabIndex = 39;
             // 
             // panel5
@@ -398,17 +398,72 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label4);
+            this.panel9.BackColor = System.Drawing.SystemColors.Control;
+            this.panel9.Controls.Add(this.panel20);
+            this.panel9.Controls.Add(this.panel19);
+            this.panel9.Controls.Add(this.panel18);
+            this.panel9.Controls.Add(this.panel17);
             this.panel9.Controls.Add(this.textBox_AddQuestion);
+            this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.checkBox_QuestionTrue);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(50, 238);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(713, 95);
+            this.panel9.Size = new System.Drawing.Size(713, 115);
             this.panel9.TabIndex = 46;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel20.Location = new System.Drawing.Point(710, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(3, 109);
+            this.panel20.TabIndex = 46;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel19.Location = new System.Drawing.Point(3, 112);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(710, 3);
+            this.panel19.TabIndex = 45;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel18.Location = new System.Drawing.Point(0, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(3, 112);
+            this.panel18.TabIndex = 44;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(713, 3);
+            this.panel17.TabIndex = 43;
+            // 
+            // textBox_AddQuestion
+            // 
+            this.textBox_AddQuestion.AcceptsReturn = true;
+            this.textBox_AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_AddQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_AddQuestion.Location = new System.Drawing.Point(20, 34);
+            this.textBox_AddQuestion.Multiline = true;
+            this.textBox_AddQuestion.Name = "textBox_AddQuestion";
+            this.textBox_AddQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_AddQuestion.Size = new System.Drawing.Size(582, 59);
+            this.textBox_AddQuestion.TabIndex = 42;
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.btn_cancel);
             this.panel10.Controls.Add(this.button_AddNewQuestion);
             this.panel10.Controls.Add(this.button_FinishAddTest);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -417,24 +472,71 @@
             this.panel10.Size = new System.Drawing.Size(713, 47);
             this.panel10.TabIndex = 47;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Location = new System.Drawing.Point(7, 8);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(164, 31);
+            this.btn_cancel.TabIndex = 37;
+            this.btn_cancel.Text = "Отмена";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.label3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(50, 333);
+            this.panel11.Location = new System.Drawing.Point(50, 353);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(713, 26);
+            this.panel11.Size = new System.Drawing.Size(713, 34);
             this.panel11.TabIndex = 48;
             // 
             // panel12
             // 
             this.panel12.Controls.Add(this.panel13);
-            this.panel12.Controls.Add(this.panelAddQuestion);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(50, 359);
+            this.panel12.Location = new System.Drawing.Point(50, 387);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(713, 165);
+            this.panel12.Size = new System.Drawing.Size(713, 137);
             this.panel12.TabIndex = 49;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.panel22);
+            this.panel13.Controls.Add(this.panelAddQuestion);
+            this.panel13.Controls.Add(this.panel21);
+            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.panel15);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(713, 137);
+            this.panel13.TabIndex = 32;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.checkedListBox_QuestionVariants);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(3, 45);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(707, 89);
+            this.panel22.TabIndex = 36;
+            // 
+            // checkedListBox_QuestionVariants
+            // 
+            this.checkedListBox_QuestionVariants.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox_QuestionVariants.FormattingEnabled = true;
+            this.checkedListBox_QuestionVariants.Location = new System.Drawing.Point(0, 0);
+            this.checkedListBox_QuestionVariants.Name = "checkedListBox_QuestionVariants";
+            this.checkedListBox_QuestionVariants.Size = new System.Drawing.Size(707, 89);
+            this.checkedListBox_QuestionVariants.TabIndex = 34;
             // 
             // panelAddQuestion
             // 
@@ -443,14 +545,11 @@
             this.panelAddQuestion.Controls.Add(this.button_AddQuestionVariant);
             this.panelAddQuestion.Controls.Add(this.textBox_TitleQuestion);
             this.panelAddQuestion.Controls.Add(this.panel25);
-            this.panelAddQuestion.Controls.Add(this.panel26);
-            this.panelAddQuestion.Controls.Add(this.panel27);
-            this.panelAddQuestion.Controls.Add(this.panel28);
             this.panelAddQuestion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAddQuestion.Location = new System.Drawing.Point(0, 0);
+            this.panelAddQuestion.Location = new System.Drawing.Point(3, 3);
             this.panelAddQuestion.Name = "panelAddQuestion";
-            this.panelAddQuestion.Size = new System.Drawing.Size(713, 42);
-            this.panelAddQuestion.TabIndex = 31;
+            this.panelAddQuestion.Size = new System.Drawing.Size(707, 42);
+            this.panelAddQuestion.TabIndex = 35;
             this.panelAddQuestion.Visible = false;
             // 
             // button_CancelQuestionVariant
@@ -460,9 +559,9 @@
             this.button_CancelQuestionVariant.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CancelQuestionVariant.FlatAppearance.BorderSize = 0;
             this.button_CancelQuestionVariant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CancelQuestionVariant.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_CancelQuestionVariant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_CancelQuestionVariant.ForeColor = System.Drawing.Color.White;
-            this.button_CancelQuestionVariant.Location = new System.Drawing.Point(568, 5);
+            this.button_CancelQuestionVariant.Location = new System.Drawing.Point(562, 5);
             this.button_CancelQuestionVariant.Name = "button_CancelQuestionVariant";
             this.button_CancelQuestionVariant.Size = new System.Drawing.Size(131, 31);
             this.button_CancelQuestionVariant.TabIndex = 28;
@@ -476,9 +575,9 @@
             this.button_AddQuestionVariant.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_AddQuestionVariant.FlatAppearance.BorderSize = 0;
             this.button_AddQuestionVariant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddQuestionVariant.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_AddQuestionVariant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_AddQuestionVariant.ForeColor = System.Drawing.Color.White;
-            this.button_AddQuestionVariant.Location = new System.Drawing.Point(428, 5);
+            this.button_AddQuestionVariant.Location = new System.Drawing.Point(422, 5);
             this.button_AddQuestionVariant.Name = "button_AddQuestionVariant";
             this.button_AddQuestionVariant.Size = new System.Drawing.Size(131, 31);
             this.button_AddQuestionVariant.TabIndex = 27;
@@ -489,68 +588,38 @@
             // 
             this.textBox_TitleQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_TitleQuestion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_TitleQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_TitleQuestion.Location = new System.Drawing.Point(20, 9);
             this.textBox_TitleQuestion.Name = "textBox_TitleQuestion";
-            this.textBox_TitleQuestion.Size = new System.Drawing.Size(391, 23);
+            this.textBox_TitleQuestion.Size = new System.Drawing.Size(385, 22);
             this.textBox_TitleQuestion.TabIndex = 4;
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel25.Location = new System.Drawing.Point(3, 39);
+            this.panel25.Location = new System.Drawing.Point(0, 39);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(707, 3);
             this.panel25.TabIndex = 3;
             // 
-            // panel26
+            // panel21
             // 
-            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel26.Location = new System.Drawing.Point(710, 3);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(3, 39);
-            this.panel26.TabIndex = 2;
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(3, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(707, 3);
+            this.panel21.TabIndex = 34;
             // 
-            // panel27
+            // panel16
             // 
-            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(3, 0);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(710, 3);
-            this.panel27.TabIndex = 1;
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel28.Location = new System.Drawing.Point(0, 0);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(3, 42);
-            this.panel28.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.checkedListBox_QuestionVariants);
-            this.panel13.Controls.Add(this.panel16);
-            this.panel13.Controls.Add(this.panel15);
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 42);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(713, 123);
-            this.panel13.TabIndex = 32;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(3, 123);
-            this.panel14.TabIndex = 0;
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(3, 134);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(707, 3);
+            this.panel16.TabIndex = 2;
             // 
             // panel15
             // 
@@ -558,26 +627,24 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel15.Location = new System.Drawing.Point(710, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(3, 123);
+            this.panel15.Size = new System.Drawing.Size(3, 137);
             this.panel15.TabIndex = 1;
             // 
-            // panel16
+            // panel14
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(3, 120);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(707, 3);
-            this.panel16.TabIndex = 2;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(3, 137);
+            this.panel14.TabIndex = 0;
             // 
-            // checkedListBox_QuestionVariants
+            // bunifuDragControl1
             // 
-            this.checkedListBox_QuestionVariants.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox_QuestionVariants.FormattingEnabled = true;
-            this.checkedListBox_QuestionVariants.Location = new System.Drawing.Point(3, 0);
-            this.checkedListBox_QuestionVariants.Name = "checkedListBox_QuestionVariants";
-            this.checkedListBox_QuestionVariants.Size = new System.Drawing.Size(707, 120);
-            this.checkedListBox_QuestionVariants.TabIndex = 33;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1_Top;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Add_Test2
             // 
@@ -622,9 +689,10 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
             this.panelAddQuestion.ResumeLayout(false);
             this.panelAddQuestion.PerformLayout();
-            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,7 +713,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_AddQuestion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_AddNewQuestion;
         private System.Windows.Forms.Button button_FinishAddTest;
@@ -663,17 +730,23 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.CheckedListBox checkedListBox_QuestionVariants;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.TextBox textBox_AddQuestion;
         private System.Windows.Forms.Panel panelAddQuestion;
         private System.Windows.Forms.Button button_CancelQuestionVariant;
         private System.Windows.Forms.Button button_AddQuestionVariant;
         private System.Windows.Forms.TextBox textBox_TitleQuestion;
         private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.CheckedListBox checkedListBox_QuestionVariants;
+        private System.Windows.Forms.Button btn_cancel;
     }
 }

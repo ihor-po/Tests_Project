@@ -23,7 +23,7 @@ namespace Kursak_Ol
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.panel14_Opoves.Visible = false;
             this.label16_Log_Opov.Text = user.Login;
             //Кнопка для создания окна добавить тест
@@ -35,6 +35,7 @@ namespace Kursak_Ol
             //выводит на несколько секунд сообщение
             timer1.Tick += Timer1_Tick;
             timer1.Start();
+            this.bunifuImageButton1_Close.Click += Button1_Close_Click;
             this.button1_Close.Click += Button1_Close_Click;
 
             this.user = user;
@@ -42,13 +43,13 @@ namespace Kursak_Ol
 
         private void BunifuImageButton3_Rezult_Click(object sender, EventArgs e)
         {
-            Result_For_Teacher result=new Result_For_Teacher();
+            Result_For_Teacher result=new Result_For_Teacher(user);
             result.ShowDialog();
         }
 
         private void BunifuImageButton1_Edit_Test_Click(object sender, EventArgs e)
         {
-            Select_Test_To_Edit selectTest=new Select_Test_To_Edit();
+            Select_Test_To_Edit selectTest=new Select_Test_To_Edit(this.user);
             selectTest.ShowDialog();
         }
 

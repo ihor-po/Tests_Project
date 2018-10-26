@@ -48,6 +48,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button_CancelStatistic = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.comboBox_Select_Test = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox_SelectCategory = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -64,6 +68,7 @@
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,11 +151,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(60, 16);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 5;
             this.label15.Text = "TASTER";
             // 
@@ -177,11 +182,11 @@
             // label1_Name
             // 
             this.label1_Name.AutoSize = true;
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.label1_Name.Location = new System.Drawing.Point(14, 13);
             this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(219, 19);
+            this.label1_Name.Size = new System.Drawing.Size(234, 20);
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Результаты тестирования";
             // 
@@ -254,7 +259,7 @@
             this.button_CancelStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CancelStatistic.FlatAppearance.BorderSize = 0;
             this.button_CancelStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CancelStatistic.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_CancelStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_CancelStatistic.ForeColor = System.Drawing.Color.White;
             this.button_CancelStatistic.Location = new System.Drawing.Point(557, 15);
             this.button_CancelStatistic.Name = "button_CancelStatistic";
@@ -265,17 +270,69 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.comboBox_Select_Test);
+            this.panel9.Controls.Add(this.label1);
+            this.panel9.Controls.Add(this.comboBox_SelectCategory);
+            this.panel9.Controls.Add(this.label10);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(53, 112);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(723, 48);
+            this.panel9.Size = new System.Drawing.Size(723, 98);
             this.panel9.TabIndex = 35;
+            // 
+            // comboBox_Select_Test
+            // 
+            this.comboBox_Select_Test.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_Select_Test.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox_Select_Test.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_Select_Test.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_Select_Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_Select_Test.FormattingEnabled = true;
+            this.comboBox_Select_Test.Location = new System.Drawing.Point(65, 61);
+            this.comboBox_Select_Test.Name = "comboBox_Select_Test";
+            this.comboBox_Select_Test.Size = new System.Drawing.Size(481, 26);
+            this.comboBox_Select_Test.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(15, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Тест:";
+            // 
+            // comboBox_SelectCategory
+            // 
+            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_SelectCategory.FormattingEnabled = true;
+            this.comboBox_SelectCategory.Location = new System.Drawing.Point(156, 8);
+            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
+            this.comboBox_SelectCategory.Size = new System.Drawing.Size(390, 26);
+            this.comboBox_SelectCategory.TabIndex = 42;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(15, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 18);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Категория теста:";
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(53, 160);
+            this.panel10.Location = new System.Drawing.Point(53, 210);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(723, 3);
             this.panel10.TabIndex = 36;
@@ -284,18 +341,18 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(773, 163);
+            this.panel11.Location = new System.Drawing.Point(773, 213);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(3, 386);
+            this.panel11.Size = new System.Drawing.Size(3, 336);
             this.panel11.TabIndex = 37;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(53, 163);
+            this.panel12.Location = new System.Drawing.Point(53, 213);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(3, 386);
+            this.panel12.Size = new System.Drawing.Size(3, 336);
             this.panel12.TabIndex = 38;
             // 
             // panel13
@@ -311,20 +368,21 @@
             // 
             this.panel14.Controls.Add(this.listBox_ShowStatistic);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(56, 163);
+            this.panel14.Location = new System.Drawing.Point(56, 213);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(717, 383);
+            this.panel14.Size = new System.Drawing.Size(717, 333);
             this.panel14.TabIndex = 40;
             // 
             // listBox_ShowStatistic
             // 
             this.listBox_ShowStatistic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_ShowStatistic.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox_ShowStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_ShowStatistic.FormattingEnabled = true;
-            this.listBox_ShowStatistic.ItemHeight = 20;
+            this.listBox_ShowStatistic.HorizontalScrollbar = true;
+            this.listBox_ShowStatistic.ItemHeight = 16;
             this.listBox_ShowStatistic.Location = new System.Drawing.Point(0, 0);
             this.listBox_ShowStatistic.Name = "listBox_ShowStatistic";
-            this.listBox_ShowStatistic.Size = new System.Drawing.Size(717, 383);
+            this.listBox_ShowStatistic.Size = new System.Drawing.Size(717, 333);
             this.listBox_ShowStatistic.TabIndex = 13;
             // 
             // bunifuDragControl1
@@ -370,6 +428,8 @@
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -402,5 +462,9 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.ListBox listBox_ShowStatistic;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.ComboBox comboBox_Select_Test;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox_SelectCategory;
+        private System.Windows.Forms.Label label10;
     }
 }

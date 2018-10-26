@@ -19,15 +19,21 @@ namespace Kursak_Ol
         {
             InitializeComponent();
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             //Кнопка для вызова панели добавить категорию
             this.button_AddCategory.Click += Button_AddCategory_Click;
             //Кнопка для скрытия панели добавить категорию
+            this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
             this.button2_Categori_Close.Click += Button2_Categori_Close_Click;
 
             this.renderCategoryList();
 
             this.user = user;
+        }
+
+        private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void Button1_Add_Test_Click(object sender, EventArgs e)
@@ -67,106 +73,66 @@ namespace Kursak_Ol
                     tests.Category.Add(category);
                     tests.SaveChanges();
 
-                    //this.bunifuTransition1.HideSync(this.panel_AddNewCategory);
+                    this.bunifuTransition2.HideSync(this.panel_AddNewCategory);
+
                     this.renderCategoryList();
+                    comboBox_SelectCategory.SelectedIndex = comboBox_SelectCategory.Items.Count - 1;
+
                 }
             }
         }
 
-        //private void button__Add_Click(object sender, EventArgs e)
-        //{
-        //    this.bunifuTransition1.ShowSync(this.panelAddQuestion);
-        //}
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    if (textBox_TitleQuestion.Text != "")
-        //    {
-        //        checkedListBox1.Items.Add(textBox_TitleQuestion.Text);
-        //        this.bunifuTransition1.HideSync(this.panelAddQuestion);
-        //    }
-        //}
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void button_FinishAddTest_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            Close();
         }
 
         private void button_AddNewQuestion_Click(object sender, EventArgs e)
         {
-            //    label_ErrorAddTest.Text = "";
-            //    if (textBox_AddTestTitle.Text == "")
-            //    {
-            //        label_ErrorAddTest.Text = "Введите название";
-            //    }
-            //    else if (textBox_AddQuestion.Text == "")
-            //    {
-            //        label_ErrorAddTest.Text = "Введите вопрос";
-            //    }
-            //    else if(checkedListBox1.Items.Count == 0)
-            //    {
-            //        label_ErrorAddTest.Text = "Добавьте ответы";
-            //    }
-            //    else if(checkedListBox1.SelectedItem == null)
-            //    {
-            //        label_ErrorAddTest.Text = "Выберите верный ответ";
-            //    }
-            //    else
-            //    {
-            //        using (Tests_DBContainer tests = new Tests_DBContainer())
-            //        {
 
-            //            Test test = new Test();
-            //            test.Title = textBox_AddTestTitle.Text;
-            //            test.IsActual = 1;
-            //            int idCat = Convert.ToInt32(comboBox_SelectCategory.SelectedValue.ToString());
-            //            test.Category = tests.Category.FirstOrDefault(cat => cat.Id == idCat);
+            if (textBox_AddTestTitle.Text == "")
+            {
+                label_ErrorAddTest.Text = "Введите название";
+            }
+            else if (textBox_AddTestTitle.Text.Length > 255)
+            {
+                label_ErrorAddTest.Text = "Название не должно превышать 255 символов";
+            }
+            else
+            {
+                using (Tests_DBContainer tests = new Tests_DBContainer())
+                {
+                    Test test = new Test();
+                    test.Title = textBox_AddTestTitle.Text;
+                    test.IsActual = 0;
+                    int idCat = Convert.ToInt32(comboBox_SelectCategory.SelectedValue.ToString());
+                    test.Category = tests.Category.FirstOrDefault(cat => cat.Id == idCat);
 
-            //            tests.Test.Add(test);
+                    tests.Test.Add(test);
 
-            //            TestQuestion testquestion = new TestQuestion();
-            //            testquestion.Question = textBox_AddQuestion.Text;
-            //            testquestion.IsActual = 1;
-            //            testquestion.Test = test;
+                    TestCreator testcreator = new TestCreator();
+                    testcreator.TestId = test.Id;
+                    testcreator.UserId = user.Id;
 
-            //            tests.TestQuestion.Add(testquestion);
+                    tests.TestCreator.Add(testcreator);
 
-            //            TestCreator testcreator = new TestCreator();
-            //            testcreator.TestId = test.Id;
-            //            testcreator.UserId = user.Id;
+                    tests.SaveChanges();
 
-            //            tests.TestCreator.Add(testcreator);
+                    textBox_AddTestTitle.Text = "";
 
-
-
-            //            int i;
-            //            for (i = 0; i <= (checkedListBox1.Items.Count - 1); i++)
-            //            {
-
-            //                TestQuestionAnswer answer = new TestQuestionAnswer();
-            //                answer.Answer = checkedListBox1.Items[i].ToString();
-            //                if (checkedListBox1.GetItemChecked(i))
-            //                {
-            //                    answer.IsAnswer = Convert.ToByte(true);
-            //                }
-            //                answer.TestQuestion = testquestion;
-            //                tests.TestQuestionAnswer.Add(answer);
-
-            //            }
-
-
-
-
-            //            tests.SaveChanges();
-
-            //            this.Close();
-            //        }
-            //    }
+                    Add_Test2 add_test2 = new Add_Test2(test.Id);
+                    Opacity = 0;
+                    this.ShowInTaskbar = false;
+                    if (add_test2.ShowDialog() == DialogResult.OK)
+                    {
+                        Close();
+                    }
+                    
+                }
+            }
         }
     }
 }

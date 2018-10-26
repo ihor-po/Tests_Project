@@ -176,11 +176,11 @@ namespace Kursak_Ol
             // 
             this.label15.AutoSize = true;
             this.bunifuTransition2.SetDecoration(this.label15, BunifuAnimatorNS.DecorationType.None);
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(60, 16);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 5;
             this.label15.Text = "TASTER";
             // 
@@ -240,11 +240,11 @@ namespace Kursak_Ol
             // 
             this.label1_Name.AutoSize = true;
             this.bunifuTransition2.SetDecoration(this.label1_Name, BunifuAnimatorNS.DecorationType.None);
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.label1_Name.Location = new System.Drawing.Point(14, 13);
             this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(127, 19);
+            this.label1_Name.Size = new System.Drawing.Size(136, 20);
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Добавить тест";
             // 
@@ -274,7 +274,7 @@ namespace Kursak_Ol
             this.bunifuTransition2.SetDecoration(this.button2_Categori_Close, BunifuAnimatorNS.DecorationType.None);
             this.button2_Categori_Close.FlatAppearance.BorderSize = 0;
             this.button2_Categori_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2_Categori_Close.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2_Categori_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2_Categori_Close.ForeColor = System.Drawing.Color.White;
             this.button2_Categori_Close.Location = new System.Drawing.Point(256, 62);
             this.button2_Categori_Close.Name = "button2_Categori_Close";
@@ -291,7 +291,7 @@ namespace Kursak_Ol
             this.bunifuTransition2.SetDecoration(this.button1_Categiri, BunifuAnimatorNS.DecorationType.None);
             this.button1_Categiri.FlatAppearance.BorderSize = 0;
             this.button1_Categiri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1_Categiri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1_Categiri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1_Categiri.ForeColor = System.Drawing.Color.White;
             this.button1_Categiri.Location = new System.Drawing.Point(19, 62);
             this.button1_Categiri.Name = "button1_Categiri";
@@ -304,10 +304,10 @@ namespace Kursak_Ol
             // textBox_AddNewCategory
             // 
             this.bunifuTransition2.SetDecoration(this.textBox_AddNewCategory, BunifuAnimatorNS.DecorationType.None);
-            this.textBox_AddNewCategory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_AddNewCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_AddNewCategory.Location = new System.Drawing.Point(19, 17);
             this.textBox_AddNewCategory.Name = "textBox_AddNewCategory";
-            this.textBox_AddNewCategory.Size = new System.Drawing.Size(397, 23);
+            this.textBox_AddNewCategory.Size = new System.Drawing.Size(397, 22);
             this.textBox_AddNewCategory.TabIndex = 4;
             // 
             // panel10
@@ -423,7 +423,7 @@ namespace Kursak_Ol
             this.bunifuTransition2.SetDecoration(this.button_AddCategory, BunifuAnimatorNS.DecorationType.None);
             this.button_AddCategory.FlatAppearance.BorderSize = 0;
             this.button_AddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_AddCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_AddCategory.ForeColor = System.Drawing.Color.White;
             this.button_AddCategory.Location = new System.Drawing.Point(9, 15);
             this.button_AddCategory.Name = "button_AddCategory";
@@ -447,10 +447,10 @@ namespace Kursak_Ol
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.bunifuTransition2.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(5, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 20);
+            this.label10.Size = new System.Drawing.Size(126, 18);
             this.label10.TabIndex = 30;
             this.label10.Text = "Категория теста:";
             // 
@@ -467,10 +467,10 @@ namespace Kursak_Ol
             // 
             this.label1.AutoSize = true;
             this.bunifuTransition2.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(19, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 20);
+            this.label1.Size = new System.Drawing.Size(121, 18);
             this.label1.TabIndex = 23;
             this.label1.Text = "Название теста:";
             // 
@@ -500,10 +500,10 @@ namespace Kursak_Ol
             // 
             this.label_ErrorAddTest.AutoSize = true;
             this.bunifuTransition2.SetDecoration(this.label_ErrorAddTest, BunifuAnimatorNS.DecorationType.None);
-            this.label_ErrorAddTest.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_ErrorAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_ErrorAddTest.Location = new System.Drawing.Point(9, 14);
             this.label_ErrorAddTest.Name = "label_ErrorAddTest";
-            this.label_ErrorAddTest.Size = new System.Drawing.Size(0, 20);
+            this.label_ErrorAddTest.Size = new System.Drawing.Size(0, 18);
             this.label_ErrorAddTest.TabIndex = 29;
             // 
             // button_FinishAddTest
@@ -514,7 +514,7 @@ namespace Kursak_Ol
             this.bunifuTransition2.SetDecoration(this.button_FinishAddTest, BunifuAnimatorNS.DecorationType.None);
             this.button_FinishAddTest.FlatAppearance.BorderSize = 0;
             this.button_FinishAddTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_FinishAddTest.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_FinishAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_FinishAddTest.ForeColor = System.Drawing.Color.White;
             this.button_FinishAddTest.Location = new System.Drawing.Point(557, 10);
             this.button_FinishAddTest.Name = "button_FinishAddTest";
@@ -532,7 +532,7 @@ namespace Kursak_Ol
             this.bunifuTransition2.SetDecoration(this.button_AddNewQuestion, BunifuAnimatorNS.DecorationType.None);
             this.button_AddNewQuestion.FlatAppearance.BorderSize = 0;
             this.button_AddNewQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddNewQuestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_AddNewQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_AddNewQuestion.ForeColor = System.Drawing.Color.White;
             this.button_AddNewQuestion.Location = new System.Drawing.Point(379, 79);
             this.button_AddNewQuestion.Name = "button_AddNewQuestion";
@@ -576,7 +576,7 @@ namespace Kursak_Ol
             this.bunifuTransition2.SetDecoration(this.button2_Text_Null, BunifuAnimatorNS.DecorationType.None);
             this.button2_Text_Null.FlatAppearance.BorderSize = 0;
             this.button2_Text_Null.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2_Text_Null.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2_Text_Null.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2_Text_Null.ForeColor = System.Drawing.Color.White;
             this.button2_Text_Null.Location = new System.Drawing.Point(544, 79);
             this.button2_Text_Null.Name = "button2_Text_Null";
@@ -637,7 +637,7 @@ namespace Kursak_Ol
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));

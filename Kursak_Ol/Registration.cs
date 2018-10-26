@@ -84,22 +84,36 @@ namespace Kursak_Ol
                         Pupil pupil = new Pupil(user);
                         textBox1_Login.Text = null;
                         textBox1_Password.Text = null;
-                        pupil.ShowDialog();
+                        this.ShowInTaskbar = false;
+                        Opacity = 0;
+                        if (pupil.ShowDialog() == DialogResult.OK)
+                        {
+                            Opacity = 1;
+                            this.ShowInTaskbar = true;
+                        }
+                        
+                        
                     }
                     else if (user.Role.Title == "Преподаватель")
                     {
                         Teacher teacher = new Teacher(user);
                         textBox1_Login.Text = null;
                         textBox1_Password.Text = null;
-                        teacher.ShowDialog();
+                        this.ShowInTaskbar = false;
+                        Opacity = 0;
+                        if (teacher.ShowDialog() == DialogResult.OK)
+                        {
+                            Opacity = 1;
+                            this.ShowInTaskbar = true;
+                        }
                     }
 
                     
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!",
+                MessageBox.Show($"Возникла не предвиденная ошибка с подключением к базе даных!\n Проверте подключение!{ex.Message}",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

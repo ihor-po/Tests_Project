@@ -15,29 +15,32 @@ namespace Kursak_Ol
         private int testId;
         private int currentQuestion = 0;
         private byte questionIsActual = 0;
+        Select_Test_To_Edit parent;
 
-        public Select_Question_To_Edit(int testId)
+        public Select_Question_To_Edit(int testId, Select_Test_To_Edit parent)
         {
             InitializeComponent();
 
             this.testId = testId;
+            this.parent = parent;
 
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.button_EditQuestion.Click += Button_EditQuestion_Click;
-
+            this.bunifuImageButton1_Close.Click += button_CancelEditQuestion_Click;
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
                 var row = tests.Test.FirstOrDefault(t => t.Id == testId);
                 if (row != null)
                 {
-                    label10.Text = row.Title;
+                    textBox_AddEditTestTitle.Text = row.Title;
                     renderQuestionList();
+                    currentQuestion = Convert.ToInt32(listBox_SelectQuestionToEdit.SelectedValue);
                 }
             }
         }
 
-        private void renderQuestionList()
+        public void renderQuestionList()
         {
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
@@ -45,6 +48,19 @@ namespace Kursak_Ol
                 listBox_SelectQuestionToEdit.DataSource = ds;
                 listBox_SelectQuestionToEdit.DisplayMember = "Question";
                 listBox_SelectQuestionToEdit.ValueMember = "Id";
+
+                if (listBox_SelectQuestionToEdit.Items.Count == 0)
+                {
+                    button_EditQuestion.Enabled = false;
+                    button_TurnOn_OffQuestion.Enabled = false;
+                    button_Delete_Question.Enabled = false;
+                }
+                else
+                {
+                    button_EditQuestion.Enabled = true;
+                    button_TurnOn_OffQuestion.Enabled = true;
+                    button_Delete_Question.Enabled = true;
+                }
             }
         }
 
@@ -52,7 +68,7 @@ namespace Kursak_Ol
         {
             if (currentQuestion > 0)
             {
-                Edit_Test test = new Edit_Test(testId, currentQuestion);
+                Edit_Test test = new Edit_Test(testId, currentQuestion, this);
                 test.ShowDialog();
             }
         }
@@ -114,6 +130,34 @@ namespace Kursak_Ol
             }
 
             this.renderQuestionList();
+        }
+
+        private void button_SaveChangeTitleQuestion_Click(object sender, EventArgs e)
+        {
+            if (textBox_AddEditTestTitle.Text == "")
+            {
+                MessageBox.Show("Название теста не может быть пустым", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            using (Tests_DBContainer tests = new Tests_DBContainer())
+            {
+                var row = tests.Test.FirstOrDefault(t => t.Id == testId);
+                if (row != null)
+                {
+                    row.Title = textBox_AddEditTestTitle.Text;
+                    tests.SaveChanges();
+                    MessageBox.Show("Название было изменено", "Изменения", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                this.parent.renderTestList();
+            }
+        }
+
+        private void button_AddQuestion_Click(object sender, EventArgs e)
+        {
+            Edit_Test test = new Edit_Test(testId, 0, this);
+            test.ShowDialog();
         }
     }
 }
