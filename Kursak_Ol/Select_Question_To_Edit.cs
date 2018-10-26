@@ -35,6 +35,7 @@ namespace Kursak_Ol
                 {
                     textBox_AddEditTestTitle.Text = row.Title;
                     renderQuestionList();
+                    currentQuestion = Convert.ToInt32(listBox_SelectQuestionToEdit.SelectedValue);
                 }
             }
         }
