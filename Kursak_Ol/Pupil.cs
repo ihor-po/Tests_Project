@@ -28,13 +28,14 @@ namespace Kursak_Ol
             InitializeComponent();
             label1_Name.Text = $"{user.LastName} {user.FirstName} {user.MiddleName}";
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.panel14_Opoves.Visible = false;
             this.label16_Log_Opov.Text = user.Login;
             //выводит на несколько секунд сообщение
             timer1.Tick += Timer1_Tick;
             timer1.Start();
             this.button1_Close.Click += Button1_Close_Click;
+            bunifuImageButton1_Close.Click+= Button1_Close_Click;
             this.button1_Statistika.Click += Button1_Statistika_Click;
             //добавляем названия предметов из базы
             using (Tests_DBContainer db = new Tests_DBContainer())
@@ -90,7 +91,7 @@ namespace Kursak_Ol
                 {
                     //переход на страницу прохождения теста
                     Pupil_Test form3 = new Pupil_Test(IdUser, nameTest);
-                    form3.Show();
+                    form3.ShowDialog();
                 }
                 else
                 {
@@ -160,8 +161,12 @@ namespace Kursak_Ol
 
         private void Button1_Close_Click(object sender, EventArgs e)
         {
+            Closee();
+        }
+
+        private void Closee()
+        {
             this.DialogResult = DialogResult.OK;
         }
-        
     }
 }

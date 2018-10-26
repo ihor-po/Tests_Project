@@ -21,8 +21,9 @@ namespace Kursak_Ol
         {
             InitializeComponent();
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.button_EditTest.Click += Button_EditTest_Click;
+            bunifuImageButton1_Close.Click += button_CancelEditTest_Click;
 
             this.user = user;
 

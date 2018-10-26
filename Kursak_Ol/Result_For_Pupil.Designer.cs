@@ -48,6 +48,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button_CancelStatistic = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.comboBox_Select_Test = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox_SelectCategory = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -55,10 +59,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.listBox_ShowStatistic = new System.Windows.Forms.ListBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.comboBox_Select_Test = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox_SelectCategory = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2_Norm)).BeginInit();
@@ -151,11 +151,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(60, 16);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 18);
+            this.label15.Size = new System.Drawing.Size(72, 20);
             this.label15.TabIndex = 5;
             this.label15.Text = "TASTER";
             // 
@@ -182,11 +182,11 @@
             // label1_Name
             // 
             this.label1_Name.AutoSize = true;
-            this.label1_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(115)))));
             this.label1_Name.Location = new System.Drawing.Point(14, 13);
             this.label1_Name.Name = "label1_Name";
-            this.label1_Name.Size = new System.Drawing.Size(219, 19);
+            this.label1_Name.Size = new System.Drawing.Size(234, 20);
             this.label1_Name.TabIndex = 0;
             this.label1_Name.Text = "Результаты тестирования";
             // 
@@ -259,7 +259,7 @@
             this.button_CancelStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CancelStatistic.FlatAppearance.BorderSize = 0;
             this.button_CancelStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CancelStatistic.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_CancelStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_CancelStatistic.ForeColor = System.Drawing.Color.White;
             this.button_CancelStatistic.Location = new System.Drawing.Point(557, 15);
             this.button_CancelStatistic.Name = "button_CancelStatistic";
@@ -279,6 +279,54 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(723, 98);
             this.panel9.TabIndex = 35;
+            // 
+            // comboBox_Select_Test
+            // 
+            this.comboBox_Select_Test.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_Select_Test.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox_Select_Test.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_Select_Test.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_Select_Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_Select_Test.FormattingEnabled = true;
+            this.comboBox_Select_Test.Location = new System.Drawing.Point(65, 61);
+            this.comboBox_Select_Test.Name = "comboBox_Select_Test";
+            this.comboBox_Select_Test.Size = new System.Drawing.Size(481, 26);
+            this.comboBox_Select_Test.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(15, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Тест:";
+            // 
+            // comboBox_SelectCategory
+            // 
+            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_SelectCategory.FormattingEnabled = true;
+            this.comboBox_SelectCategory.Location = new System.Drawing.Point(156, 8);
+            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
+            this.comboBox_SelectCategory.Size = new System.Drawing.Size(390, 26);
+            this.comboBox_SelectCategory.TabIndex = 42;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(15, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 18);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Категория теста:";
             // 
             // panel10
             // 
@@ -328,10 +376,10 @@
             // listBox_ShowStatistic
             // 
             this.listBox_ShowStatistic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_ShowStatistic.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox_ShowStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox_ShowStatistic.FormattingEnabled = true;
             this.listBox_ShowStatistic.HorizontalScrollbar = true;
-            this.listBox_ShowStatistic.ItemHeight = 17;
+            this.listBox_ShowStatistic.ItemHeight = 16;
             this.listBox_ShowStatistic.Location = new System.Drawing.Point(0, 0);
             this.listBox_ShowStatistic.Name = "listBox_ShowStatistic";
             this.listBox_ShowStatistic.Size = new System.Drawing.Size(717, 333);
@@ -343,54 +391,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel1_Top;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // comboBox_Select_Test
-            // 
-            this.comboBox_Select_Test.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_Select_Test.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox_Select_Test.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox_Select_Test.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_Select_Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_Select_Test.FormattingEnabled = true;
-            this.comboBox_Select_Test.Location = new System.Drawing.Point(65, 61);
-            this.comboBox_Select_Test.Name = "comboBox_Select_Test";
-            this.comboBox_Select_Test.Size = new System.Drawing.Size(481, 26);
-            this.comboBox_Select_Test.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(15, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Тест:";
-            // 
-            // comboBox_SelectCategory
-            // 
-            this.comboBox_SelectCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_SelectCategory.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox_SelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox_SelectCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_SelectCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_SelectCategory.FormattingEnabled = true;
-            this.comboBox_SelectCategory.Location = new System.Drawing.Point(156, 8);
-            this.comboBox_SelectCategory.Name = "comboBox_SelectCategory";
-            this.comboBox_SelectCategory.Size = new System.Drawing.Size(390, 26);
-            this.comboBox_SelectCategory.TabIndex = 42;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(15, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 20);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "Категория теста:";
             // 
             // Result_For_Pupil
             // 

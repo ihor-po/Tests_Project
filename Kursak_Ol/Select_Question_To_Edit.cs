@@ -25,9 +25,9 @@ namespace Kursak_Ol
             this.parent = parent;
 
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             this.button_EditQuestion.Click += Button_EditQuestion_Click;
-
+            this.bunifuImageButton1_Close.Click += button_CancelEditQuestion_Click;
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
                 var row = tests.Test.FirstOrDefault(t => t.Id == testId);

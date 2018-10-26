@@ -19,10 +19,11 @@ namespace Kursak_Ol
         {
             InitializeComponent();
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
             //Кнопка для вызова панели добавить категорию
             this.button_AddCategory.Click += Button_AddCategory_Click;
             //Кнопка для скрытия панели добавить категорию
+            this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
             this.button2_Categori_Close.Click += Button2_Categori_Close_Click;
 
            
@@ -30,6 +31,11 @@ namespace Kursak_Ol
             this.renderCategoryList();
 
             this.user = user;
+        }
+
+        private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void Button1_Add_Test_Click(object sender, EventArgs e)
@@ -69,35 +75,18 @@ namespace Kursak_Ol
                     tests.Category.Add(category);
                     tests.SaveChanges();
 
-                    //this.bunifuTransition1.HideSync(this.panel_AddNewCategory);
+                    
                     this.renderCategoryList();
                 }
             }
         }
 
-        //private void button__Add_Click(object sender, EventArgs e)
-        //{
-        //    this.bunifuTransition1.ShowSync(this.panelAddQuestion);
-        //}
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    if (textBox_TitleQuestion.Text != "")
-        //    {
-        //        checkedListBox1.Items.Add(textBox_TitleQuestion.Text);
-        //        this.bunifuTransition1.HideSync(this.panelAddQuestion);
-        //    }
-        //}
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void button_FinishAddTest_Click(object sender, EventArgs e)
         {
 
-            this.Close();
+            Close();
         }
 
         private void button_AddNewQuestion_Click(object sender, EventArgs e)
@@ -134,7 +123,13 @@ namespace Kursak_Ol
                     textBox_AddTestTitle.Text = "";
 
                     Add_Test2 add_test2 = new Add_Test2(test.Id);
-                    add_test2.Show();
+                    Opacity = 0;
+                    this.ShowInTaskbar = false;
+                    if (add_test2.ShowDialog() == DialogResult.OK)
+                    {
+                        Close();
+                    }
+                    
                 }
             }
         }

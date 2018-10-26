@@ -25,7 +25,8 @@ namespace Kursak_Ol
             this.parent = parent;
 
             //наследуемый метод
-            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm, bunifuImageButton1_Close);
+            base.Top_Button(bunifuImageButton1_Min, bunifuImageButton1_Max, bunifuImageButton2_Norm);
+            this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
 
             using (Tests_DBContainer tests = new Tests_DBContainer())
             {
@@ -46,6 +47,11 @@ namespace Kursak_Ol
 
                 renderAnswerList();
             }
+        }
+
+        private void BunifuImageButton1_Close_Click(object sender, EventArgs e)
+        {
+           this.Close();
         }
 
         private void renderAnswerList()
