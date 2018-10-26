@@ -131,43 +131,69 @@ namespace Kursak_Ol
             {
                 using (Tests_DBContainer db = new Tests_DBContainer())
                 {
-                    var userTest = db.UserTest.Where(z => z.TestId == test.Id).ToList();//по айдишнику теста находим пользователей которые его проходили
+                    //по айдишнику теста находим пользователей которые его проходили: и группируем по пользователю
+                    var userTest = db.UserTest.Where(z => z.TestId == test.Id).GroupBy(item => item.User.LastName).ToList();
 
+                    //userTest = userTest.GroupBy(item => item.User.LastName);
                     foreach (var VARIABLE in userTest)
                     {
-                        //для расчета времени прохождения теста
-                        TimeSpan span = (VARIABLE.EndDate - VARIABLE.StartDate);
-                        //выводим в лист бокс информацию
-                        this.listBox_Test_Results_For_Teacher.Items.Add($"{VARIABLE.User.FirstName} {VARIABLE.User.LastName} {VARIABLE.User.MiddleName}");
-                        this.listBox_Test_Results_For_Teacher.Items.Add(
-                            $"Дата прохождения теста: {VARIABLE.StartDate.ToString("d")}     Результат: {VARIABLE.Result}     Потрачено времени: {FormatedTime(span)}");
+                        bool needUser = true;
+
+                        foreach (UserTest item in VARIABLE)
+                        {
+                            //для расчета времени прохождения теста
+                            TimeSpan span = (item.EndDate - item.StartDate);
+                            if (needUser)
+                            {
+                                listBox_Test_Results_For_Teacher.Items.Add($"{item.User.FirstName} {item.User.LastName} {item.User.MiddleName}");
+                                needUser = false;
+                            }
+
+                            //
+                            //выводим в лист бокс информацию
+                            //
+                            listBox_Test_Results_For_Teacher.Items.Add(
+                                $"Дата прохождения теста: {item.StartDate.ToString("d")}     Результат: {item.Result}     Потрачено времени: {FormatedTime(span)}");
+                        }
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Определение выбранного элемента при смене индекса
+        /// </summary>
+        /// <param name="lb"></param>
+        /// <param name="up"></param>
         private void ChangeIndex(ListBox lb, bool up)
         {
             if (up)
             {
-                if (lb.SelectedIndex == 0)
+                if (lb.SelectedItem.ToString().Substring(0,4) != "Дата")
                 {
-                    lb.SelectedIndex = lb.Items.Count - 1;
-                }
-                else
-                {
-                    lb.SelectedIndex = lb.SelectedIndex - 1;
+                    if (lb.SelectedIndex == 0)
+                    {
+                        lb.SelectedIndex = lb.Items.Count - 1;
+                    }
+                    else
+                    {
+                        lb.SelectedIndex -= 1;
+                    }
+                    
                 }
             }
             else
             {
-                if (lb.SelectedIndex == lb.Items.Count - 1)
+                if (lb.SelectedIndex != lb.Items.Count - 1)
                 {
-                    lb.SelectedIndex = 1;
+                    if (lb.SelectedItem.ToString().Substring(0, 4) != "Дата")
+                    {
+                        lb.SelectedIndex += 1;
+                    }
                 }
                 else
                 {
-                    lb.SelectedIndex = lb.SelectedIndex + 1;
+                    lb.SelectedIndex = 1;
                 }
             }
         }
