@@ -26,8 +26,6 @@ namespace Kursak_Ol
             this.bunifuImageButton1_Close.Click += BunifuImageButton1_Close_Click;
             this.button2_Categori_Close.Click += Button2_Categori_Close_Click;
 
-           
-
             this.renderCategoryList();
 
             this.user = user;
@@ -75,8 +73,11 @@ namespace Kursak_Ol
                     tests.Category.Add(category);
                     tests.SaveChanges();
 
-                    
+                    this.bunifuTransition2.HideSync(this.panel_AddNewCategory);
+
                     this.renderCategoryList();
+                    comboBox_SelectCategory.SelectedIndex = comboBox_SelectCategory.Items.Count - 1;
+
                 }
             }
         }

@@ -24,7 +24,46 @@ namespace Kursak_Ol
             this.button_AddQuestionVariant.Click += button_AddQuestionVariant_Click;
             this.button_CancelQuestionVariant.Click += button_CancelQuestionVariant_Click;
             renderListQuestions();
+            btn_cancel.Click += Btn_cancel_Click;
+        }
+
+        /// <summary>
+        /// Обработка нажатия кнопи"Отмена"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_cancel_Click(object sender, EventArgs e)
+        {
+            //Вывод сообщения для пользователя
+            DialogResult res = MessageBox.Show("Вы действительно хотите отменить создание теста?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             
+            //Если пользователь подвердил отмену создания теста
+            if (res == DialogResult.Yes)
+            {
+                using (Tests_DBContainer tests = new Tests_DBContainer())
+                {
+                    using (var transaction = tests.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            Test test = tests.Test.FirstOrDefault(t => t.Id == this.testId);
+                            if (test != null)
+                            {
+                                tests.Test.Remove(test);    //Удаляем тест
+                                tests.SaveChanges();        //Сохраняем вопросы
+                                transaction.Commit();       //подтверждаем транзакцию
+                                this.DialogResult = DialogResult.OK; //закрываем окно
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback(); //отменяем все изменения в БД
+                            MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); //выводим сообщение об ошибке
+                        }
+                        
+                    }
+                }
+            }
         }
 
         private void comboBoxChanged(object sender, EventArgs e)
@@ -52,15 +91,12 @@ namespace Kursak_Ol
                 comboBox_SelectQuestion.DataSource = tests.TestQuestion.Where(t => t.TestId == this.testId).ToList();
                 comboBox_SelectQuestion.ValueMember = "Id";
                 comboBox_SelectQuestion.DisplayMember = "Question";
-               
 
                 if (comboBox_SelectQuestion.Items.Count > 0)
                 {
                     comboBox_SelectQuestion.SelectedIndex = ind;
                     renderListAnswers();
                 }
-                
-                
             }
         }
 
@@ -125,7 +161,6 @@ namespace Kursak_Ol
                 if (!error)
                 {
 
-
                     TestQuestion testquestion = new TestQuestion();
                     testquestion.Question = textBox_AddQuestion.Text;
 
@@ -137,7 +172,6 @@ namespace Kursak_Ol
 
                     testquestion.TestId = this.testId;
                     tests.TestQuestion.Add(testquestion);
-
 
                     int i;
                     for (i = 0; i <= (checkedListBox_QuestionVariants.Items.Count - 1); i++)
@@ -154,14 +188,12 @@ namespace Kursak_Ol
 
                     }
 
-
                     tests.SaveChanges();
 
                     checkedListBox_QuestionVariants.Items.Clear();
                     textBox_AddQuestion.Text = "";
                     checkBox_QuestionTrue.Checked = true;
                     renderListQuestions((comboBox_SelectQuestion.Items.Count));
-
                 }
             }
         }
