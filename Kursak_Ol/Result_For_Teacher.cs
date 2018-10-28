@@ -134,10 +134,10 @@ namespace Kursak_Ol
                     //по айдишнику теста находим пользователей которые его проходили: и группируем по пользователю
                     var userTest = db.UserTest
                         .Where(z => z.TestId == test.Id)
-                        .OrderByDescending(item => item.StartDate)
-                        .ThenBy(item => item.User.LastName)
+                        .OrderBy(item => item.User.LastName)
                         .ThenBy(item => item.User.FirstName)
                         .ThenBy(item => item.User.MiddleName)
+                        .ThenByDescending(item => item.StartDate)
                         .GroupBy(item => item.User.LastName)
                         .ToList();
 
