@@ -132,7 +132,14 @@ namespace Kursak_Ol
                 using (Tests_DBContainer db = new Tests_DBContainer())
                 {
                     //по айдишнику теста находим пользователей которые его проходили: и группируем по пользователю
-                    var userTest = db.UserTest.Where(z => z.TestId == test.Id).GroupBy(item => item.User.LastName).ToList();
+                    var userTest = db.UserTest
+                        .Where(z => z.TestId == test.Id)
+                        .OrderByDescending(item => item.StartDate)
+                        .ThenBy(item => item.User.LastName)
+                        .ThenBy(item => item.User.FirstName)
+                        .ThenBy(item => item.User.MiddleName)
+                        .GroupBy(item => item.User.LastName)
+                        .ToList();
 
                     //userTest = userTest.GroupBy(item => item.User.LastName);
                     foreach (var VARIABLE in userTest)

@@ -108,7 +108,10 @@ namespace Kursak_Ol
             var test = Ltest.Find(z => z.Title == this.comboBox_Select_Test.SelectedItem.ToString());//находим выбранный тест
             using (Tests_DBContainer db = new Tests_DBContainer())
             {
-                var userTest = db.UserTest.Where(z => z.TestId == test.Id && z.UserId == user.Id).ToList();//по айдишнику теста находим пользователей которые его проходили
+                var userTest = db.UserTest
+                    .Where(z => z.TestId == test.Id && z.UserId == user.Id)
+                    .OrderByDescending(item => item.StartDate)
+                    .ToList();//по айдишнику теста находим пользователей которые его проходили
 
                 if (userTest.Count != 0)
                 {
